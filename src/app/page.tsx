@@ -1,80 +1,173 @@
-import { ThemeToggle } from "@/components/theme-toggle";
+import * as React from "react";
+import { Container, Section } from "@/components/layout/container";
+import { Button } from "@/components/ui/button";
+import { StatusPill } from "@/components/ui/status-pill";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import { TechTag } from "@/components/ui/tech-tag";
+import { MetadataLabel, MetricStat } from "@/components/ui/metadata-label";
+import { CopyButton } from "@/components/ui/copy-button";
+import { siteConfig } from "@/config/site";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-6 sm:p-12 max-w-4xl mx-auto flex flex-col justify-between">
-      {/* Foundation Header Shell */}
-      <header className="flex items-center justify-between py-4 border-b border-border-subtle">
-        <div className="flex items-center gap-3">
-          <span className="font-mono text-xs font-semibold px-2 py-1 rounded border border-border-subtle bg-surface text-text-secondary">
-            M1-FOUNDATION
+    <Container className="space-y-16 py-12 sm:py-16">
+      {/* Shell Preview Header */}
+      <div className="space-y-4 max-w-3xl border-b border-border-subtle pb-8">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+          <span className="font-mono text-xs font-semibold px-2 py-0.5 rounded border border-border-subtle bg-surface text-text-secondary">
+            MILESTONE 2
           </span>
-          <span className="text-sm font-medium text-text-primary">
-            Dipanshi Gupta — System Baseline
-          </span>
+          <StatusPill variant="available">Shell & Primitives Active</StatusPill>
         </div>
-        <div className="flex items-center gap-3">
-          <span className="text-xs text-text-tertiary hidden sm:inline-block font-mono">
-            Theme Mode:
-          </span>
-          <ThemeToggle />
-        </div>
-      </header>
+        <Eyebrow>Design System & Global Shell Baseline</Eyebrow>
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-text-primary">
+          Atomic UI Primitives & Editorial Shell
+        </h1>
+        <p className="text-text-secondary text-base leading-relaxed">
+          This preview verifies the reusable visual language, layout containers,
+          accessible button primitives, status indicators, and technical typography tokens.
+          The portfolio homepage narrative will be implemented in subsequent milestones.
+        </p>
+      </div>
 
-      {/* Token & Typography Verification Panel */}
-      <section className="my-16 space-y-8">
-        <div className="space-y-3">
-          <p className="font-mono text-xs uppercase tracking-wider text-accent-primary">
-            Milestone 1 · Dual-Theme & Typography Verification
-          </p>
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-text-primary">
-            Editorial Tech Product Design Tokens
-          </h1>
-          <p className="text-text-secondary text-base max-w-2xl leading-relaxed">
-            Obsidian Dark serves as the default visual direction with a zero-flicker toggle to Warm-Neutral Light.
-            Shared layout, typography, and component structures adapt strictly via semantic CSS custom properties.
+      {/* 1. Button Primitives Matrix */}
+      <Section size="sm" className="space-y-6 border-b border-border-subtle pb-12">
+        <div className="space-y-1">
+          <Eyebrow>01 / Button Primitives</Eyebrow>
+          <h2 className="text-xl font-semibold tracking-tight text-text-primary">
+            Action States & Hierarchy
+          </h2>
+          <p className="text-text-secondary text-sm">
+            High-contrast primary, subtle secondary, clean outline, ghost, and disabled treatments with visible focus rings.
           </p>
         </div>
 
-        {/* Semantic Color Token Matrix */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
-          <div className="p-4 rounded-md border border-border-subtle bg-surface space-y-1">
-            <span className="text-text-tertiary block">Surface</span>
-            <span className="text-text-primary font-semibold">var(--bg-surface)</span>
-          </div>
-          <div className="p-4 rounded-md border border-border-subtle bg-surface-elevated space-y-1">
-            <span className="text-text-tertiary block">Elevated</span>
-            <span className="text-text-primary font-semibold">var(--bg-surface-elevated)</span>
-          </div>
-          <div className="p-4 rounded-md border border-border-subtle bg-surface space-y-1">
-            <span className="text-accent-primary block">Accent Primary</span>
-            <span className="text-text-primary font-semibold">#38BDF8 / #0284C7</span>
-          </div>
-          <div className="p-4 rounded-md border border-border-subtle bg-surface space-y-1">
-            <span className="text-accent-success block">Status Success</span>
-            <span className="text-text-primary font-semibold">#10B981 / #059669</span>
-          </div>
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+          <Button variant="primary">
+            <span>Primary Action</span>
+          </Button>
+
+          <Button variant="secondary">
+            <span>Secondary Action</span>
+          </Button>
+
+          <Button variant="outline">
+            <span>Outline Action</span>
+          </Button>
+
+          <Button variant="ghost">
+            <span>Ghost Action</span>
+          </Button>
+
+          <Button variant="secondary" size="sm">
+            <span>Small (32px)</span>
+          </Button>
+
+          <Button variant="primary" disabled>
+            <span>Disabled State</span>
+          </Button>
+
+          <Button variant="outline" size="sm" href={siteConfig.links.github} external>
+            <span>External ↗</span>
+          </Button>
+        </div>
+      </Section>
+
+      {/* 2. Status & Metadata Primitives */}
+      <Section size="sm" className="space-y-6 border-b border-border-subtle pb-12">
+        <div className="space-y-1">
+          <Eyebrow>02 / Status & Metadata</Eyebrow>
+          <h2 className="text-xl font-semibold tracking-tight text-text-primary">
+            Status Indicators & Technical Data
+          </h2>
+          <p className="text-text-secondary text-sm">
+            Monospace micro-treatments engineered for recruiter scanning and technical rigor.
+          </p>
         </div>
 
-        {/* Typography Demonstration */}
-        <div className="p-6 rounded-lg border border-border-subtle bg-surface space-y-4">
-          <span className="font-mono text-xs text-text-tertiary uppercase tracking-wider block">
-            Typography Proof · Geist Sans + Geist Mono
-          </span>
-          <p className="text-text-primary font-sans text-lg font-medium">
-            Geist Sans: Clean geometric curves engineered for high-density developer tooling.
-          </p>
-          <p className="text-text-secondary font-mono text-sm">
-            Geist Mono: Strict character width reserved for technical metadata, IS codes, and metrics.
+        <div className="flex flex-wrap items-center gap-4">
+          <StatusPill variant="available">Available for Internships</StatusPill>
+          <StatusPill variant="neutral" pulse={false}>Production Verified</StatusPill>
+          <StatusPill variant="warning">Under Review</StatusPill>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+          <MetricStat
+            stat="45 / 20 / 20"
+            label="Hybrid Ranking Weights"
+            context="Dense / BM25 / Domain"
+          />
+          <MetricStat
+            stat="< 250ms"
+            label="Motion Budget"
+            context="Target micro-interaction latency"
+          />
+          <MetricStat
+            stat="100% WCAG"
+            label="Contrast Compliance"
+            context="AA level across both themes"
+          />
+        </div>
+
+        <div className="flex flex-wrap gap-6 pt-2">
+          <MetadataLabel label="Engine" value="FastAPI + Qdrant" inline />
+          <MetadataLabel label="Tokenizer" value="PyMuPDF / fitz" inline />
+          <MetadataLabel label="Status" value="M2 Verified" inline />
+        </div>
+      </Section>
+
+      {/* 3. Technology Tags */}
+      <Section size="sm" className="space-y-6 border-b border-border-subtle pb-12">
+        <div className="space-y-1">
+          <Eyebrow>03 / Technology Tags</Eyebrow>
+          <h2 className="text-xl font-semibold tracking-tight text-text-primary">
+            Restrained Technical Taxonomy
+          </h2>
+          <p className="text-text-secondary text-sm">
+            Monospace uppercase tags designed for project architecture cards and capability matrices.
           </p>
         </div>
-      </section>
 
-      {/* Foundation Footer Status */}
-      <footer className="py-4 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-text-tertiary font-mono">
-        <span>Ready for Milestone 2: UI Primitives & Global Shell</span>
-        <span>WCAG 2.1 AA Compliant Tokens</span>
-      </footer>
-    </main>
+        <div className="flex flex-wrap gap-2">
+          <TechTag dot active>Next.js 14</TechTag>
+          <TechTag dot>TypeScript</TechTag>
+          <TechTag dot>Tailwind CSS</TechTag>
+          <TechTag>FastAPI</TechTag>
+          <TechTag>PostgreSQL</TechTag>
+          <TechTag>Qdrant</TechTag>
+          <TechTag>PyMuPDF</TechTag>
+          <TechTag>Docker</TechTag>
+          <TechTag interactive>Interactive Tag ↗</TechTag>
+        </div>
+      </Section>
+
+      {/* 4. Contact & Interaction Primitives */}
+      <Section size="sm" className="space-y-6">
+        <div className="space-y-1">
+          <Eyebrow>04 / Contact & Clipboard Action</Eyebrow>
+          <h2 className="text-xl font-semibold tracking-tight text-text-primary">
+            Direct Email Interaction
+          </h2>
+          <p className="text-text-secondary text-sm">
+            One-click copy-to-clipboard action with visual confirmation and screen-reader accessibility.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-4">
+          <CopyButton
+            textToCopy={siteConfig.email}
+            variant="button"
+            label={`Copy: ${siteConfig.email}`}
+            copiedLabel="Email Address Copied!"
+          />
+          <CopyButton
+            textToCopy={siteConfig.email}
+            variant="badge"
+            label={siteConfig.email}
+            copiedLabel="Copied!"
+          />
+        </div>
+      </Section>
+    </Container>
   );
 }
