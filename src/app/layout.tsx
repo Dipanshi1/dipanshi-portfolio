@@ -4,12 +4,12 @@ import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dipanshi Gupta — Software Engineer & Applied AI",
-  description:
-    "Personal portfolio and engineering case studies showcasing work in Applied AI, Full-Stack Systems, and Product Design.",
+  title: siteConfig.title,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

@@ -1,54 +1,50 @@
 import * as React from "react";
 import { Container } from "@/components/layout/container";
-import { Eyebrow } from "@/components/ui/eyebrow";
 import { Button } from "@/components/ui/button";
-import { TechTag } from "@/components/ui/tech-tag";
 
 export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative w-full pt-12 pb-16 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-32 overflow-hidden"
+      className="relative w-full py-16 sm:py-24 lg:py-28 overflow-hidden"
     >
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 xl:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-16 items-center">
           {/* Left / Primary Column */}
           <div className="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8">
-            {/* Eyebrow */}
+            {/* Restrained Eyebrow */}
             <div className="flex items-center gap-2">
               <span
                 className="w-1.5 h-1.5 rounded-full bg-accent-primary"
                 aria-hidden="true"
               />
-              <Eyebrow className="text-accent-primary font-semibold tracking-wider">
+              <p className="font-mono text-xs uppercase tracking-wider text-text-tertiary select-none">
                 AI × Full-Stack × Product Design
-              </Eyebrow>
+              </p>
             </div>
 
             {/* Dominant Headline */}
             <h1
               id="hero-heading"
-              className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-semibold tracking-[-0.03em] leading-[1.08] text-text-primary"
+              className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-semibold tracking-[-0.035em] leading-[1.08] text-text-primary"
             >
-              I design and build{" "}
-              <br className="hidden sm:inline" />
+              I design and build <br />
               AI-powered products.
             </h1>
 
-            {/* Concise Supporting Copy */}
-            <p className="text-base sm:text-lg text-text-secondary leading-relaxed max-w-xl font-normal">
+            {/* Factual Supporting Copy */}
+            <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-xl font-normal">
               Computer Science engineering student specializing in applied AI systems,
-              scalable FastAPI and PostgreSQL architectures, and polished Next.js
-              product interfaces.
+              scalable FastAPI and PostgreSQL backends, and modern Next.js interfaces.
             </p>
 
             {/* Primary Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-1">
               <Button
                 variant="primary"
                 size="lg"
                 href="#work"
-                className="justify-center gap-2"
+                className="justify-center gap-2 h-11 px-6 text-sm font-medium"
               >
                 <span>View My Work</span>
                 <svg
@@ -73,140 +69,119 @@ export function Hero() {
                 variant="secondary"
                 size="lg"
                 href="#contact"
-                className="justify-center"
+                className="justify-center h-11 px-6 text-sm font-medium"
               >
                 <span>Contact Me</span>
               </Button>
             </div>
 
-            {/* Contextual Technical Metadata */}
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-mono text-text-tertiary pt-2">
-              <span className="inline-flex items-center gap-1.5">
-                <span
-                  className="w-1.5 h-1.5 rounded-full bg-text-tertiary"
-                  aria-hidden="true"
-                />
-                Based in India
-              </span>
+            {/* Factual Contextual Metadata */}
+            <div className="flex items-center gap-3 text-xs font-mono text-text-tertiary pt-2">
+              <span>Based in India</span>
               <span className="text-border-subtle" aria-hidden="true">
-                ·
+                /
               </span>
               <span className="inline-flex items-center gap-1.5 text-text-secondary">
                 <span
                   className="w-1.5 h-1.5 rounded-full bg-accent-success"
                   aria-hidden="true"
                 />
-                Open to Internships
+                Available for Internships
               </span>
-              <span className="text-border-subtle" aria-hidden="true">
-                ·
-              </span>
-              <span>B.Tech CSE &apos;26</span>
             </div>
           </div>
 
-          {/* Right / Secondary Column: Restrained Technical Workspace Abstraction */}
+          {/* Right / Secondary Column: Editorial Technical Artifact */}
           <div className="lg:col-span-5 w-full">
             <div
-              className="rounded-xl border border-border-subtle bg-surface p-5 sm:p-6 shadow-sm space-y-5 select-none"
-              aria-label="Engineering and design stack overview"
+              className="rounded-xl border border-border-subtle bg-surface/50 p-6 sm:p-8 lg:p-9 space-y-7 select-none"
+              aria-label="Technical focus and capability domains"
             >
-              {/* Header Bar */}
-              <div className="flex items-center justify-between pb-3 border-b border-border-subtle">
-                <div className="flex items-center gap-2">
-                  <span
-                    className="w-2 h-2 rounded-sm bg-accent-primary/20 border border-accent-primary/40"
-                    aria-hidden="true"
-                  />
-                  <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
-                    System Architecture
-                  </span>
+              {/* Artifact Header */}
+              <div className="flex items-center justify-between pb-3.5 border-b border-border-subtle">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-text-tertiary">
+                  Technical Focus &amp; Domains
+                </span>
+                <span className="font-mono text-[11px] text-text-tertiary">
+                  03 Disciplines
+                </span>
+              </div>
+
+              {/* 3 Discipline Sections (Typographic, Clean, No Card Nesting) */}
+              <div className="space-y-6">
+                {/* 01: Applied AI & Retrieval */}
+                <div className="space-y-1.5">
+                  <div className="flex items-baseline justify-between font-mono text-xs">
+                    <span className="font-semibold text-text-primary uppercase tracking-wide">
+                      01 — Applied AI &amp; Retrieval
+                    </span>
+                    <span className="text-[10px] text-text-tertiary uppercase">
+                      RAG / Search
+                    </span>
+                  </div>
+                  <p className="text-sm text-text-secondary leading-snug font-normal">
+                    Hybrid Retrieval · Dense Embeddings · Grounded Reasoning
+                  </p>
+                  <p className="font-mono text-xs text-text-tertiary pt-0.5">
+                    Qdrant · Gemini API · PyMuPDF · BM25
+                  </p>
                 </div>
-                <div className="inline-flex items-center gap-1.5 text-[10px] font-mono text-text-tertiary px-2 py-0.5 rounded border border-border-subtle bg-surface-elevated">
-                  <span
-                    className="w-1.5 h-1.5 rounded-full bg-accent-success animate-pulse"
-                    aria-hidden="true"
-                  />
-                  <span>Verified Stack</span>
+
+                <div className="h-px w-full bg-border-subtle" aria-hidden="true" />
+
+                {/* 02: Systems & Backend */}
+                <div className="space-y-1.5">
+                  <div className="flex items-baseline justify-between font-mono text-xs">
+                    <span className="font-semibold text-text-primary uppercase tracking-wide">
+                      02 — Systems &amp; Backend
+                    </span>
+                    <span className="text-[10px] text-text-tertiary uppercase">
+                      Core / APIs
+                    </span>
+                  </div>
+                  <p className="text-sm text-text-secondary leading-snug font-normal">
+                    Async Microservices · Relational Schemas · Container Runtimes
+                  </p>
+                  <p className="font-mono text-xs text-text-tertiary pt-0.5">
+                    FastAPI · PostgreSQL · SQLAlchemy · Docker
+                  </p>
+                </div>
+
+                <div className="h-px w-full bg-border-subtle" aria-hidden="true" />
+
+                {/* 03: Product & Interaction */}
+                <div className="space-y-1.5">
+                  <div className="flex items-baseline justify-between font-mono text-xs">
+                    <span className="font-semibold text-text-primary uppercase tracking-wide">
+                      03 — Product &amp; Interaction
+                    </span>
+                    <span className="text-[10px] text-text-tertiary uppercase">
+                      Interface
+                    </span>
+                  </div>
+                  <p className="text-sm text-text-secondary leading-snug font-normal">
+                    Design Systems · Responsive Architecture · Accessible UI
+                  </p>
+                  <p className="font-mono text-xs text-text-tertiary pt-0.5">
+                    Next.js 14 · TypeScript · Tailwind CSS · Figma
+                  </p>
                 </div>
               </div>
 
-              {/* 3 Discipline Layers */}
-              <div className="space-y-3.5">
-                {/* Layer 1: Applied AI & Retrieval */}
-                <div className="p-3.5 rounded-lg border border-border-subtle bg-surface-elevated/50 space-y-2">
-                  <div className="flex items-center justify-between font-mono text-xs">
-                    <span className="font-semibold text-text-primary">
-                      01 / Applied AI & Retrieval
-                    </span>
-                    <span className="text-[10px] text-accent-primary uppercase tracking-wide">
-                      Hybrid
-                    </span>
-                  </div>
-                  <p className="text-xs text-text-secondary leading-snug">
-                    Vector indexing, dense + sparse ranking, and grounded LLM reasoning.
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    <TechTag dot active>Qdrant</TechTag>
-                    <TechTag dot active>Gemini API</TechTag>
-                    <TechTag>PyMuPDF</TechTag>
-                    <TechTag>BM25</TechTag>
-                  </div>
-                </div>
-
-                {/* Layer 2: Systems & Backend */}
-                <div className="p-3.5 rounded-lg border border-border-subtle bg-surface-elevated/50 space-y-2">
-                  <div className="flex items-center justify-between font-mono text-xs">
-                    <span className="font-semibold text-text-primary">
-                      02 / Systems & Backend
-                    </span>
-                    <span className="text-[10px] text-text-tertiary uppercase tracking-wide">
-                      Core
-                    </span>
-                  </div>
-                  <p className="text-xs text-text-secondary leading-snug">
-                    Async Python microservices, relational schemas, and containerized runtime.
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    <TechTag dot>FastAPI</TechTag>
-                    <TechTag dot>PostgreSQL</TechTag>
-                    <TechTag>SQLAlchemy</TechTag>
-                    <TechTag>Docker</TechTag>
-                  </div>
-                </div>
-
-                {/* Layer 3: Product & Interaction */}
-                <div className="p-3.5 rounded-lg border border-border-subtle bg-surface-elevated/50 space-y-2">
-                  <div className="flex items-center justify-between font-mono text-xs">
-                    <span className="font-semibold text-text-primary">
-                      03 / Product & Interaction
-                    </span>
-                    <span className="text-[10px] text-text-tertiary uppercase tracking-wide">
-                      UI/UX
-                    </span>
-                  </div>
-                  <p className="text-xs text-text-secondary leading-snug">
-                    Design systems in Figma translated into accessible App Router interfaces.
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    <TechTag dot>Next.js 14</TechTag>
-                    <TechTag dot>TypeScript</TechTag>
-                    <TechTag>Tailwind</TechTag>
-                    <TechTag>Figma</TechTag>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom Pipeline Strip */}
-              <div className="pt-3 border-t border-border-subtle flex items-center justify-between text-xs font-mono text-text-tertiary">
-                <span className="text-[10px] uppercase tracking-wider">Discipline Flow</span>
-                <div className="flex items-center gap-1.5 text-[11px] font-medium text-text-secondary">
-                  <span>Design</span>
-                  <span className="text-accent-primary" aria-hidden="true">→</span>
-                  <span>Build</span>
-                  <span className="text-accent-primary" aria-hidden="true">→</span>
-                  <span>Ship</span>
-                </div>
+              {/* Artifact Footer: Discipline Flow */}
+              <div className="pt-3.5 border-t border-border-subtle flex items-center justify-between font-mono text-[11px] text-text-tertiary">
+                <span className="uppercase tracking-wider">Discipline Flow</span>
+                <span className="text-text-secondary font-medium">
+                  Design{" "}
+                  <span className="text-text-tertiary mx-1" aria-hidden="true">
+                    →
+                  </span>{" "}
+                  Build{" "}
+                  <span className="text-text-tertiary mx-1" aria-hidden="true">
+                    →
+                  </span>{" "}
+                  Ship
+                </span>
               </div>
             </div>
           </div>

@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "Dipanshi Gupta",
   monogram: "DG",
-  title: "Dipanshi Gupta — Software Engineer & Applied AI",
+  title: "Dipanshi Gupta — AI Systems & Product Design",
   description:
     "Personal portfolio and engineering case studies showcasing work in Applied AI, Full-Stack Systems, and Product Design.",
-  role: "Software Engineer & Product Designer",
+  role: "Computer Science Student · AI & Product Design",
   status: "Available for Internships",
   email: "dipanshig6969@gmail.com",
   links: {

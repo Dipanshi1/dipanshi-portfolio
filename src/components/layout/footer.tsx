@@ -22,8 +22,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-text-secondary max-w-sm leading-relaxed">
-              Software engineer and product designer specializing in hybrid-retrieval
-              AI systems, scalable backend architectures, and high-density interfaces.
+              Computer Science engineering student building at the intersection of
+              applied AI systems, backend architectures, and thoughtful product design.
             </p>
             <div className="pt-1">
               <StatusPill variant="available">
