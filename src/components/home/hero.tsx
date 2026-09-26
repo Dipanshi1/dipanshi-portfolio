@@ -9,7 +9,7 @@ export function Hero() {
       className="relative w-full min-h-[calc(100svh-4rem)] flex flex-col justify-center py-12 sm:py-16 lg:py-0 overflow-hidden"
     >
       <Container className="w-full my-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-14 items-center">
           {/* Left / Primary Column: Identity & Positioning */}
           <div className="lg:col-span-7 flex flex-col space-y-8 sm:space-y-10">
             {/* Restrained Technical Eyebrow */}
@@ -23,17 +23,17 @@ export function Hero() {
               </p>
             </div>
 
-            {/* Dominant Editorial Display Headline */}
+            {/* Dominant Editorial Display Headline (Balanced Two Lines) */}
             <h1
               id="hero-heading"
-              className="text-4xl sm:text-6xl lg:text-[4.25rem] xl:text-[5rem] 2xl:text-[5.5rem] font-semibold tracking-[-0.04em] leading-[0.98] sm:leading-[1.0] lg:leading-[1.02] text-text-primary"
+              className="text-3xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] 2xl:text-[4rem] font-semibold tracking-[-0.035em] leading-[1.08] sm:leading-[1.05] text-text-primary"
             >
-              I design and build <br />
-              AI-powered products.
+              <span className="block">I design and build</span>
+              <span className="block">AI-powered products.</span>
             </h1>
 
             {/* Factual Supporting Copy */}
-            <p className="text-lg sm:text-xl lg:text-[1.35rem] text-text-secondary leading-relaxed max-w-2xl font-normal">
+            <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-xl font-normal">
               Computer Science engineering student specializing in applied AI systems,
               scalable FastAPI and PostgreSQL backends, and modern Next.js interfaces.
             </p>
@@ -99,12 +99,12 @@ export function Hero() {
               aria-label="Technical focus and capability domains"
             >
               {/* Artifact Header Strip */}
-              <div className="flex items-center justify-between pb-3.5 border-b border-border-subtle font-mono text-[11px] text-text-tertiary">
+              <div className="flex items-center justify-between pb-4 border-b border-border-subtle font-mono text-xs text-text-tertiary">
                 <span className="uppercase tracking-widest font-medium">
                   Technical Focus
                 </span>
                 <span className="tracking-wider">
-                  03 Domains
+                  03 Disciplines
                 </span>
               </div>
 
@@ -116,12 +116,12 @@ export function Hero() {
                     <span className="font-mono text-2xl lg:text-3xl font-semibold text-text-primary tracking-tight shrink-0 w-8">
                       01
                     </span>
-                    <div className="space-y-1 flex-1 min-w-0">
-                      <h2 className="font-mono text-xs uppercase tracking-wider font-semibold text-text-primary">
+                    <div className="space-y-1.5 flex-1 min-w-0">
+                      <h2 className="font-mono text-xs sm:text-sm uppercase tracking-wider font-semibold text-text-primary">
                         Applied AI &amp; Retrieval
                       </h2>
-                      <p className="text-sm sm:text-base text-text-secondary leading-snug">
-                        Hybrid Retrieval · Grounded Reasoning
+                      <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
+                        Hybrid Retrieval · Grounded Reasoning · Vector Indexing
                       </p>
                       <p className="font-mono text-xs text-text-tertiary pt-0.5">
                         Qdrant · Gemini API · PyMuPDF · BM25
@@ -138,12 +138,12 @@ export function Hero() {
                     <span className="font-mono text-2xl lg:text-3xl font-semibold text-text-primary tracking-tight shrink-0 w-8">
                       02
                     </span>
-                    <div className="space-y-1 flex-1 min-w-0">
-                      <h2 className="font-mono text-xs uppercase tracking-wider font-semibold text-text-primary">
+                    <div className="space-y-1.5 flex-1 min-w-0">
+                      <h2 className="font-mono text-xs sm:text-sm uppercase tracking-wider font-semibold text-text-primary">
                         Systems &amp; Backend
                       </h2>
-                      <p className="text-sm sm:text-base text-text-secondary leading-snug">
-                        Async APIs · Relational Schemas
+                      <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
+                        Async APIs · Relational Schemas · Container Runtimes
                       </p>
                       <p className="font-mono text-xs text-text-tertiary pt-0.5">
                         FastAPI · PostgreSQL · SQLAlchemy · Docker
@@ -160,12 +160,12 @@ export function Hero() {
                     <span className="font-mono text-2xl lg:text-3xl font-semibold text-text-primary tracking-tight shrink-0 w-8">
                       03
                     </span>
-                    <div className="space-y-1 flex-1 min-w-0">
-                      <h2 className="font-mono text-xs uppercase tracking-wider font-semibold text-text-primary">
+                    <div className="space-y-1.5 flex-1 min-w-0">
+                      <h2 className="font-mono text-xs sm:text-sm uppercase tracking-wider font-semibold text-text-primary">
                         Product &amp; Interaction
                       </h2>
-                      <p className="text-sm sm:text-base text-text-secondary leading-snug">
-                        Design Systems · Accessible UI
+                      <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
+                        Design Systems · Responsive Architecture · Accessible UI
                       </p>
                       <p className="font-mono text-xs text-text-tertiary pt-0.5">
                         Next.js 14 · TypeScript · Tailwind CSS · Figma
@@ -176,8 +176,8 @@ export function Hero() {
               </div>
 
               {/* Artifact Footer Strip */}
-              <div className="pt-3.5 border-t border-border-subtle flex items-center justify-between font-mono text-[11px] text-text-tertiary">
-                <span className="uppercase tracking-widest">
+              <div className="pt-4 border-t border-border-subtle flex items-center justify-between font-mono text-xs text-text-tertiary">
+                <span className="uppercase tracking-widest font-medium">
                   Discipline Flow
                 </span>
                 <span className="text-text-secondary font-medium tracking-wide">
