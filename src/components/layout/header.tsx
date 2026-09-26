@@ -55,11 +55,12 @@ export function Header() {
             </span>
           </a>
 
-          {/* Desktop Status Pill */}
-          <div className="hidden lg:block">
-            <StatusPill variant="available">
-              {siteConfig.status}
-            </StatusPill>
+          {/* Subtle Availability Indicator (Desktop) */}
+          <div className="hidden lg:flex items-center pl-3 border-l border-border-subtle">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono text-text-secondary bg-surface border border-border-subtle select-none">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-success animate-pulse shrink-0" aria-hidden="true" />
+              <span>{siteConfig.status}</span>
+            </span>
           </div>
         </div>
 
@@ -181,13 +182,13 @@ export function Header() {
           </div>
 
           {/* Numbered Nav Links */}
-          <nav className="flex flex-col space-y-3 font-mono text-sm" aria-label="Mobile Navigation">
+          <nav className="flex flex-col space-y-2 font-mono text-sm" aria-label="Mobile Navigation">
             {siteConfig.nav.map((item, index) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-between py-2.5 px-3 rounded-md text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+                className="flex items-center justify-between min-h-[44px] py-2.5 px-3 rounded-md text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
               >
                 <span className="font-sans font-medium text-base text-text-primary">
                   {item.label}
@@ -202,7 +203,7 @@ export function Header() {
             <a
               href={siteConfig.links.resume}
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-between py-2.5 px-3 rounded-md text-accent-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+              className="flex items-center justify-between min-h-[44px] py-2.5 px-3 rounded-md text-accent-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
             >
               <span className="font-sans font-medium text-base">
                 View Resume
