@@ -26,10 +26,10 @@ export function Hero() {
             {/* Dominant Editorial Display Headline (Balanced Two Lines) */}
             <h1
               id="hero-heading"
-              className="text-3xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.35rem] 2xl:text-[4.75rem] font-semibold tracking-[-0.035em] leading-[1.04] sm:leading-[1.02] text-text-primary"
+              className="text-3xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.95rem] 2xl:text-[4.25rem] font-semibold tracking-[-0.035em] leading-[1.06] sm:leading-[1.04] text-text-primary"
             >
-              <span className="block">I design and build</span>
-              <span className="block">AI-powered products.</span>
+              <span className="lg:block">I design and build</span>{" "}
+              <span className="lg:block lg:whitespace-nowrap">AI-powered products.</span>
             </h1>
 
             {/* Factual Supporting Copy */}
