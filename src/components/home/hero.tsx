@@ -6,12 +6,12 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative w-full min-h-[calc(100svh-4rem)] flex flex-col justify-center py-12 sm:py-16 lg:py-0 overflow-hidden"
+      className="relative w-full min-h-[calc(100svh-4rem)] flex flex-col justify-start lg:justify-center pt-8 pb-16 sm:pt-12 sm:pb-20 lg:pt-8 lg:pb-24 overflow-hidden"
     >
-      <Container className="w-full my-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-14 items-center">
-          {/* Left / Primary Column: Identity & Positioning */}
-          <div className="lg:col-span-7 flex flex-col space-y-8 sm:space-y-10">
+      <Container className="w-full">
+        <div className="grid grid-cols-1 editorial-hero-grid gap-12 lg:gap-12 xl:gap-16 items-center">
+          {/* Left / Primary Column: Identity & Positioning (7.5fr) */}
+          <div className="flex flex-col space-y-7 sm:space-y-9">
             {/* Restrained Technical Eyebrow */}
             <div className="flex items-center gap-2.5">
               <span
@@ -26,7 +26,7 @@ export function Hero() {
             {/* Dominant Editorial Display Headline (Balanced Two Lines) */}
             <h1
               id="hero-heading"
-              className="text-3xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] 2xl:text-[4rem] font-semibold tracking-[-0.035em] leading-[1.08] sm:leading-[1.05] text-text-primary"
+              className="text-3xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.35rem] 2xl:text-[4.75rem] font-semibold tracking-[-0.035em] leading-[1.04] sm:leading-[1.02] text-text-primary"
             >
               <span className="block">I design and build</span>
               <span className="block">AI-powered products.</span>
@@ -39,7 +39,7 @@ export function Hero() {
             </p>
 
             {/* Actions & Contextual Metadata */}
-            <div className="space-y-6 pt-2">
+            <div className="space-y-6 pt-1">
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <Button
                   variant="primary"
@@ -92,8 +92,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right / Secondary Column: Open Editorial Technical Specification */}
-          <div className="lg:col-span-5 w-full">
+          {/* Right / Secondary Column: Open Editorial Technical Specification (4.5fr) */}
+          <div className="w-full">
             <div
               className="w-full space-y-7 lg:space-y-8 select-none"
               aria-label="Technical focus and capability domains"
@@ -123,7 +123,7 @@ export function Hero() {
                       <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
                         Hybrid Retrieval · Grounded Reasoning · Vector Indexing
                       </p>
-                      <p className="font-mono text-xs text-text-tertiary pt-0.5">
+                      <p className="font-mono text-xs sm:text-[13px] text-text-tertiary pt-0.5">
                         Qdrant · Gemini API · PyMuPDF · BM25
                       </p>
                     </div>
@@ -145,7 +145,7 @@ export function Hero() {
                       <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
                         Async APIs · Relational Schemas · Container Runtimes
                       </p>
-                      <p className="font-mono text-xs text-text-tertiary pt-0.5">
+                      <p className="font-mono text-xs sm:text-[13px] text-text-tertiary pt-0.5">
                         FastAPI · PostgreSQL · SQLAlchemy · Docker
                       </p>
                     </div>
@@ -167,7 +167,7 @@ export function Hero() {
                       <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
                         Design Systems · Responsive Architecture · Accessible UI
                       </p>
-                      <p className="font-mono text-xs text-text-tertiary pt-0.5">
+                      <p className="font-mono text-xs sm:text-[13px] text-text-tertiary pt-0.5">
                         Next.js 14 · TypeScript · Tailwind CSS · Figma
                       </p>
                     </div>

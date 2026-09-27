@@ -51,3 +51,19 @@
     scroll-behavior: auto !important;
   }
 }
+
+@layer utilities {
+  @media (min-width: 1024px) {
+    .editorial-hero-grid {
+      display: grid;
+      grid-template-columns: 7.25fr 4.75fr;
+    }
+  }
+  @media (min-width: 1280px) {
+    .editorial-hero-grid {
+      display: grid;
+      grid-template-columns: 7.5fr 4.5fr;
+    }
+  }
+}
+
