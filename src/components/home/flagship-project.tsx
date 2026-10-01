@@ -74,8 +74,9 @@ export function FlagshipProject() {
               </h3>
               <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
                 Engineered a hybrid retrieval system combining Qdrant vector search
-                with BM25 lexical matching, coupled with a deterministic multi-signal
-                reranking formula directly verified against the codebase:
+                with BM25 lexical matching. The recommendation pipeline distinguishes
+                deterministic rank_results scoring from subsequent LightGBM
+                applicability soft-reranking, directly verified against the codebase:
               </p>
 
               {/* Exact Formula Block */}
@@ -83,12 +84,20 @@ export function FlagshipProject() {
                 <div className="text-[11px] text-text-tertiary uppercase tracking-wider font-semibold">
                   Scoring Formula (ai-engine/src/ranking.py)
                 </div>
-                <div className="text-text-primary font-medium leading-relaxed">
-                  Final Score = 0.40 × Semantic + 0.15 × BM25 + 0.20 × Product Match
-                  + 0.10 × Domain + 0.10 × Tech Coverage + 0.05 × Metadata Conf
+                <div className="text-text-primary font-medium leading-relaxed whitespace-pre-line">
+                  {`Base Score =
+0.40 × Semantic
++ 0.15 × BM25
++ 0.20 × Product Match
++ 0.10 × App/Domain Match
++ 0.10 × Tech Coverage
++ 0.05 × Metadata Confidence
+
+Final Relevance =
+min(1.0, Base Score + 0.30 × Explicit Citation Match)`}
                 </div>
-                <div className="text-[11px] text-accent-primary">
-                  + 0.30 boost for explicit standard citations in tender text
+                <div className="text-[11px] text-accent-primary leading-relaxed">
+                  The +0.30 citation boost is a conditional additive boost applied after the base score and clamped at 1.0, not a seventh weighted component.
                 </div>
               </div>
             </div>
@@ -127,8 +136,8 @@ export function FlagshipProject() {
                   </span>
                   <span>
                     <strong className="text-text-primary font-medium">Applicability Classification:</strong>{" "}
-                    LightGBM classifier serialized via locked scikit-learn pipeline to
-                    predict applicability without prediction drift.
+                    Subsequent LightGBM applicability soft-reranking serialized via locked
+                    scikit-learn pipeline to predict applicability without prediction drift.
                   </span>
                 </li>
               </ul>
