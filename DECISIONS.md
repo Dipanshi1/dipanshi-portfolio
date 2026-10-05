@@ -53,11 +53,11 @@
   - Aligning with `CapabilityPillars`'s vertical rhythm unifies the page into a cohesive editorial composition.
 
 ### 7. Universal Contact Email Correction & Accessible Mailto Action
-- **Decision:** Replace the incorrect email address (`dipanshig6969@gmail.com`) with `dipanshig982@gmail.com` across the entire codebase (`siteConfig`, footer, hero contact action, mobile drawer).
+- **Decision:** Set canonical email address strictly to `dipanshig98@gmail.com` across the entire codebase (`siteConfig`, footer, hero contact action, mobile drawer).
 - **Reasoning:**
-  - Replaced copy-only button widgets in the footer and mobile drawer with accessible, clickable `<a>` links pointing to `mailto:dipanshig982@gmail.com`.
-  - Configured Hero "Contact Me" CTA to trigger `mailto:dipanshig982@gmail.com`, ensuring immediate functional utility.
-  - Updated local Git author email to match the correct address for future commits.
+  - Replaced copy-only button widgets in the footer and mobile drawer with accessible, clickable `<a>` links pointing to `mailto:dipanshig98@gmail.com`.
+  - Configured Hero "Contact Me" CTA to trigger `mailto:dipanshig98@gmail.com`, ensuring immediate functional utility.
+  - Updated local Git author email to match `dipanshig98@gmail.com`.
 
 ## Header Navigation Layout Tightening
 
