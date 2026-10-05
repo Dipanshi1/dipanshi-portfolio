@@ -14,7 +14,6 @@ export const siteConfig = {
   },
   nav: [
     { label: "Work", href: "#work" },
-    { label: "ManakSetu", href: "#manaksetu" },
     { label: "Stack", href: "#stack" },
     { label: "About", href: "#about" },
   ],
