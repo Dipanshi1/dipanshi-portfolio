@@ -37,3 +37,24 @@
 - **Reasoning:** 
   - In accordance with the previous milestone fix (`92b829e`), ManakSetu is a flagship project rather than a top-level global destination.
   - The secondary projects section is anchored at `id="secondary-projects"` and flows directly beneath ManakSetu within the `#work` stream.
+
+## Post-3C Visual Polish & Contact Email Correction
+
+### 5. Technical Artifact Exhibits: De-densifying Dashboard Widgets to Editorial Exhibits
+- **Decision:** Remove nested box-in-box card structures, colored sub-cards, and dashboard progress widgets from the right-column technical panels. Replace them with open, typography-led key-value specifications and hairline horizontal dividers.
+- **Reasoning:**
+  - The initial implementation suffered from visual density overload resembling a multi-tenant SaaS dashboard rather than an editorial systems whitepaper.
+  - Using hairline rules (`border-border-subtle/50`), clean alignment, monospace code contracts, and subtle tabular rows aligns the artifacts with Hero's "Open Editorial Technical Specification" and ManakSetu's verification panel.
+
+### 6. Vertical Rhythm & Section Spacing Normalization
+- **Decision:** Normalize section padding to `py-16 sm:py-20 lg:py-24` and inter-project spacing to `space-y-16 sm:space-y-20 lg:space-y-24`.
+- **Reasoning:**
+  - Previous `lg:py-32` and `space-y-36` generated excessive empty whitespace before the footer.
+  - Aligning with `CapabilityPillars`'s vertical rhythm unifies the page into a cohesive editorial composition.
+
+### 7. Universal Contact Email Correction & Accessible Mailto Action
+- **Decision:** Replace the incorrect email address (`dipanshig6969@gmail.com`) with `dipanshig982@gmail.com` across the entire codebase (`siteConfig`, footer, hero contact action, mobile drawer).
+- **Reasoning:**
+  - Replaced copy-only button widgets in the footer and mobile drawer with accessible, clickable `<a>` links pointing to `mailto:dipanshig982@gmail.com`.
+  - Configured Hero "Contact Me" CTA to trigger `mailto:dipanshig982@gmail.com`, ensuring immediate functional utility.
+  - Updated local Git author email to match the correct address for future commits.

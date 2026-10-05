@@ -6,11 +6,12 @@ export const siteConfig = {
     "Personal portfolio and engineering case studies showcasing work in Applied AI, Full-Stack Systems, and Product Design.",
   role: "Computer Science Student · AI & Product Design",
   status: "Available for Internships",
-  email: "dipanshig6969@gmail.com",
+  email: "dipanshig982@gmail.com",
   links: {
     github: "https://github.com/Dipanshi1",
     linkedin: "https://linkedin.com/in/dipanshi-gupta",
     resume: "/resume",
+    email: "mailto:dipanshig982@gmail.com",
   },
   nav: [
     { label: "Work", href: "#work" },

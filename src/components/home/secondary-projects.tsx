@@ -10,11 +10,11 @@ export function SecondaryProjects() {
     <section
       id="secondary-projects"
       aria-labelledby="secondary-projects-heading"
-      className="relative w-full border-t border-border-subtle bg-canvas py-16 sm:py-24 lg:py-32 transition-colors duration-150"
+      className="relative w-full border-t border-border-subtle bg-canvas py-16 sm:py-20 lg:py-24 transition-colors duration-150"
     >
       <Container>
         {/* Section Header */}
-        <div className="space-y-4 max-w-3xl pb-16 sm:pb-20">
+        <div className="space-y-4 max-w-3xl pb-12 sm:pb-16">
           <div className="flex items-center gap-2">
             <span
               className="w-1.5 h-1.5 rounded-full bg-accent-primary"
@@ -38,13 +38,13 @@ export function SecondaryProjects() {
         </div>
 
         {/* Editorial Project Showcase Entries */}
-        <div className="space-y-20 sm:space-y-28 lg:space-y-36">
+        <div className="space-y-16 sm:space-y-20 lg:space-y-24">
           {/* ========================================================= */}
           {/* PROJECT 1: AgriVision AI (Computer Vision / Applied AI)   */}
           {/* ========================================================= */}
           <article
             aria-labelledby="agrivision-heading"
-            className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-start"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start"
           >
             {/* Narrative Column */}
             <div className="lg:col-span-6 flex flex-col space-y-6">
@@ -54,7 +54,7 @@ export function SecondaryProjects() {
                 </span>
                 <h3
                   id="agrivision-heading"
-                  className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-primary"
+                  className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-text-primary"
                 >
                   AgriVision AI
                 </h3>
@@ -71,15 +71,15 @@ export function SecondaryProjects() {
                 designed for automated diagnostic workflows.
               </p>
 
-              {/* Technical Highlights */}
-              <div className="space-y-2.5 pt-2">
+              {/* Technical Architecture Highlights */}
+              <div className="space-y-2.5 pt-1">
                 <span className="font-mono text-[11px] uppercase tracking-wider text-text-tertiary block">
                   Engineering Architecture
                 </span>
                 <ul className="space-y-2 text-xs sm:text-sm text-text-secondary">
                   <li className="flex items-start gap-2.5">
                     <span
-                      className="text-accent-primary font-mono text-xs pt-0.5"
+                      className="text-accent-primary font-mono text-xs pt-0.5 select-none shrink-0"
                       aria-hidden="true"
                     >
                       ↳
@@ -95,7 +95,7 @@ export function SecondaryProjects() {
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span
-                      className="text-accent-primary font-mono text-xs pt-0.5"
+                      className="text-accent-primary font-mono text-xs pt-0.5 select-none shrink-0"
                       aria-hidden="true"
                     >
                       ↳
@@ -110,7 +110,7 @@ export function SecondaryProjects() {
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span
-                      className="text-accent-primary font-mono text-xs pt-0.5"
+                      className="text-accent-primary font-mono text-xs pt-0.5 select-none shrink-0"
                       aria-hidden="true"
                     >
                       ↳
@@ -127,7 +127,7 @@ export function SecondaryProjects() {
               </div>
 
               {/* Verified Technology Tags */}
-              <div className="pt-2 space-y-2">
+              <div className="pt-1 space-y-2">
                 <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
                   Verified Toolchain
                 </span>
@@ -142,13 +142,13 @@ export function SecondaryProjects() {
               </div>
 
               {/* Action Link & Context */}
-              <div className="pt-3 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Button
                   variant="outline"
-                  size="md"
+                  size="sm"
                   href="https://github.com/Dipanshi1/agri-vision-ai"
                   external
-                  className="gap-1.5 text-xs h-9 px-4"
+                  className="gap-1.5 text-xs h-9 px-3.5"
                 >
                   <span>Codebase Repository</span>
                   <span className="text-xs" aria-hidden="true">
@@ -161,165 +161,103 @@ export function SecondaryProjects() {
               </div>
             </div>
 
-            {/* Technical Inspection Artifact Frame */}
+            {/* Technical Exhibit Panel (Restrained Engineering Artifact) */}
             <div className="lg:col-span-6 w-full">
               <div
                 className="rounded-xl border border-border-subtle bg-surface p-5 sm:p-6 shadow-sm space-y-5 select-none hover:border-border-focus/30 transition-colors duration-200"
                 aria-label="AgriVision AI computer vision pipeline telemetry preview"
               >
-                {/* Frame Header */}
+                {/* Exhibit Header */}
                 <div className="flex items-center justify-between pb-3.5 border-b border-border-subtle">
                   <div className="flex items-center gap-2">
                     <span
                       className="w-2 h-2 rounded-sm bg-accent-primary/20 border border-accent-primary/40"
                       aria-hidden="true"
-                    ></span>
-                    <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
-                      Vision Inference Pipeline
-                    </span>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 text-[10px] font-mono text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 bg-emerald-500/10">
-                    <span
-                      className="w-1.5 h-1.5 rounded-full bg-emerald-500"
-                      aria-hidden="true"
                     />
-                    <span>Containerized API</span>
-                  </div>
-                </div>
-
-                {/* Sub-panel 1: Image Preprocessing Pipeline */}
-                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated space-y-2.5">
-                  <div className="flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-text-tertiary uppercase tracking-wider">
-                      Input Tensor Matrix
-                    </span>
-                    <span className="text-text-secondary">
-                      leaf_sample_RGB_042.jpg
+                    <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
+                      Exhibit 01 · Vision Inference Pipeline
                     </span>
                   </div>
-                  <div className="grid grid-cols-2 gap-2 text-xs font-mono">
-                    <div className="p-2 rounded bg-surface border border-border-subtle space-y-1">
-                      <span className="text-[10px] text-text-tertiary uppercase block">
-                        Dimensions
-                      </span>
-                      <span className="text-text-primary font-medium">
-                        224 × 224 × 3 (RGB)
-                      </span>
-                    </div>
-                    <div className="p-2 rounded bg-surface border border-border-subtle space-y-1">
-                      <span className="text-[10px] text-text-tertiary uppercase block">
-                        Normalization
-                      </span>
-                      <span className="text-text-primary font-medium">
-                        CLAHE + Mean [0.485...]
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Sub-panel 2: Classification Softmax Confidence Distribution */}
-                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated space-y-3">
-                  <div className="flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-accent-primary uppercase tracking-wider font-semibold">
-                      Diagnostic Prediction
-                    </span>
-                    <span className="font-mono text-xs font-semibold text-text-primary">
-                      Alternaria solani
-                    </span>
-                  </div>
-
-                  <div className="space-y-2">
-                    {/* Primary class */}
-                    <div className="space-y-1">
-                      <div className="flex justify-between text-xs font-mono">
-                        <span className="text-text-primary font-medium">
-                          Early Blight (Target Detection)
-                        </span>
-                        <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
-                          94.2%
-                        </span>
-                      </div>
-                      <div className="h-1.5 w-full rounded-full bg-surface overflow-hidden border border-border-subtle">
-                        <div
-                          className="h-full bg-emerald-500 rounded-full"
-                          style={{ width: "94.2%" }}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Secondary class */}
-                    <div className="space-y-1">
-                      <div className="flex justify-between text-[11px] font-mono text-text-tertiary">
-                        <span>Late Blight Anomaly</span>
-                        <span>3.8%</span>
-                      </div>
-                      <div className="h-1.5 w-full rounded-full bg-surface overflow-hidden border border-border-subtle">
-                        <div
-                          className="h-full bg-text-tertiary/40 rounded-full"
-                          style={{ width: "3.8%" }}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Healthy baseline */}
-                    <div className="space-y-1">
-                      <div className="flex justify-between text-[11px] font-mono text-text-tertiary">
-                        <span>Healthy Baseline</span>
-                        <span>2.0%</span>
-                      </div>
-                      <div className="h-1.5 w-full rounded-full bg-surface overflow-hidden border border-border-subtle">
-                        <div
-                          className="h-full bg-text-tertiary/20 rounded-full"
-                          style={{ width: "2.0%" }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Sub-panel 3: Telemetry Stat Boxes */}
-                <div className="grid grid-cols-3 gap-2 font-mono text-[10px] text-text-tertiary text-center">
-                  <div className="p-2 rounded border border-border-subtle bg-surface-elevated space-y-0.5">
-                    <div className="text-text-primary font-semibold text-xs">
-                      ~42ms
-                    </div>
-                    <div>Inference Latency</div>
-                  </div>
-                  <div className="p-2 rounded border border-border-subtle bg-surface-elevated space-y-0.5">
-                    <div className="text-text-primary font-semibold text-xs">
-                      FastAPI
-                    </div>
-                    <div>Async Runtime</div>
-                  </div>
-                  <div className="p-2 rounded border border-border-subtle bg-surface-elevated space-y-0.5">
-                    <div className="text-text-primary font-semibold text-xs">
-                      Docker
-                    </div>
-                    <div>Edge Packaging</div>
-                  </div>
-                </div>
-
-                {/* Data Flow Strip */}
-                <div className="pt-2 border-t border-border-subtle space-y-2">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
-                    Execution Flow
+                  <span className="font-mono text-[10px] text-accent-primary">
+                    Docker / FastAPI
                   </span>
-                  <div className="flex flex-wrap items-center gap-1.5 font-mono text-[10px] text-text-secondary">
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      Leaf Capture
+                </div>
+
+                {/* Section 1: Preprocessing & Input Tensor Specs */}
+                <div className="space-y-2">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
+                    Input Tensor Transformation
+                  </span>
+                  <div className="space-y-1.5 font-mono text-xs">
+                    <div className="flex items-center justify-between py-1 border-b border-border-subtle/50">
+                      <span className="text-text-tertiary">Source Capture</span>
+                      <span className="text-text-primary">leaf_sample_RGB_042.jpg</span>
+                    </div>
+                    <div className="flex items-center justify-between py-1 border-b border-border-subtle/50">
+                      <span className="text-text-tertiary">Resolution &amp; Channels</span>
+                      <span className="text-text-primary">224 × 224 × 3 (RGB)</span>
+                    </div>
+                    <div className="flex items-center justify-between py-1">
+                      <span className="text-text-tertiary">Preprocessing Filter</span>
+                      <span className="text-text-primary">CLAHE Contrast + Mean/Std Scaled</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Section 2: Pathological Classification Output */}
+                <div className="space-y-2 pt-2 border-t border-border-subtle">
+                  <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
+                    <span>Classification Diagnostic</span>
+                    <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
+                      Target Positive
                     </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      OpenCV CLAHE
+                  </div>
+
+                  <div className="space-y-1.5 font-mono text-xs">
+                    <div className="flex items-center justify-between py-1.5 px-3 rounded bg-surface-elevated/70 border border-border-subtle">
+                      <div className="space-y-0.5">
+                        <span className="text-text-primary font-semibold block">
+                          Early Blight (Alternaria solani)
+                        </span>
+                        <span className="text-[11px] text-text-tertiary block">
+                          Confidence Threshold: &gt; 0.90
+                        </span>
+                      </div>
+                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold text-sm">
+                        0.942
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between px-3 py-1 text-[11px] text-text-tertiary">
+                      <span>Late Blight (Phytophthora infestans)</span>
+                      <span>0.038</span>
+                    </div>
+
+                    <div className="flex items-center justify-between px-3 py-1 text-[11px] text-text-tertiary">
+                      <span>Healthy Baseline</span>
+                      <span>0.020</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Section 3: Telemetry & Execution Chain */}
+                <div className="pt-3 border-t border-border-subtle space-y-2">
+                  <div className="flex items-center justify-between font-mono text-[11px]">
+                    <span className="text-text-tertiary">
+                      Latency: <strong className="text-text-primary font-medium">~42ms</strong>
                     </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      Tensor Transform
+                    <span className="text-text-tertiary">
+                      Runtime: <strong className="text-text-primary font-medium">FastAPI / Uvicorn</strong>
                     </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle text-accent-primary">
-                      FastAPI Diagnostic JSON
+                  </div>
+
+                  <div className="font-mono text-[10px] text-text-tertiary pt-1">
+                    <span className="text-text-tertiary uppercase tracking-wider block pb-1">
+                      Execution Chain:
                     </span>
+                    <p className="text-text-secondary leading-relaxed">
+                      Leaf Frame → OpenCV CLAHE → Tensor Normalization → CNN Inference → JSON Diagnostic
+                    </p>
                   </div>
                 </div>
               </div>
@@ -334,129 +272,97 @@ export function SecondaryProjects() {
           {/* ========================================================= */}
           <article
             aria-labelledby="interview-tracker-heading"
-            className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-start"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start"
           >
-            {/* Technical Inspection Artifact Frame (Ordered Left on Desktop) */}
+            {/* Technical Exhibit Panel (Ordered Left on Desktop) */}
             <div className="order-2 lg:order-1 lg:col-span-6 w-full">
               <div
                 className="rounded-xl border border-border-subtle bg-surface p-5 sm:p-6 shadow-sm space-y-5 select-none hover:border-border-focus/30 transition-colors duration-200"
                 aria-label="Interview Tracker Pro relational schema and authorization inspector"
               >
-                {/* Frame Header */}
+                {/* Exhibit Header */}
                 <div className="flex items-center justify-between pb-3.5 border-b border-border-subtle">
                   <div className="flex items-center gap-2">
                     <span
                       className="w-2 h-2 rounded-sm bg-accent-primary/20 border border-accent-primary/40"
                       aria-hidden="true"
-                    ></span>
-                    <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
-                      Relational Schema &amp; Auth Spec
-                    </span>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 text-[10px] font-mono text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 bg-emerald-500/10">
-                    <span
-                      className="w-1.5 h-1.5 rounded-full bg-emerald-500"
-                      aria-hidden="true"
                     />
-                    <span>ACID Compliant</span>
-                  </div>
-                </div>
-
-                {/* Sub-panel 1: Normalized Database Entity Model */}
-                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated space-y-2">
-                  <div className="flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-text-tertiary uppercase tracking-wider">
-                      SQLAlchemy Entity: applications
-                    </span>
-                    <span className="text-text-secondary">
-                      PostgreSQL Engine
+                    <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
+                      Exhibit 02 · Relational Architecture &amp; Auth
                     </span>
                   </div>
-                  <div className="p-2.5 rounded bg-surface border border-border-subtle font-mono text-[11px] text-text-secondary space-y-1">
-                    <div className="text-text-primary">
-                      <span className="text-accent-primary font-semibold">PK</span> id: UUID = uuid4()
-                    </div>
-                    <div>
-                      <span className="text-text-tertiary font-semibold">FK</span> user_id: UUID (Index, Non-Nullable)
-                    </div>
-                    <div>company: VARCHAR(120) · role: VARCHAR(100)</div>
-                    <div>status: Enum(&apos;applied&apos;, &apos;screening&apos;, &apos;technical&apos;, &apos;offer&apos;)</div>
-                    <div className="text-[10px] text-text-tertiary pt-0.5">
-                      ↳ Relationship: interview_rounds (1:N, cascade=&quot;all, delete-orphan&quot;)
-                    </div>
-                  </div>
-                </div>
-
-                {/* Sub-panel 2: Row-Level Tenant Security Spec */}
-                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated space-y-2.5">
-                  <div className="flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-accent-primary uppercase tracking-wider font-semibold">
-                      Tenant Isolation &amp; Auth Guard
-                    </span>
-                    <span className="text-text-secondary text-[10px]">
-                      Bearer JWT (RS256)
-                    </span>
-                  </div>
-                  <div className="p-2.5 rounded bg-surface border border-border-subtle font-mono text-xs text-text-primary space-y-1">
-                    <div className="text-text-tertiary text-[10px] uppercase">
-                      Query Constraint Verification
-                    </div>
-                    <p className="text-text-secondary text-[11px] leading-relaxed">
-                      SELECT * FROM applications WHERE id = :target_id AND user_id = :authenticated_user_id;
-                    </p>
-                  </div>
-                  <div className="text-[11px] font-mono text-text-tertiary">
-                    Strict isolation: cross-tenant data requests trigger immediate 404/403 aborts.
-                  </div>
-                </div>
-
-                {/* Sub-panel 3: Telemetry Stat Boxes */}
-                <div className="grid grid-cols-3 gap-2 font-mono text-[10px] text-text-tertiary text-center">
-                  <div className="p-2 rounded border border-border-subtle bg-surface-elevated space-y-0.5">
-                    <div className="text-text-primary font-semibold text-xs">
-                      PostgreSQL
-                    </div>
-                    <div>Relational Engine</div>
-                  </div>
-                  <div className="p-2 rounded border border-border-subtle bg-surface-elevated space-y-0.5">
-                    <div className="text-text-primary font-semibold text-xs">
-                      Pydantic v2
-                    </div>
-                    <div>Contract Schemas</div>
-                  </div>
-                  <div className="p-2 rounded border border-border-subtle bg-surface-elevated space-y-0.5">
-                    <div className="text-text-primary font-semibold text-xs">
-                      JWT Auth
-                    </div>
-                    <div>Stateless Session</div>
-                  </div>
-                </div>
-
-                {/* Data Flow Strip */}
-                <div className="pt-2 border-t border-border-subtle space-y-2">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
-                    Execution Flow
+                  <span className="font-mono text-[10px] text-accent-primary">
+                    PostgreSQL / SQLAlchemy
                   </span>
-                  <div className="flex flex-wrap items-center gap-1.5 font-mono text-[10px] text-text-secondary">
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      Client Request
+                </div>
+
+                {/* Section 1: Relational Schema Contract */}
+                <div className="space-y-2">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
+                    Entity Data Contract (SQLAlchemy)
+                  </span>
+                  <div className="p-3 rounded bg-surface-elevated/70 border border-border-subtle font-mono text-[11px] text-text-secondary space-y-1">
+                    <div className="text-text-primary font-semibold">
+                      TABLE applications &#123;
+                    </div>
+                    <div className="pl-3 space-y-0.5 text-[11px]">
+                      <div>
+                        <span className="text-accent-primary font-semibold">PK</span> id: UUID = uuid4()
+                      </div>
+                      <div>
+                        <span className="text-text-tertiary font-semibold">FK</span> user_id: UUID (Indexed, Non-Nullable)
+                      </div>
+                      <div>company: VARCHAR(120) · role: VARCHAR(100)</div>
+                      <div>status: Enum(&apos;applied&apos;, &apos;screening&apos;, &apos;technical&apos;, &apos;offer&apos;)</div>
+                      <div className="text-[10px] text-text-tertiary pt-0.5">
+                        ↳ Rel: interview_rounds (1:N, cascade=&quot;all, delete-orphan&quot;)
+                      </div>
+                    </div>
+                    <div className="text-text-primary font-semibold">&#125;;</div>
+                  </div>
+                </div>
+
+                {/* Section 2: Authorization Boundary & Tenant Scoping */}
+                <div className="space-y-2 pt-2 border-t border-border-subtle">
+                  <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
+                    <span>Authorization Boundary</span>
+                    <span className="text-text-secondary">Bearer JWT (RS256)</span>
+                  </div>
+
+                  <div className="space-y-1.5 font-mono text-xs">
+                    <div className="flex items-center justify-between py-1 border-b border-border-subtle/50">
+                      <span className="text-text-tertiary">Endpoint Route</span>
+                      <span className="text-text-primary">POST /api/v1/applications/&#123;id&#125;/transition</span>
+                    </div>
+                    <div className="flex items-center justify-between py-1 border-b border-border-subtle/50">
+                      <span className="text-text-tertiary">Tenant Query Scoping</span>
+                      <span className="text-text-primary">WHERE id = :id AND user_id = :current_user</span>
+                    </div>
+                    <div className="flex items-center justify-between py-1">
+                      <span className="text-text-tertiary">Integrity Model</span>
+                      <span className="text-text-primary">ACID Session · Auto-Rollback on Error</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Section 3: Telemetry & Execution Chain */}
+                <div className="pt-3 border-t border-border-subtle space-y-2">
+                  <div className="flex items-center justify-between font-mono text-[11px]">
+                    <span className="text-text-tertiary">
+                      Validation: <strong className="text-text-primary font-medium">Pydantic v2</strong>
                     </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      JWT Auth Guard
+                    <span className="text-text-tertiary">
+                      ORM: <strong className="text-text-primary font-medium">SQLAlchemy Async</strong>
                     </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      Pydantic Validator
+                  </div>
+
+                  <div className="font-mono text-[10px] text-text-tertiary pt-1">
+                    <span className="text-text-tertiary uppercase tracking-wider block pb-1">
+                      Execution Chain:
                     </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      SQLAlchemy ORM
-                    </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle text-accent-primary">
-                      PostgreSQL Commit
-                    </span>
+                    <p className="text-text-secondary leading-relaxed">
+                      Client Request → JWT Bearer Auth Guard → Pydantic Validation → SQLAlchemy ORM → PostgreSQL Commit
+                    </p>
                   </div>
                 </div>
               </div>
@@ -470,7 +376,7 @@ export function SecondaryProjects() {
                 </span>
                 <h3
                   id="interview-tracker-heading"
-                  className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-primary"
+                  className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-text-primary"
                 >
                   Interview Tracker Pro
                 </h3>
@@ -487,15 +393,15 @@ export function SecondaryProjects() {
                 security to prevent multi-tenant data leakage.
               </p>
 
-              {/* Technical Highlights */}
-              <div className="space-y-2.5 pt-2">
+              {/* Technical Architecture Highlights */}
+              <div className="space-y-2.5 pt-1">
                 <span className="font-mono text-[11px] uppercase tracking-wider text-text-tertiary block">
                   Engineering Architecture
                 </span>
                 <ul className="space-y-2 text-xs sm:text-sm text-text-secondary">
                   <li className="flex items-start gap-2.5">
                     <span
-                      className="text-accent-primary font-mono text-xs pt-0.5"
+                      className="text-accent-primary font-mono text-xs pt-0.5 select-none shrink-0"
                       aria-hidden="true"
                     >
                       ↳
@@ -511,7 +417,7 @@ export function SecondaryProjects() {
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span
-                      className="text-accent-primary font-mono text-xs pt-0.5"
+                      className="text-accent-primary font-mono text-xs pt-0.5 select-none shrink-0"
                       aria-hidden="true"
                     >
                       ↳
@@ -527,7 +433,7 @@ export function SecondaryProjects() {
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span
-                      className="text-accent-primary font-mono text-xs pt-0.5"
+                      className="text-accent-primary font-mono text-xs pt-0.5 select-none shrink-0"
                       aria-hidden="true"
                     >
                       ↳
@@ -545,7 +451,7 @@ export function SecondaryProjects() {
               </div>
 
               {/* Verified Technology Tags */}
-              <div className="pt-2 space-y-2">
+              <div className="pt-1 space-y-2">
                 <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
                   Verified Toolchain
                 </span>
@@ -560,13 +466,13 @@ export function SecondaryProjects() {
               </div>
 
               {/* Action Link & Context */}
-              <div className="pt-3 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Button
                   variant="outline"
-                  size="md"
+                  size="sm"
                   href={siteConfig.links.github}
                   external
-                  className="gap-1.5 text-xs h-9 px-4"
+                  className="gap-1.5 text-xs h-9 px-3.5"
                 >
                   <span>GitHub Repository</span>
                   <span className="text-xs" aria-hidden="true">
@@ -588,7 +494,7 @@ export function SecondaryProjects() {
           {/* ========================================================= */}
           <article
             aria-labelledby="career-adviser-heading"
-            className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-start"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start"
           >
             {/* Narrative Column */}
             <div className="lg:col-span-6 flex flex-col space-y-6">
@@ -598,7 +504,7 @@ export function SecondaryProjects() {
                 </span>
                 <h3
                   id="career-adviser-heading"
-                  className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-primary"
+                  className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-text-primary"
                 >
                   Career Adviser
                 </h3>
@@ -615,15 +521,15 @@ export function SecondaryProjects() {
                 technical roadmaps and competency gap assessments.
               </p>
 
-              {/* Technical Highlights */}
-              <div className="space-y-2.5 pt-2">
+              {/* Technical Architecture Highlights */}
+              <div className="space-y-2.5 pt-1">
                 <span className="font-mono text-[11px] uppercase tracking-wider text-text-tertiary block">
                   Engineering Architecture
                 </span>
                 <ul className="space-y-2 text-xs sm:text-sm text-text-secondary">
                   <li className="flex items-start gap-2.5">
                     <span
-                      className="text-accent-primary font-mono text-xs pt-0.5"
+                      className="text-accent-primary font-mono text-xs pt-0.5 select-none shrink-0"
                       aria-hidden="true"
                     >
                       ↳
@@ -639,7 +545,7 @@ export function SecondaryProjects() {
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span
-                      className="text-accent-primary font-mono text-xs pt-0.5"
+                      className="text-accent-primary font-mono text-xs pt-0.5 select-none shrink-0"
                       aria-hidden="true"
                     >
                       ↳
@@ -655,7 +561,7 @@ export function SecondaryProjects() {
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span
-                      className="text-accent-primary font-mono text-xs pt-0.5"
+                      className="text-accent-primary font-mono text-xs pt-0.5 select-none shrink-0"
                       aria-hidden="true"
                     >
                       ↳
@@ -673,7 +579,7 @@ export function SecondaryProjects() {
               </div>
 
               {/* Verified Technology Tags */}
-              <div className="pt-2 space-y-2">
+              <div className="pt-1 space-y-2">
                 <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
                   Verified Toolchain
                 </span>
@@ -688,13 +594,13 @@ export function SecondaryProjects() {
               </div>
 
               {/* Action Link & Context */}
-              <div className="pt-3 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Button
                   variant="outline"
-                  size="md"
+                  size="sm"
                   href={siteConfig.links.github}
                   external
-                  className="gap-1.5 text-xs h-9 px-4"
+                  className="gap-1.5 text-xs h-9 px-3.5"
                 >
                   <span>GitHub Repository</span>
                   <span className="text-xs" aria-hidden="true">
@@ -707,92 +613,77 @@ export function SecondaryProjects() {
               </div>
             </div>
 
-            {/* Technical Inspection Artifact Frame */}
+            {/* Technical Exhibit Panel (Restrained Engineering Artifact) */}
             <div className="lg:col-span-6 w-full">
               <div
                 className="rounded-xl border border-border-subtle bg-surface p-5 sm:p-6 shadow-sm space-y-5 select-none hover:border-border-focus/30 transition-colors duration-200"
                 aria-label="Career Adviser structured schema contract and roadmap output preview"
               >
-                {/* Frame Header */}
+                {/* Exhibit Header */}
                 <div className="flex items-center justify-between pb-3.5 border-b border-border-subtle">
                   <div className="flex items-center gap-2">
                     <span
                       className="w-2 h-2 rounded-sm bg-accent-primary/20 border border-accent-primary/40"
                       aria-hidden="true"
-                    ></span>
-                    <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
-                      Schema Guard &amp; Output Contract
-                    </span>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 text-[10px] font-mono text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 bg-emerald-500/10">
-                    <span
-                      className="w-1.5 h-1.5 rounded-full bg-emerald-500"
-                      aria-hidden="true"
                     />
-                    <span>Schema Verified</span>
+                    <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
+                      Exhibit 03 · Structured Output Contract
+                    </span>
                   </div>
+                  <span className="font-mono text-[10px] text-accent-primary">
+                    Gemini API / Pydantic
+                  </span>
                 </div>
 
-                {/* Sub-panel 1: Input Profile Trajectory */}
-                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated space-y-2">
-                  <div className="flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-text-tertiary uppercase tracking-wider">
-                      Input Trajectory Profile
-                    </span>
-                    <span className="text-text-secondary">
-                      Target: AI Systems Engineer
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2 text-xs font-mono">
-                    <div className="p-2 rounded bg-surface border border-border-subtle space-y-1">
-                      <span className="text-[10px] text-text-tertiary uppercase block">
-                        Verified Baseline
-                      </span>
-                      <span className="text-text-primary font-medium text-[11px]">
-                        TypeScript, PostgreSQL, React
-                      </span>
+                {/* Section 1: Trajectory Mapping & Profile Extraction */}
+                <div className="space-y-2">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
+                    Profile Trajectory Mapping
+                  </span>
+                  <div className="space-y-1.5 font-mono text-xs">
+                    <div className="flex items-center justify-between py-1 border-b border-border-subtle/50">
+                      <span className="text-text-tertiary">Candidate Target</span>
+                      <span className="text-text-primary">Full-Stack → AI Systems Engineer</span>
                     </div>
-                    <div className="p-2 rounded bg-surface border border-border-subtle space-y-1">
-                      <span className="text-[10px] text-text-tertiary uppercase block">
-                        Target Gap Identified
-                      </span>
-                      <span className="text-accent-primary font-medium text-[11px]">
-                        Vector Search, LLM Schemas
-                      </span>
+                    <div className="flex items-center justify-between py-1 border-b border-border-subtle/50">
+                      <span className="text-text-tertiary">Baseline Capability</span>
+                      <span className="text-text-primary">TypeScript, PostgreSQL, React</span>
+                    </div>
+                    <div className="flex items-center justify-between py-1">
+                      <span className="text-text-tertiary">Synthesized Competency Gaps</span>
+                      <span className="text-accent-primary font-medium">Vector Search, LLM Guardrails</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Sub-panel 2: Enforced Pydantic Schema Output */}
-                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated space-y-2.5">
-                  <div className="flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-accent-primary uppercase tracking-wider font-semibold">
-                      Validated Roadmap Contract
-                    </span>
-                    <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold text-[10px]">
-                      Pydantic: 0% Parse Drift
+                {/* Section 2: Enforced Pydantic Schema Output */}
+                <div className="space-y-2 pt-2 border-t border-border-subtle">
+                  <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-text-tertiary">
+                    <span>Enforced Roadmap Output Contract</span>
+                    <span className="text-emerald-600 dark:text-emerald-400 font-semibold text-[10px]">
+                      Pydantic Validated
                     </span>
                   </div>
 
                   <div className="space-y-2 font-mono text-xs">
-                    <div className="p-2.5 rounded bg-surface border border-border-subtle space-y-1">
+                    <div className="p-3 rounded bg-surface-elevated/70 border border-border-subtle space-y-1">
                       <div className="flex items-center justify-between text-[11px]">
                         <span className="text-text-primary font-semibold">
-                          Phase 01: Hybrid Retrieval Systems
+                          01 / Hybrid Retrieval Architectures
                         </span>
-                        <span className="text-text-tertiary text-[10px]">4 Weeks</span>
+                        <span className="text-text-tertiary text-[10px]">Phase 1</span>
                       </div>
                       <p className="text-text-secondary text-[11px] leading-relaxed">
-                        Implement dense vector index (Qdrant) alongside BM25 lexical scorer with weighted rank fusion.
+                        Dense vector index (Qdrant) alongside BM25 lexical scorer with weighted rank fusion.
                       </p>
                     </div>
 
-                    <div className="p-2.5 rounded bg-surface border border-border-subtle space-y-1">
+                    <div className="p-3 rounded bg-surface-elevated/70 border border-border-subtle space-y-1">
                       <div className="flex items-center justify-between text-[11px]">
                         <span className="text-text-primary font-semibold">
-                          Phase 02: Output Guardrails &amp; Validation
+                          02 / Schema Guardrails &amp; Structured Output
                         </span>
-                        <span className="text-text-tertiary text-[10px]">3 Weeks</span>
+                        <span className="text-text-tertiary text-[10px]">Phase 2</span>
                       </div>
                       <p className="text-text-secondary text-[11px] leading-relaxed">
                         Structure LLM completions via Pydantic BaseModels and retry fallbacks for production resilience.
@@ -801,53 +692,24 @@ export function SecondaryProjects() {
                   </div>
                 </div>
 
-                {/* Sub-panel 3: Telemetry Stat Boxes */}
-                <div className="grid grid-cols-3 gap-2 font-mono text-[10px] text-text-tertiary text-center">
-                  <div className="p-2 rounded border border-border-subtle bg-surface-elevated space-y-0.5">
-                    <div className="text-text-primary font-semibold text-xs">
-                      JSON Mode
-                    </div>
-                    <div>Schema Contract</div>
+                {/* Section 3: Telemetry & Execution Chain */}
+                <div className="pt-3 border-t border-border-subtle space-y-2">
+                  <div className="flex items-center justify-between font-mono text-[11px]">
+                    <span className="text-text-tertiary">
+                      Validation: <strong className="text-text-primary font-medium">0% Parse Drift</strong>
+                    </span>
+                    <span className="text-text-tertiary">
+                      Client: <strong className="text-text-primary font-medium">Next.js 14 App Router</strong>
+                    </span>
                   </div>
-                  <div className="p-2 rounded border border-border-subtle bg-surface-elevated space-y-0.5">
-                    <div className="text-text-primary font-semibold text-xs">
-                      Pydantic
-                    </div>
-                    <div>Type Validator</div>
-                  </div>
-                  <div className="p-2 rounded border border-border-subtle bg-surface-elevated space-y-0.5">
-                    <div className="text-text-primary font-semibold text-xs">
-                      Next.js 14
-                    </div>
-                    <div>Client Runtime</div>
-                  </div>
-                </div>
 
-                {/* Data Flow Strip */}
-                <div className="pt-2 border-t border-border-subtle space-y-2">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
-                    Execution Flow
-                  </span>
-                  <div className="flex flex-wrap items-center gap-1.5 font-mono text-[10px] text-text-secondary">
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      Profile Input
+                  <div className="font-mono text-[10px] text-text-tertiary pt-1">
+                    <span className="text-text-tertiary uppercase tracking-wider block pb-1">
+                      Execution Chain:
                     </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      Prompt Schema
-                    </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      Gemini API
-                    </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                      Pydantic Guard
-                    </span>
-                    <span className="text-text-tertiary">→</span>
-                    <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle text-accent-primary">
-                      Next.js Roadmap
-                    </span>
+                    <p className="text-text-secondary leading-relaxed">
+                      Profile Input → Prompt Schema Template → Gemini API → Pydantic Validator → Next.js Roadmap View
+                    </p>
                   </div>
                 </div>
               </div>

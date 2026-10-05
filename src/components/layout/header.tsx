@@ -6,7 +6,6 @@ import { Container } from "@/components/layout/container";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { StatusPill } from "@/components/ui/status-pill";
 import { Button } from "@/components/ui/button";
-import { CopyButton } from "@/components/ui/copy-button";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -216,12 +215,13 @@ export function Header() {
           <div className="pt-4 border-t border-border-subtle flex flex-col gap-3 font-mono text-xs">
             <div className="flex items-center justify-between">
               <span className="text-text-tertiary uppercase tracking-wider">Direct Contact</span>
-              <CopyButton
-                textToCopy={siteConfig.email}
-                variant="inline"
-                label={siteConfig.email}
-                copiedLabel="Copied Email!"
-              />
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="text-text-primary hover:text-accent-primary transition-colors duration-150 inline-flex items-center gap-1 font-mono text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+              >
+                <span>{siteConfig.email}</span>
+                <span className="text-xs" aria-hidden="true">↗</span>
+              </a>
             </div>
             <div className="flex items-center gap-4 text-text-secondary pt-2">
               <a

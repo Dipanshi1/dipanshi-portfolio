@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
 
 export function Hero() {
   return (
@@ -69,7 +70,7 @@ export function Hero() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  href="#contact"
+                  href={`mailto:${siteConfig.email}`}
                   className="justify-center h-12 px-7 text-sm font-medium"
                 >
                   <span>Contact Me</span>

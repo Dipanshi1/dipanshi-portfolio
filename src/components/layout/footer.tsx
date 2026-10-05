@@ -1,7 +1,6 @@
 import * as React from "react";
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/layout/container";
-import { CopyButton } from "@/components/ui/copy-button";
 import { StatusPill } from "@/components/ui/status-pill";
 
 export function Footer() {
@@ -88,14 +87,29 @@ export function Footer() {
                   <span className="text-xs">↗</span>
                 </a>
               </li>
-              <li className="pt-2">
-                <CopyButton
-                  textToCopy={siteConfig.email}
-                  variant="button"
-                  label={siteConfig.email}
-                  copiedLabel="Email Copied!"
-                  className="w-full sm:w-auto"
-                />
+              <li className="pt-1">
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="font-mono text-xs text-text-secondary hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1.5 py-1.5 px-3 rounded-md border border-border-subtle bg-surface hover:bg-surface-elevated hover:border-text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-3.5 h-3.5 text-text-tertiary"
+                    aria-hidden="true"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <span>{siteConfig.email}</span>
+                </a>
               </li>
             </ul>
           </div>
