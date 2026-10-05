@@ -75,3 +75,16 @@
 - **Reasoning:**
   - Code audits confirmed all source files correctly resolved to `dipanshig98@gmail.com`. The persistence of `dipanshig982@gmail.com` in the user's browser was caused by a stale `next dev` process from 09:31 bound to port 3000 serving a legacy `.next` cache.
   - Purged `.next`, terminated all stale node/next background processes, executed a clean rebuild, and verified the rendered HTML output on fresh production servers.
+
+## 2026-10-05 — ManakSetu Case Study
+- Decision: Implement ManakSetu Flagship Case Study at `/work/manaksetu` as an editorial engineering deep dive while preserving global navigation as strictly `Work`, `Stack`, `About`, `Resume`. Updated `siteConfig.nav` anchors to root-relative `/#work`, `/#stack`, `/#about` so global header links seamlessly route back to homepage sections from subpages.
+- Reason: The case study is a dedicated engineering artifact rather than a top-level global destination. Root-relative hashes guarantee full bidirectional routing between `/work/manaksetu` and the homepage without breaking single-page scroll on `/`.
+
+- Decision: Strictly verify all ranking formulas and retrieval architecture directly against `/home/dipanshi/ManakSetu/ManakSetu`. Displayed the exact 6-factor deterministic linear combination from `ranking.py` (`0.40 * semantic + 0.15 * bm25 + 0.20 * product + 0.10 * domain + 0.10 * tech + 0.05 * metadata`) and explicitly documented that the `+0.30 * ref_boost` is a conditional post-score additive boost clamped at 1.0 rather than a 7th weighted component. Completely excluded ungrounded Reciprocal Rank Fusion (RRF) claims in the primary ranking formula.
+- Reason: Editorial and engineering credibility requires 100% mathematical fidelity to the actual repository implementation. In legal and procurement auditability, deterministic explainability is paramount.
+
+- Decision: Clearly delineate Dipanshi Gupta's verified contributions (Product Design in Figma, UI/UX interaction architecture, Next.js/React frontend engineering, split-view audit interface, dynamic PDF report generation with Unicode/Devanagari font support, and retrieval/ranking UI integration) from backend microservices owned by team members Kartikey (FastAPI, document processing, reasoning) and Kshiraj (database, Qdrant/PostgreSQL adapters, BIS catalog scraping).
+- Reason: Transparent attribution reflects genuine software engineering practice, matches the repository git commit log (`dipanshi-latest` branch), and avoids inflated claims of building third-party microservices.
+
+- Decision: Frame project impact around verified technical capability (successful end-to-end execution on municipal LED street lighting and civil tender notices demonstrated for SIH 26108) with zero fabricated business metrics, user numbers, or commercial scale.
+- Reason: Portfolio guidelines mandate zero invented metrics and strict grounding in code and project facts.

@@ -10,3 +10,9 @@
 
 ## Header Navigation Spacing & Responsive Polish
 - **Browser Automation:** Headless browser automation tooling (Chromium/Puppeteer/Playwright) is not installed in the execution environment. Visual validation was conducted via production SSR build analysis, HTML inspection across mobile and desktop DOM hierarchies, and curl HTTP verification.
+
+## 2026-10-05 — ManakSetu Case Study
+- Blocker: None
+- Impact: None
+- Temporary handling: Full source-of-truth verification conducted against local repository `/home/dipanshi/ManakSetu/ManakSetu`. Production build, TypeScript typecheck, ESLint, and SSR HTTP endpoints verified with zero errors.
+

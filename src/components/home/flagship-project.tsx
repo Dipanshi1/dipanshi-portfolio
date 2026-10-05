@@ -163,7 +163,7 @@ min(1.0, Base Score + 0.30 × Explicit Citation Match)`}
               <Button
                 variant="primary"
                 size="md"
-                href="#manaksetu"
+                href="/work/manaksetu"
                 className="gap-2 text-xs h-10 px-5"
               >
                 <span>Flagship Case Study</span>

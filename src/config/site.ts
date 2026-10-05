@@ -14,9 +14,9 @@ export const siteConfig = {
     email: "mailto:dipanshig98@gmail.com",
   },
   nav: [
-    { label: "Work", href: "#work" },
-    { label: "Stack", href: "#stack" },
-    { label: "About", href: "#about" },
+    { label: "Work", href: "/#work" },
+    { label: "Stack", href: "/#stack" },
+    { label: "About", href: "/#about" },
   ],
 } as const;
 
