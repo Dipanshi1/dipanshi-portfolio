@@ -67,3 +67,11 @@
   - Previously, `justify-between` spaced the brand, navigation links, and action buttons into three disjoint regions across the viewport, leaving large artificial voids between navigation and the Resume/theme controls.
   - The new two-cluster layout (`[Brand Group] ... [Nav + Actions Group]`) clusters navigation links (`gap-5 lg:gap-7`) closely with Resume and ThemeToggle via a compact `gap-5 sm:gap-6 lg:gap-7` with an editorial vertical hairline divider (`h-4 w-px bg-border-subtle`).
   - Responsiveness is preserved across all breakpoints: on mobile viewports (`< md`), desktop nav and the Resume button hide seamlessly while leaving brand on the left and theme toggle + mobile trigger on the right without horizontal overflow.
+
+## Stale Server Termination & Cache Invalidation
+
+### 9. Elimination of Background Dev Server & Full `.next` Cache Invalidation
+- **Decision:** Terminate background Next.js development server (PIDs 6767, 6769, 6797) running on port 3000 that was launched prior to email updates and serving stale in-memory cached builds containing `dipanshig982@gmail.com`.
+- **Reasoning:**
+  - Code audits confirmed all source files correctly resolved to `dipanshig98@gmail.com`. The persistence of `dipanshig982@gmail.com` in the user's browser was caused by a stale `next dev` process from 09:31 bound to port 3000 serving a legacy `.next` cache.
+  - Purged `.next`, terminated all stale node/next background processes, executed a clean rebuild, and verified the rendered HTML output on fresh production servers.
