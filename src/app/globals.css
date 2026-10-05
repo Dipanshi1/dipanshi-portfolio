@@ -31,6 +31,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--bg-canvas);
     color: var(--text-primary);
@@ -64,6 +67,14 @@
       display: grid;
       grid-template-columns: 7.5fr 4.5fr;
     }
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 

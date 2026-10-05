@@ -88,3 +88,54 @@
 
 - Decision: Frame project impact around verified technical capability (successful end-to-end execution on municipal LED street lighting and civil tender notices demonstrated for SIH 26108) with zero fabricated business metrics, user numbers, or commercial scale.
 - Reason: Portfolio guidelines mandate zero invented metrics and strict grounding in code and project facts.
+
+## Milestone 4 — Visual Detail Pass for ManakSetu Flagship Case Study
+
+### 10. 3-Tier Surface Hierarchy: De-Boxing Generic Card Container Fatigue
+- **Decision:** Restructure all case study sections into a disciplined 3-tier surface hierarchy:
+  - *Level 1 (Open Editorial Section):* Pure typography, generous vertical rhythm (`py-16 sm:py-24 lg:py-32`), asymmetric grids, and precision hairline rules (`border-border-subtle`).
+  - *Level 2 (Hairline Technical Exhibit):* Subtle surface elevation (`bg-surface/40` or `bg-surface-elevated/40`), key-value specification matrices, and tabular ledgers.
+  - *Level 3 (Focused Product Artifact):* High-fidelity, chrome-framed interactive exhibits representing actual tool interfaces (Runtime Hero Artifact, Architecture Canvas, Formula Exhibit, and Split Audit Inspector).
+- **Reasoning:**
+  - Prevents the case study from looking like a generic SaaS documentation page filled with rounded cards.
+  - Aligns the visual language with high-end editorial engineering publications and industrial systems whitepapers.
+
+### 11. Composed Hero with Opening Runtime Product Artifact
+- **Decision:** Transform the case study hero into a composed editorial opening featuring small monospace metadata (`SIH 26108 · 2024–2025 · Demonstrated Prototype`), high-contrast display typography (`MANAKSETU`), a prominent positioning quote, and an authentic runtime product artifact displaying real project data (`NIT_MCD-2024-LT-09` 120W LED Street Luminaire matched to `IS 10322 (Part 5/Sec 3): 2012`).
+- **Reasoning:**
+  - Avoids the generic "Eyebrow → Title → Paragraph → Button → immediate next section" pattern.
+  - The opening artifact gives recruiters and engineering leads immediate visual payoff and evidence of real system design before reading deep technical copy.
+
+### 12. Sticky Editorial Section Navigation (CaseStudyNav)
+- **Decision:** Implement a sticky sub-navigation bar (`CaseStudyNav`) pinned at `top-14 sm:top-16` beneath the global header, featuring active scroll-spy tracking across all 8 numbered sections (`01 Problem`, `02 Architecture`, `03 Ranking`, `04 Extraction`, `05 Verification`, `06 Tradeoffs`, `07 Contribution`, `08 Roadmap`).
+- **Reasoning:**
+  - Provides effortless anchor navigation across an information-dense deep dive without polluting global header navigation.
+  - Responsive with smooth horizontal scrolling (`no-scrollbar`) on mobile viewports and instant visual feedback on active sections.
+
+### 13. System Architecture: Interactive Canvas & Dual Desktop/Mobile Topology
+- **Decision:** Elevate the 7-stage pipeline (`Input` → `Extraction` → `Query / Requirement` → `Hybrid Retrieval` → `Ranking` → `Applicability` → `Evidence`) into an expansive interactive topology canvas on desktop with click/hover contract inspection, and a vertical connected timeline on mobile.
+- **Reasoning:**
+  - Replaces generic card containers with an authentic systems diagram feel.
+  - Clearly exposes input/output data contracts and execution boundaries at each stage.
+
+### 14. Deterministic Ranking Formula Hero Visual
+- **Decision:** Present the scoring formula as a dedicated engineering blueprint exhibit, visually separating the 6-factor base linear combination from the conditional +0.30 citation boost, and rendering horizontal signal rows with proportional visual weight bars.
+- **Reasoning:**
+  - Elevates the mathematical formula to hero visual status rather than burying it in a small code snippet.
+  - Clearly communicates that the +0.30 boost is a post-score additive boost clamped at 1.0 rather than a diluted base weight.
+
+### 15. Dual-Pass Extraction Execution Flow & Explicit Edge Guards
+- **Decision:** Re-architect Document Extraction as a directional execution flow (`Primary: PyMuPDF` vs `Fallback: pdfplumber`) paired with an explicit technical ledger for defensive edge conditions (`_MIN_TEXT_LENGTH < 100` scanned PDF halt, encrypted file rejection, and immutable page provenance markers).
+- **Reasoning:**
+  - Clarifies runtime branching heuristics and defends system boundaries without resorting to giant generic alert boxes.
+
+### 16. Evidence Verification Centerpiece: Multi-Sample Split Audit Console
+- **Decision:** Build an interactive, authentic split-view audit console allowing toggling between municipal LED lighting (`NIT_MCD-2024-LT-09`) and structural cement (`BOQ_CIVIL-2024-C53`), explicitly emphasizing the distinction between statistical `Retrieval Match` and statutory `Legal Applicability`.
+- **Reasoning:**
+  - Forms the emotional and visual centerpiece of the case study.
+  - Bridges technical retrieval mechanics with real-world procurement compliance and legal defensibility.
+
+### 17. Visual Closure Strip (NEXT / Selected Work)
+- **Decision:** Conclude the case study with an editorial roadmap and an intentional `NEXT / SELECTED WORK` project navigation strip linking back to secondary engineering projects (`AgriVision AI`, `Interview Tracker Pro`, `Career Adviser`) and top-of-page anchor.
+- **Reasoning:**
+  - Eliminates awkward empty space before the global footer and guarantees visual closure.

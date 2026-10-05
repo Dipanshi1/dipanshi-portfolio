@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CaseStudyHero } from "./components/case-study-hero";
+import { CaseStudyNav } from "./components/case-study-nav";
 import { ProblemStatement } from "./components/problem-statement";
 import { SystemArchitecture } from "./components/system-architecture";
 import { RetrievalRanking } from "./components/retrieval-ranking";
@@ -19,6 +20,7 @@ export default function ManakSetuCaseStudyPage() {
   return (
     <article className="flex flex-col w-full selection:bg-accent-primary/20 selection:text-text-primary">
       <CaseStudyHero />
+      <CaseStudyNav />
       <ProblemStatement />
       <SystemArchitecture />
       <RetrievalRanking />
