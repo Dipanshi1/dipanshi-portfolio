@@ -5,23 +5,31 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 
 export function FlagshipProject() {
+  const technicalSignals = [
+    "Hybrid Retrieval (Qdrant + BM25)",
+    "Deterministic 6-Signal Ranking",
+    "Evidence-Grounded Verification",
+    "Dual-Pass Parser (PyMuPDF)",
+    "FastAPI & Next.js 14",
+  ];
+
   return (
     <section
       id="work"
       aria-labelledby="flagship-heading"
-      className="relative w-full border-t border-border-subtle bg-canvas py-16 sm:py-24 lg:py-32 transition-colors duration-150"
+      className="relative w-full border-t border-border-subtle bg-canvas py-16 sm:py-20 lg:py-24 transition-colors duration-150 scroll-mt-16"
     >
       <div id="manaksetu" className="absolute -top-16" aria-hidden="true" />
       <Container>
-        {/* Section Identity & Eyebrow */}
-        <div className="space-y-4 max-w-3xl pb-12 sm:pb-16">
+        {/* Section Identity */}
+        <div className="space-y-3 max-w-3xl pb-10 sm:pb-14">
           <div className="flex items-center gap-2">
             <span
               className="w-1.5 h-1.5 rounded-full bg-accent-primary"
               aria-hidden="true"
             />
             <Eyebrow className="text-text-tertiary font-semibold tracking-wider">
-              Flagship Project · Applied AI &amp; Full-Stack Systems
+              Flagship Project · Applied AI &amp; Regulatory Systems
             </Eyebrow>
           </div>
           <h2
@@ -31,145 +39,70 @@ export function FlagshipProject() {
             ManakSetu
           </h2>
           <p className="font-mono text-sm sm:text-base text-accent-primary font-medium tracking-tight">
-            &ldquo;From procurement requirements to defensible standards intelligence.&rdquo;
-          </p>
-          <p className="text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
-            AI-powered intelligence platform engineered to automate the extraction
-            of complex technical specifications from Indian public procurement
-            tenders and verify compliance against Bureau of Indian Standards (BIS)
-            records.
+            AI-powered procurement intelligence for applicable Indian Standards.
           </p>
         </div>
 
-        {/* Asymmetric 2-Column Presentation */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-16 items-start">
-          {/* Left Column: Engineering Whitepaper & Technical Narrative */}
-          <div className="lg:col-span-6 flex flex-col space-y-8">
-            {/* The Technical Challenge */}
+        {/* 2-Column High-Impact Presentation */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-start">
+          {/* Left Column: Problem, Value Statement & Technical Signals */}
+          <div className="lg:col-span-5 flex flex-col space-y-6">
+            {/* Concise Value Statement */}
             <div className="space-y-3">
               <span className="font-mono text-xs uppercase tracking-wider text-text-tertiary block">
-                01 / The Technical Friction
+                The Engineering Problem
               </span>
-              <h3 className="text-xl font-semibold tracking-tight text-text-primary">
-                Why Pure Dense Vector Search Failed
-              </h3>
               <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
-                Indian procurement tenders contain dense technical bills of quantities
-                (BOQ) citing specific regulatory clauses. In benchmark testing, pure
-                dense vector embeddings blurred numerical tolerances (e.g., 53 Grade
-                vs 43 Grade cement) and failed to prioritize exact code citations
-                over general topical relevance.
+                Indian government procurement tenders arrive as dense, unstandardized PDFs.
+                In benchmark testing, pure vector search failed by blurring numerical tolerances
+                (e.g., 53 Grade vs 43 Grade cement) and diluting exact standard codes.
+              </p>
+              <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
+                ManakSetu automates parameter extraction and executes hybrid vector and lexical retrieval
+                across 10,000+ Bureau of Indian Standards (BIS) records, delivering mathematically
+                defensible compliance audits for public sector procurement officers.
               </p>
             </div>
 
-            <div className="h-px w-full bg-border-subtle" aria-hidden="true" />
-
-            {/* The Multi-Signal Solution */}
-            <div className="space-y-4">
+            {/* 5 Strong Technical Signals */}
+            <div className="space-y-2.5 pt-1">
               <span className="font-mono text-xs uppercase tracking-wider text-text-tertiary block">
-                02 / Architectural Decision
+                Key Technical Signals
               </span>
-              <h3 className="text-xl font-semibold tracking-tight text-text-primary">
-                Weighted Multi-Signal Reranking Pipeline
-              </h3>
-              <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
-                Engineered a hybrid retrieval system combining Qdrant vector search
-                with BM25 lexical matching. The recommendation pipeline distinguishes
-                deterministic rank_results scoring from subsequent LightGBM
-                applicability soft-reranking, directly verified against the codebase:
-              </p>
-
-              {/* Exact Formula Block */}
-              <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated/70 font-mono text-xs space-y-2 text-text-secondary">
-                <div className="text-[11px] text-text-tertiary uppercase tracking-wider font-semibold">
-                  Scoring Formula (ai-engine/src/ranking.py)
-                </div>
-                <div className="text-text-primary font-medium leading-relaxed whitespace-pre-line">
-                  {`Base Score =
-0.40 × Semantic
-+ 0.15 × BM25
-+ 0.20 × Product Match
-+ 0.10 × App/Domain Match
-+ 0.10 × Tech Coverage
-+ 0.05 × Metadata Confidence
-
-Final Relevance =
-min(1.0, Base Score + 0.30 × Explicit Citation Match)`}
-                </div>
-                <div className="text-[11px] text-accent-primary leading-relaxed">
-                  The +0.30 citation boost is a conditional additive boost applied after the base score and clamped at 1.0, not a seventh weighted component.
-                </div>
+              <div className="flex flex-wrap gap-2">
+                {technicalSignals.map((signal) => (
+                  <span
+                    key={signal}
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface border border-border-subtle font-mono text-xs text-text-primary"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent-primary" aria-hidden="true" />
+                    <span>{signal}</span>
+                  </span>
+                ))}
               </div>
             </div>
 
-            <div className="h-px w-full bg-border-subtle" aria-hidden="true" />
-
-            {/* Verified Technical Highlights */}
-            <div className="space-y-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-text-tertiary block">
-                03 / Verified System Capabilities
+            {/* Team Context Note */}
+            <div className="p-3.5 rounded-lg border border-border-subtle bg-surface/50 font-mono text-xs text-text-tertiary space-y-1">
+              <span className="text-text-secondary font-medium text-[11px] block">
+                Smart India Hackathon (SIH 26108) Prototype
               </span>
-              <ul className="space-y-2.5 text-xs sm:text-sm text-text-secondary">
-                <li className="flex items-start gap-2.5">
-                  <span className="text-accent-primary font-mono text-xs pt-0.5" aria-hidden="true">
-                    •
-                  </span>
-                  <span>
-                    <strong className="text-text-primary font-medium">Dual-Pass Document Ingestion:</strong>{" "}
-                    Benchmarked PyMuPDF against pdfplumber for multi-column BOQ table
-                    extraction and layout preservation.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-accent-primary font-mono text-xs pt-0.5" aria-hidden="true">
-                    •
-                  </span>
-                  <span>
-                    <strong className="text-text-primary font-medium">Zero-Hallucination Grounding:</strong>{" "}
-                    Extracted clauses are verified strictly against indexed BIS records
-                    with highlighted provenance; unverified fields trigger human-review flags.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-accent-primary font-mono text-xs pt-0.5" aria-hidden="true">
-                    •
-                  </span>
-                  <span>
-                    <strong className="text-text-primary font-medium">Applicability Classification:</strong>{" "}
-                    Subsequent LightGBM applicability soft-reranking serialized via locked
-                    scikit-learn pipeline to predict applicability without prediction drift.
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="h-px w-full bg-border-subtle" aria-hidden="true" />
-
-            {/* Ownership & Context Transparency */}
-            <div className="space-y-2 text-xs font-mono text-text-tertiary">
-              <div className="text-text-secondary font-medium">
-                Team Context (Smart India Hackathon · SIH 26108)
-              </div>
-              <p className="leading-relaxed">
-                Dipanshi led product design, UI architecture in Figma &amp; Next.js/React,
-                and AI retrieval/ranking integration. Backend microservices built in
-                collaboration with team contributors. Batch queue architecture (Celery/Redis)
-                marked for next phase.
+              <p className="text-[11px] leading-relaxed">
+                Dipanshi led product design in Figma, frontend systems in Next.js 14, and
+                retrieval/ranking UI integration. Backend microservices built collaboratively with team contributors.
               </p>
             </div>
 
-            {/* Action Links */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            {/* Direct Action CTAs */}
+            <div className="pt-2 flex flex-wrap items-center gap-3.5">
               <Button
                 variant="primary"
                 size="md"
                 href="/work/manaksetu"
                 className="gap-2 text-xs h-10 px-5"
               >
-                <span>Flagship Case Study</span>
-                <span className="text-xs" aria-hidden="true">
-                  →
-                </span>
+                <span>View Full Case Study</span>
+                <span className="text-xs" aria-hidden="true">→</span>
               </Button>
 
               <Button
@@ -180,168 +113,135 @@ min(1.0, Base Score + 0.30 × Explicit Citation Match)`}
                 className="gap-1.5 text-xs h-10 px-4"
               >
                 <span>Codebase Repository</span>
-                <span className="text-xs" aria-hidden="true">
-                  ↗
-                </span>
+                <span className="text-xs" aria-hidden="true">↗</span>
               </Button>
             </div>
           </div>
 
-          {/* Right Column: Authentic Split-View Verification Interface Frame */}
-          <div className="lg:col-span-6 w-full">
+          {/* Right Column: Strong Product / System Visual */}
+          <div className="lg:col-span-7 w-full">
             <div
-              className="rounded-xl border border-border-subtle bg-surface p-5 sm:p-7 shadow-sm space-y-6 select-none"
+              className="rounded-xl border border-border-subtle bg-surface p-5 sm:p-7 shadow-xs space-y-5 select-none"
               aria-label="ManakSetu tender compliance audit preview"
             >
               {/* Frame Header */}
-              <div className="flex items-center justify-between pb-3.5 border-b border-border-subtle">
+              <div className="flex items-center justify-between pb-3.5 border-b border-border-subtle font-mono text-xs">
                 <div className="flex items-center gap-2">
                   <span
-                    className="w-2 h-2 rounded-sm bg-accent-primary/20 border border-accent-primary/40"
+                    className="w-2 h-2 rounded-sm bg-accent-primary/20 border border-accent-primary/50"
                     aria-hidden="true"
                   />
-                  <span className="font-mono text-[11px] font-semibold uppercase tracking-wider text-text-secondary">
-                    Verification Audit Engine
+                  <span className="font-semibold uppercase tracking-wider text-text-secondary text-[11px]">
+                    Audit Verification Preview
                   </span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 text-[10px] font-mono text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 bg-emerald-500/10">
-                  <span
-                    className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"
-                    aria-hidden="true"
-                  />
-                  <span>Grounded Proof</span>
+                <div className="inline-flex items-center gap-1.5 text-[10px] text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 bg-emerald-500/10 font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+                  <span>Clause Grounded · Score 0.94</span>
                 </div>
               </div>
 
               {/* Split Verification Panels */}
               <div className="space-y-4">
                 {/* Panel 1: Tender Specification Extract */}
-                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated space-y-2">
-                  <div className="flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-text-tertiary uppercase tracking-wider">
-                      Input Tender Extract
+                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated/50 space-y-2">
+                  <div className="flex items-center justify-between font-mono text-xs">
+                    <span className="text-text-tertiary uppercase tracking-wider text-[11px]">
+                      01 / Ingested Tender Extract
                     </span>
-                    <span className="text-text-secondary">
-                      BOQ_Civil_Tender_2024.pdf
+                    <span className="text-text-secondary text-[11px]">
+                      NIT_MCD-2024-LT-09 (p. 14 § 8.2)
                     </span>
                   </div>
-                  <div className="p-2.5 rounded border border-amber-500/20 bg-amber-500/5 text-xs font-mono text-text-primary leading-relaxed">
-                    &ldquo;Supply of 53 Grade Ordinary Portland Cement conforming to
-                    relevant Indian Standards. Minimum 28-day compressive strength of
-                    53 MPa required for RCC structure.&rdquo;
+                  <div className="p-3 rounded border border-amber-500/20 bg-amber-500/5 text-xs font-mono text-text-primary leading-relaxed">
+                    &ldquo;Supply of 120W outdoor LED street lighting luminaires rated for operation
+                    at 240V AC, 50 Hz, with total harmonic distortion (THD) &lt; 10%, and minimum
+                    IP66 ingress protection rating.&rdquo;
                   </div>
-                  <div className="flex items-center justify-between text-[11px] font-mono text-text-tertiary pt-1">
-                    <span>Target: Cement Specification</span>
-                    <span>Clause 4.2 · Civil Section</span>
+                  <div className="flex flex-wrap gap-1.5 font-mono text-[10px] text-text-secondary pt-1">
+                    <span className="px-1.5 py-0.5 rounded bg-surface border border-border-subtle">
+                      120W Rating
+                    </span>
+                    <span className="px-1.5 py-0.5 rounded bg-surface border border-border-subtle">
+                      THD &lt; 10%
+                    </span>
+                    <span className="px-1.5 py-0.5 rounded bg-surface border border-border-subtle">
+                      IP66 Ingress
+                    </span>
                   </div>
                 </div>
 
                 {/* Connection Indicator */}
                 <div className="flex items-center justify-center -my-1 text-text-tertiary font-mono text-xs">
-                  <span className="px-2 py-0.5 rounded border border-border-subtle bg-surface text-[10px] uppercase tracking-wider">
-                    Hybrid Retrieval &amp; Multi-Signal Match ↳
+                  <span className="px-2.5 py-0.5 rounded border border-border-subtle bg-surface text-[10px] uppercase tracking-wider">
+                    Hybrid Retrieval &amp; Deterministic Scoring ↳
                   </span>
                 </div>
 
-                {/* Panel 2: Verified BIS Standard Grounding */}
-                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated space-y-2.5">
-                  <div className="flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-accent-primary uppercase tracking-wider font-semibold">
-                      Matched BIS Standard
+                {/* Panel 2: Matched Standard */}
+                <div className="p-4 rounded-lg border border-border-subtle bg-surface-elevated/50 space-y-2.5">
+                  <div className="flex items-center justify-between font-mono text-xs">
+                    <span className="text-accent-primary uppercase tracking-wider font-semibold text-[11px]">
+                      02 / Matched Indian Standard
                     </span>
-                    <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold text-[10px]">
-                      Confidence: High (0.94)
+                    <span className="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-semibold text-[10px]">
+                      High Confidence
                     </span>
                   </div>
 
-                  <div className="space-y-1">
-                    <div className="font-mono text-sm font-semibold text-text-primary">
-                      IS 12269:2013
+                  <div className="space-y-0.5">
+                    <div className="font-mono text-sm sm:text-base font-bold text-text-primary">
+                      IS 10322 (Part 5/Sec 3): 2012
                     </div>
-                    <div className="text-xs text-text-secondary">
-                      Ordinary Portland Cement, 53 Grade — Specification
+                    <div className="text-xs text-text-secondary font-sans leading-snug">
+                      Luminaires — Particular Requirements — Luminaires for Road and Street Lighting
                     </div>
                   </div>
 
-                  <div className="p-2.5 rounded border border-border-subtle bg-surface text-xs font-mono text-text-primary space-y-1">
+                  <div className="p-3 rounded border border-border-subtle bg-surface text-xs font-mono space-y-1">
                     <span className="text-[10px] text-text-tertiary uppercase block">
-                      Evidence Provenance (Clause 6.2 · Table 2)
+                      Evidence Provenance: Section 3 · Table 1
                     </span>
-                    <p className="text-text-secondary leading-relaxed">
-                      &ldquo;28-day compressive strength shall be not less than 53 MPa.
-                      Verified from indexed Bureau of Indian Standards catalog.&rdquo;
+                    <p className="text-text-secondary leading-relaxed font-sans text-xs">
+                      &ldquo;Specifies electrical safety, ingress protection (minimum IP65/IP66 for outdoor enclosures),
+                      and driver distortion thresholds for public street lighting.&rdquo;
                     </p>
                   </div>
 
-                  {/* Multi-Signal Breakdown Metrics */}
-                  <div className="grid grid-cols-3 gap-2 pt-1 font-mono text-[10px] text-text-tertiary">
-                    <div className="p-2 rounded border border-border-subtle bg-surface text-center space-y-0.5">
-                      <div className="text-text-primary font-semibold">0.91</div>
-                      <div>Semantic Cosine</div>
+                  {/* 4 Attribution Scores */}
+                  <div className="grid grid-cols-4 gap-1.5 font-mono text-[10px] text-center pt-1">
+                    <div className="p-1.5 rounded bg-surface border border-border-subtle">
+                      <div className="text-text-primary font-bold">0.91</div>
+                      <div className="text-text-tertiary text-[9px]">Semantic</div>
                     </div>
-                    <div className="p-2 rounded border border-border-subtle bg-surface text-center space-y-0.5">
-                      <div className="text-text-primary font-semibold">0.88</div>
-                      <div>BM25 Lexical</div>
+                    <div className="p-1.5 rounded bg-surface border border-border-subtle">
+                      <div className="text-text-primary font-bold">0.85</div>
+                      <div className="text-text-tertiary text-[9px]">BM25</div>
                     </div>
-                    <div className="p-2 rounded border border-border-subtle bg-surface text-center space-y-0.5">
-                      <div className="text-emerald-600 dark:text-emerald-400 font-semibold">100%</div>
-                      <div>Clause Grounding</div>
+                    <div className="p-1.5 rounded bg-surface border border-border-subtle">
+                      <div className="text-emerald-600 dark:text-emerald-400 font-bold">1.00</div>
+                      <div className="text-text-tertiary text-[9px]">Product</div>
+                    </div>
+                    <div className="p-1.5 rounded bg-surface border border-border-subtle">
+                      <div className="text-accent-primary font-bold">1.00</div>
+                      <div className="text-text-tertiary text-[9px]">Meta Conf</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Data Flow Strip */}
-              <div className="pt-3 border-t border-border-subtle space-y-2">
-                <span className="font-mono text-[10px] uppercase tracking-wider text-text-tertiary block">
-                  End-to-End Pipeline
-                </span>
-                <div className="flex flex-wrap items-center gap-1.5 font-mono text-[10px] text-text-secondary">
-                  <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                    Tender PDF
-                  </span>
-                  <span className="text-text-tertiary">→</span>
-                  <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                    PyMuPDF
-                  </span>
-                  <span className="text-text-tertiary">→</span>
-                  <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                    Qdrant + BM25
-                  </span>
-                  <span className="text-text-tertiary">→</span>
-                  <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle">
-                    Reranking
-                  </span>
-                  <span className="text-text-tertiary">→</span>
-                  <span className="px-1.5 py-0.5 rounded bg-surface-elevated border border-border-subtle text-accent-primary">
-                    Audit Report
-                  </span>
+              {/* Footer Strip */}
+              <div className="pt-2 border-t border-border-subtle flex items-center justify-between font-mono text-[11px]">
+                <div className="flex items-center gap-1.5 text-text-secondary">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                  <span>QCO Mandated: S.O. 2357(E)</span>
                 </div>
-              </div>
-
-              {/* Verified Stack Taxonomy */}
-              <div className="pt-2 flex flex-wrap gap-1.5 font-mono text-[11px]">
-                <span className="px-2 py-0.5 rounded border border-border-subtle bg-surface-elevated text-text-secondary">
-                  FastAPI
-                </span>
-                <span className="px-2 py-0.5 rounded border border-border-subtle bg-surface-elevated text-text-secondary">
-                  Qdrant Cloud
-                </span>
-                <span className="px-2 py-0.5 rounded border border-border-subtle bg-surface-elevated text-text-secondary">
-                  BM25
-                </span>
-                <span className="px-2 py-0.5 rounded border border-border-subtle bg-surface-elevated text-text-secondary">
-                  Gemini API
-                </span>
-                <span className="px-2 py-0.5 rounded border border-border-subtle bg-surface-elevated text-text-secondary">
-                  PyMuPDF
-                </span>
-                <span className="px-2 py-0.5 rounded border border-border-subtle bg-surface-elevated text-text-secondary">
-                  PostgreSQL
-                </span>
-                <span className="px-2 py-0.5 rounded border border-border-subtle bg-surface-elevated text-text-secondary">
-                  Docker
-                </span>
+                <a
+                  href="/work/manaksetu"
+                  className="text-accent-primary hover:underline text-[11px]"
+                >
+                  Read full case study →
+                </a>
               </div>
             </div>
           </div>

@@ -139,3 +139,43 @@
 - **Decision:** Conclude the case study with an editorial roadmap and an intentional `NEXT / SELECTED WORK` project navigation strip linking back to secondary engineering projects (`AgriVision AI`, `Interview Tracker Pro`, `Career Adviser`) and top-of-page anchor.
 - **Reasoning:**
   - Eliminates awkward empty space before the global footer and guarantees visual closure.
+
+
+## Recruiter-First Refinement Pass
+
+### 18. Candidate Identity & 10–20 Second Recruiter Comprehension (Hero Refactor)
+- **Decision:** Restructure homepage Hero to immediately communicate Dipanshi Gupta's identity, academic stage (3rd-Year B.Tech Computer Science student), primary engineering focus (Applied AI, Backend Systems, and Product Design), and immediate availability for internships.
+- **Reasoning:**
+  - Previous hero had high visual polish but buried the candidate's core profile, academic year, and internship availability under abstract engineering marketing copy.
+  - Placed primary CTAs front and center: "View Selected Work" (`/#work`) and "View Resume" (`/resume.pdf` with external icon), accompanied by a direct secondary access row (GitHub, LinkedIn, and `mailto:dipanshig98@gmail.com`).
+  - Replaced repetitive right-column bullet lists with a clean "Recruiter Fast-Look / Candidate Snapshot" featuring key facts (Academic Level, Primary Focus, Flagship Demonstration, and Internship Availability).
+
+### 19. Capability Pillars Streamlining & De-Duplication
+- **Decision:** Streamline Capability Pillars into a clean 3-card grid (Applied AI & Search Systems, Full-Stack Systems & APIs, Product Design & Frontend Architecture) with high-signal descriptions and verified toolchain tags.
+- **Reasoning:**
+  - Removed multi-bullet laundry lists that duplicated descriptions found elsewhere on the page.
+  - Emphasized actual engineering implementation: hybrid vector/lexical retrieval, deterministic scoring, relational state machines, and design-system fidelity.
+
+### 20. Flagship Case Study Homepage Presentation
+- **Decision:** Present ManakSetu on the homepage as a high-signal recruiter summary rather than repeating the full case study inline.
+- **Reasoning:**
+  - The homepage section provides a crisp 5-point technical signal ledger (Hybrid Qdrant + BM25, 6-factor deterministic scoring, dual-pass PDF extraction, verifiable clause provenance, and SIH 26108 demonstration) paired with an authentic split-view preview.
+  - Direct primary CTA routes recruiters to the full engineering deep dive at `/work/manaksetu`.
+
+### 21. Secondary Projects Editorial Grid Compression
+- **Decision:** Replace the 723-line monolithic secondary projects section on the homepage with an elegant, scannable 3-column editorial grid (AgriVision AI, Interview Tracker Pro, Career Adviser).
+- **Reasoning:**
+  - Previously, secondary projects included exhaustive multi-screen schema models, telemetry widgets, and deep code mocks that created extreme scroll fatigue.
+  - The refined layout communicates problem domain, architectural solution, verified stack, and repository links concisely, leaving room for interview discussion.
+
+### 22. Dedicated About Section & Anchor Resolution
+- **Decision:** Create a dedicated, professional About section at `id="about"` featuring an academic background summary (3rd-year B.Tech CSE), technical philosophy, campus leadership (Google Developer Groups on Campus contributor), a recruiter fast-facts ledger, and direct contact buttons.
+- **Reasoning:**
+  - Resolved a broken navigation link: `/#about` existed in `siteConfig.nav`, header, and footer, but no element on the homepage possessed `id="about"`.
+  - Gives recruiters the exact personal context, academic timeline, and collaboration experience needed to evaluate internship fit.
+
+### 23. Case Study De-Duplication & Typographic Legibility
+- **Decision:** Streamline `system-architecture.tsx` by removing the redundant 7-row specification table beneath the 7-stage interactive topology canvas. Upgrade micro-labels across case study components from `text-[9px]` to `text-[10px]` / `text-xs`.
+- **Reasoning:**
+  - The lower specification table in `system-architecture.tsx` duplicated the exact text rendered inside the interactive canvas inspector bar. Removing it cut ~30% unnecessary vertical length without losing any technical proof.
+  - Upgrading micro-labels ensures text remains crisp, legible, and compliant with accessibility standards across high-DPI displays.

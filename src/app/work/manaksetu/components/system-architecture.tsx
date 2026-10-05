@@ -86,7 +86,7 @@ export function SystemArchitecture() {
     <section
       id="architecture"
       aria-labelledby="architecture-heading"
-      className="w-full border-b border-border-subtle bg-canvas py-16 sm:py-24 lg:py-32 scroll-mt-24 sm:scroll-mt-28 transition-colors duration-150"
+      className="w-full border-b border-border-subtle bg-canvas py-16 sm:py-20 lg:py-24 scroll-mt-24 sm:scroll-mt-28 transition-colors duration-150"
     >
       <Container>
         {/* Section Header */}
@@ -97,26 +97,26 @@ export function SystemArchitecture() {
             System Architecture
           </span>
           <span className="text-border-subtle hidden sm:inline">/</span>
-          <span className="hidden sm:inline text-text-tertiary">Dataflow &amp; Processing Canvas</span>
+          <span className="hidden sm:inline text-text-tertiary">End-to-End Pipeline</span>
         </div>
 
         {/* Section Intro */}
-        <div className="mt-12 sm:mt-16 max-w-3xl space-y-5">
+        <div className="mt-10 sm:mt-14 max-w-3xl space-y-4">
           <h2
             id="architecture-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-text-primary leading-[1.1]"
+            className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-text-primary leading-[1.15]"
           >
             End-to-End System Pipeline
           </h2>
           <p className="text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
-            The ManakSetu architecture decouples high-speed text ingestion, parameter extraction,
+            The architecture decouples high-speed text ingestion, parameter extraction,
             hybrid retrieval, deterministic multi-signal scoring, and evidence assembly into a
             fault-tolerant, inspectable 7-stage pipeline.
           </p>
         </div>
 
         {/* Architectural Canvas (Level 2/3 Surface) */}
-        <div className="mt-12 sm:mt-16 w-full rounded-xl border border-border-subtle bg-surface/40 overflow-hidden shadow-xs">
+        <div className="mt-10 sm:mt-14 w-full rounded-xl border border-border-subtle bg-surface/40 overflow-hidden shadow-xs">
           {/* Canvas Controls & Status Bar */}
           <div className="px-5 sm:px-8 py-3.5 border-b border-border-subtle bg-surface-elevated/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 font-mono text-xs">
             <div className="flex items-center gap-2.5">
@@ -128,7 +128,7 @@ export function SystemArchitecture() {
               <span className="text-text-tertiary text-[11px]">7 Sequential Stages</span>
             </div>
             <div className="flex items-center gap-2 text-[11px] text-text-tertiary">
-              <span className="hidden md:inline">Click or hover node to inspect contracts:</span>
+              <span className="hidden md:inline">Click stage to inspect data contract:</span>
               <span className="px-2 py-0.5 rounded bg-surface border border-border-subtle text-accent-primary font-medium">
                 Stage {PIPELINE_STAGES[activeStage].num}: {PIPELINE_STAGES[activeStage].stageName}
               </span>
@@ -296,50 +296,6 @@ export function SystemArchitecture() {
                 </span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Detailed Stage Specifications Ledger (Level 2 Hairline Ledger) */}
-        <div className="mt-16 space-y-6">
-          <div className="flex items-center justify-between pb-3 border-b border-border-subtle font-mono text-xs">
-            <h3 className="font-semibold uppercase tracking-wider text-text-primary text-xs">
-              Complete Pipeline Specification Ledger
-            </h3>
-            <span className="text-text-tertiary text-[11px]">Deterministic Data Flow</span>
-          </div>
-
-          <div className="divide-y divide-border-subtle border-t border-b border-border-subtle">
-            {PIPELINE_STAGES.map((step) => (
-              <div
-                key={step.num}
-                className="py-5 grid grid-cols-1 lg:grid-cols-12 gap-4 items-start text-xs font-mono hover:bg-surface/30 transition-colors duration-150"
-              >
-                <div className="lg:col-span-1 text-accent-primary font-bold text-sm">
-                  {step.num}
-                </div>
-                <div className="lg:col-span-3 space-y-1">
-                  <span className="font-semibold text-text-primary block text-sm font-sans">
-                    {step.title}
-                  </span>
-                  <span className="text-text-tertiary text-[11px] block">
-                    {step.technology}
-                  </span>
-                </div>
-                <div className="lg:col-span-5 font-sans text-text-secondary text-xs leading-relaxed">
-                  {step.purpose}
-                </div>
-                <div className="lg:col-span-3 space-y-1 text-[11px] text-text-tertiary">
-                  <div>
-                    <span className="text-text-secondary font-medium">In: </span>
-                    {step.input}
-                  </div>
-                  <div>
-                    <span className="text-text-secondary font-medium">Out: </span>
-                    {step.output}
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </Container>

@@ -262,19 +262,19 @@ export function CaseStudyHero() {
                 <div className="grid grid-cols-4 gap-1.5 font-mono text-[10px] text-center pt-1">
                   <div className="p-1.5 rounded bg-surface border border-border-subtle">
                     <div className="text-text-primary font-bold">0.91</div>
-                    <div className="text-text-tertiary text-[9px]">Semantic</div>
+                    <div className="text-text-tertiary text-[10px]">Semantic</div>
                   </div>
                   <div className="p-1.5 rounded bg-surface border border-border-subtle">
                     <div className="text-text-primary font-bold">0.85</div>
-                    <div className="text-text-tertiary text-[9px]">BM25</div>
+                    <div className="text-text-tertiary text-[10px]">BM25</div>
                   </div>
                   <div className="p-1.5 rounded bg-surface border border-border-subtle">
                     <div className="text-emerald-600 dark:text-emerald-400 font-bold">1.00</div>
-                    <div className="text-text-tertiary text-[9px]">Product</div>
+                    <div className="text-text-tertiary text-[10px]">Product</div>
                   </div>
                   <div className="p-1.5 rounded bg-surface border border-border-subtle">
                     <div className="text-accent-primary font-bold">1.00</div>
-                    <div className="text-text-tertiary text-[9px]">Meta Conf</div>
+                    <div className="text-text-tertiary text-[10px]">Meta Conf</div>
                   </div>
                 </div>
               </div>

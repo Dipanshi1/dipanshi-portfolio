@@ -11,49 +11,55 @@ export function Hero() {
     >
       <Container className="w-full">
         <div className="grid grid-cols-1 editorial-hero-grid gap-12 lg:gap-12 xl:gap-16 items-center">
-          {/* Left / Primary Column: Identity & Positioning (7.5fr) */}
-          <div className="flex flex-col space-y-7 sm:space-y-9">
-            {/* Restrained Technical Eyebrow */}
-            <div className="flex items-center gap-2.5">
-              <span
-                className="w-1.5 h-1.5 rounded-full bg-accent-primary"
-                aria-hidden="true"
-              />
-              <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary select-none">
-                AI × Full-Stack × Product Design
-              </p>
+          {/* Left / Primary Column: Identity, Positioning & Obvious Actions */}
+          <div className="flex flex-col space-y-6 sm:space-y-8">
+            {/* Identity & Availability Eyebrow */}
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-mono">
+              <span className="font-semibold text-text-primary uppercase tracking-wider">
+                Dipanshi Gupta
+              </span>
+              <span className="text-border-subtle" aria-hidden="true">/</span>
+              <span className="text-text-secondary">
+                3rd-Year Computer Science Student
+              </span>
+              <span className="text-border-subtle hidden sm:inline" aria-hidden="true">/</span>
+              <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-[11px] font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" aria-hidden="true" />
+                <span>Available for Internships</span>
+              </div>
             </div>
 
-            {/* Dominant Editorial Display Headline (Balanced Two Lines) */}
+            {/* Dominant Display Headline */}
             <h1
               id="hero-heading"
-              className="text-3xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.95rem] 2xl:text-[4.25rem] font-semibold tracking-[-0.035em] leading-[1.06] sm:leading-[1.04] text-text-primary"
+              className="text-3xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.85rem] font-semibold tracking-[-0.035em] leading-[1.08] text-text-primary"
             >
               <span className="lg:block">I design and build</span>{" "}
               <span className="lg:block lg:whitespace-nowrap">AI-powered products.</span>
             </h1>
 
             {/* Factual Supporting Copy */}
-            <p className="text-lg sm:text-xl text-text-secondary leading-relaxed max-w-xl font-normal">
+            <p className="text-base sm:text-lg text-text-secondary leading-relaxed max-w-xl font-normal">
               Computer Science engineering student specializing in applied AI systems,
               scalable FastAPI and PostgreSQL backends, and modern Next.js interfaces.
+              Focused on bridging complex models with production user experiences.
             </p>
 
-            {/* Actions & Contextual Metadata */}
-            <div className="space-y-6 pt-1">
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            {/* Primary Actions: View Work & Resume */}
+            <div className="space-y-5 pt-1">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
                 <Button
                   variant="primary"
                   size="lg"
                   href="#work"
-                  className="justify-center gap-2 h-12 px-7 text-sm font-medium"
+                  className="justify-center gap-2 h-11 px-6 text-sm font-medium"
                 >
-                  <span>View My Work</span>
+                  <span>View Selected Work</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    width="16"
-                    height="16"
+                    width="15"
+                    height="15"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -70,128 +76,123 @@ export function Hero() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  href={`mailto:${siteConfig.email}`}
-                  className="justify-center h-12 px-7 text-sm font-medium"
+                  href={siteConfig.links.resume}
+                  className="justify-center gap-1.5 h-11 px-6 text-sm font-medium"
                 >
-                  <span>Contact Me</span>
+                  <span>View Resume</span>
+                  <span className="text-xs" aria-hidden="true">↗</span>
                 </Button>
               </div>
 
-              <div className="flex items-center gap-3 text-xs font-mono text-text-tertiary">
-                <span>Based in India</span>
-                <span className="text-border-subtle" aria-hidden="true">
-                  /
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-text-secondary">
-                  <span
-                    className="w-1.5 h-1.5 rounded-full bg-accent-success"
-                    aria-hidden="true"
-                  />
-                  Available for Internships
-                </span>
+              {/* Secondary Access: GitHub, LinkedIn, Email, Location */}
+              <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-text-tertiary pt-1">
+                <a
+                  href={siteConfig.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-secondary hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1 py-1"
+                >
+                  <span>GitHub</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <span className="text-border-subtle" aria-hidden="true">·</span>
+                <a
+                  href={siteConfig.links.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-secondary hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1 py-1"
+                >
+                  <span>LinkedIn</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <span className="text-border-subtle" aria-hidden="true">·</span>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="text-text-secondary hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1 py-1"
+                >
+                  <span>{siteConfig.email}</span>
+                </a>
+                <span className="text-border-subtle hidden sm:inline" aria-hidden="true">·</span>
+                <span className="text-text-tertiary hidden sm:inline">Based in India</span>
               </div>
             </div>
           </div>
 
-          {/* Right / Secondary Column: Open Editorial Technical Specification (4.5fr) */}
+          {/* Right / Secondary Column: Candidate Technical Snapshot */}
           <div className="w-full">
             <div
-              className="w-full space-y-7 lg:space-y-8 select-none"
-              aria-label="Technical focus and capability domains"
+              className="w-full rounded-xl border border-border-subtle bg-surface/50 p-6 sm:p-7 space-y-6 select-none"
+              aria-label="Candidate technical snapshot"
             >
-              {/* Artifact Header Strip */}
-              <div className="flex items-center justify-between pb-4 border-b border-border-subtle font-mono text-xs text-text-tertiary">
-                <span className="uppercase tracking-widest font-medium">
-                  Technical Focus
+              {/* Snapshot Header */}
+              <div className="flex items-center justify-between pb-3.5 border-b border-border-subtle font-mono text-xs text-text-tertiary">
+                <span className="uppercase tracking-widest font-medium text-text-secondary">
+                  Core Focus &amp; Stack
                 </span>
-                <span className="tracking-wider">
-                  03 Disciplines
+                <span className="tracking-wider text-[11px]">
+                  3rd-Year B.Tech CSE
                 </span>
               </div>
 
-              {/* The 3 Disciplines with Prominent Indices & Hairline Dividers */}
-              <div className="space-y-7 lg:space-y-8">
+              {/* 3 Core Competencies */}
+              <div className="space-y-5">
                 {/* 01: Applied AI & Retrieval */}
-                <div className="space-y-2.5">
-                  <div className="flex items-baseline gap-4">
-                    <span className="font-mono text-2xl lg:text-3xl font-semibold text-text-primary tracking-tight shrink-0 w-8">
-                      01
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between font-mono text-xs">
+                    <span className="font-semibold text-text-primary uppercase tracking-wider">
+                      01 / Applied AI &amp; Retrieval
                     </span>
-                    <div className="space-y-1.5 flex-1 min-w-0">
-                      <h2 className="font-mono text-xs sm:text-sm uppercase tracking-wider font-semibold text-text-primary">
-                        Applied AI &amp; Retrieval
-                      </h2>
-                      <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
-                        Hybrid Retrieval · Grounded Reasoning · Vector Indexing
-                      </p>
-                      <p className="font-mono text-xs sm:text-[13px] text-text-tertiary pt-0.5">
-                        Qdrant · Gemini API · PyMuPDF · BM25
-                      </p>
-                    </div>
+                    <span className="text-accent-primary text-[11px]">Flagship Domain</span>
+                  </div>
+                  <p className="text-xs text-text-secondary font-sans leading-relaxed">
+                    Hybrid vector search (Qdrant) + BM25 lexical matching, structured LLM extraction (Gemini API), and computer vision inference.
+                  </p>
+                  <div className="font-mono text-[11px] text-text-tertiary pt-0.5">
+                    Qdrant · Gemini API · PyMuPDF · BM25 · OpenCV
                   </div>
                 </div>
 
                 <div className="h-px w-full bg-border-subtle" aria-hidden="true" />
 
                 {/* 02: Systems & Backend */}
-                <div className="space-y-2.5">
-                  <div className="flex items-baseline gap-4">
-                    <span className="font-mono text-2xl lg:text-3xl font-semibold text-text-primary tracking-tight shrink-0 w-8">
-                      02
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between font-mono text-xs">
+                    <span className="font-semibold text-text-primary uppercase tracking-wider">
+                      02 / Systems &amp; Backend
                     </span>
-                    <div className="space-y-1.5 flex-1 min-w-0">
-                      <h2 className="font-mono text-xs sm:text-sm uppercase tracking-wider font-semibold text-text-primary">
-                        Systems &amp; Backend
-                      </h2>
-                      <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
-                        Async APIs · Relational Schemas · Container Runtimes
-                      </p>
-                      <p className="font-mono text-xs sm:text-[13px] text-text-tertiary pt-0.5">
-                        FastAPI · PostgreSQL · SQLAlchemy · Docker
-                      </p>
-                    </div>
+                    <span className="text-text-tertiary text-[11px]">Core Strength</span>
+                  </div>
+                  <p className="text-xs text-text-secondary font-sans leading-relaxed">
+                    Asynchronous FastAPI microservices, relational schema modeling (PostgreSQL / SQLAlchemy), row-level tenant security, and Docker.
+                  </p>
+                  <div className="font-mono text-[11px] text-text-tertiary pt-0.5">
+                    FastAPI · PostgreSQL · SQLAlchemy · Docker
                   </div>
                 </div>
 
                 <div className="h-px w-full bg-border-subtle" aria-hidden="true" />
 
                 {/* 03: Product & Interaction */}
-                <div className="space-y-2.5">
-                  <div className="flex items-baseline gap-4">
-                    <span className="font-mono text-2xl lg:text-3xl font-semibold text-text-primary tracking-tight shrink-0 w-8">
-                      03
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between font-mono text-xs">
+                    <span className="font-semibold text-text-primary uppercase tracking-wider">
+                      03 / Product Design &amp; UI
                     </span>
-                    <div className="space-y-1.5 flex-1 min-w-0">
-                      <h2 className="font-mono text-xs sm:text-sm uppercase tracking-wider font-semibold text-text-primary">
-                        Product &amp; Interaction
-                      </h2>
-                      <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
-                        Design Systems · Responsive Architecture · Accessible UI
-                      </p>
-                      <p className="font-mono text-xs sm:text-[13px] text-text-tertiary pt-0.5">
-                        Next.js 14 · TypeScript · Tailwind CSS · Figma
-                      </p>
-                    </div>
+                    <span className="text-text-tertiary text-[11px]">Frontend Craft</span>
+                  </div>
+                  <p className="text-xs text-text-secondary font-sans leading-relaxed">
+                    Production Next.js App Router engineering, token-driven Figma design systems, WCAG 2.1 AA accessibility, and responsive layouts.
+                  </p>
+                  <div className="font-mono text-[11px] text-text-tertiary pt-0.5">
+                    Next.js 14 · TypeScript · Tailwind CSS · Figma
                   </div>
                 </div>
               </div>
 
-              {/* Artifact Footer Strip */}
-              <div className="pt-4 border-t border-border-subtle flex items-center justify-between font-mono text-xs text-text-tertiary">
-                <span className="uppercase tracking-widest font-medium">
-                  Discipline Flow
-                </span>
-                <span className="text-text-secondary font-medium tracking-wide">
-                  Design{" "}
-                  <span className="text-text-tertiary mx-1.5" aria-hidden="true">
-                    →
-                  </span>{" "}
-                  Build{" "}
-                  <span className="text-text-tertiary mx-1.5" aria-hidden="true">
-                    →
-                  </span>{" "}
-                  Ship
-                </span>
+              {/* Snapshot Footer */}
+              <div className="pt-3 border-t border-border-subtle flex items-center justify-between font-mono text-xs text-text-tertiary">
+                <span className="text-[11px]">Smart India Hackathon (SIH 26108)</span>
+                <span className="text-text-secondary font-medium text-[11px]">GDG on Campus Contributor</span>
               </div>
             </div>
           </div>

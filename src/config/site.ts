@@ -3,8 +3,8 @@ export const siteConfig = {
   monogram: "DG",
   title: "Dipanshi Gupta — AI Systems & Product Design",
   description:
-    "Personal portfolio and engineering case studies showcasing work in Applied AI, Full-Stack Systems, and Product Design.",
-  role: "Computer Science Student · AI & Product Design",
+    "Portfolio of Dipanshi Gupta, 3rd-year Computer Science student specializing in Applied AI Systems, Scalable Backends, and Product Design.",
+  role: "3rd-Year Computer Science Student · Applied AI & Full-Stack Systems",
   status: "Available for Internships",
   email: "dipanshig98@gmail.com",
   links: {
