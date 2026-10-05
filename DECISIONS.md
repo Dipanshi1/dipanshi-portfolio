@@ -58,3 +58,12 @@
   - Replaced copy-only button widgets in the footer and mobile drawer with accessible, clickable `<a>` links pointing to `mailto:dipanshig982@gmail.com`.
   - Configured Hero "Contact Me" CTA to trigger `mailto:dipanshig982@gmail.com`, ensuring immediate functional utility.
   - Updated local Git author email to match the correct address for future commits.
+
+## Header Navigation Layout Tightening
+
+### 8. Unified Navigation & Right-Side Action Grouping
+- **Decision:** Unify desktop navigation links (`Work`, `Stack`, `About`), the hairline separator, and action controls (`Resume`, `ThemeToggle`, mobile trigger) into a single cohesive right-side flex group within the header container, removing the 3-region `justify-between` distribution.
+- **Reasoning:**
+  - Previously, `justify-between` spaced the brand, navigation links, and action buttons into three disjoint regions across the viewport, leaving large artificial voids between navigation and the Resume/theme controls.
+  - The new two-cluster layout (`[Brand Group] ... [Nav + Actions Group]`) clusters navigation links (`gap-5 lg:gap-7`) closely with Resume and ThemeToggle via a compact `gap-5 sm:gap-6 lg:gap-7` with an editorial vertical hairline divider (`h-4 w-px bg-border-subtle`).
+  - Responsiveness is preserved across all breakpoints: on mobile viewports (`< md`), desktop nav and the Resume button hide seamlessly while leaving brand on the left and theme toggle + mobile trigger on the right without horizontal overflow.
