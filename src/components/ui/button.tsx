@@ -35,11 +35,11 @@ export const Button = React.forwardRef<
       secondary:
         "border border-border-subtle bg-surface text-text-primary rounded-md hover:bg-surface-elevated hover:border-text-secondary active:scale-[0.98]",
       outline:
-        "border border-border-subtle bg-transparent text-text-primary rounded-md hover:bg-surface-elevated hover:border-border-focus active:scale-[0.98]",
+        "border border-border-subtle bg-transparent text-text-primary rounded-md hover:bg-surface-elevated hover:border-text-secondary active:scale-[0.98]",
       ghost:
         "bg-transparent text-text-secondary hover:text-text-primary hover:bg-surface-elevated rounded-md active:scale-[0.98]",
       link:
-        "bg-transparent text-accent-primary hover:underline underline-offset-4 p-0 h-auto font-normal",
+        "bg-transparent text-text-primary hover:underline underline-offset-4 p-0 h-auto font-normal",
     };
 
     const sizeStyles = {

@@ -179,3 +179,17 @@
 - **Reasoning:**
   - The lower specification table in `system-architecture.tsx` duplicated the exact text rendered inside the interactive canvas inspector bar. Removing it cut ~30% unnecessary vertical length without losing any technical proof.
   - Upgrading micro-labels ensures text remains crisp, legible, and compliant with accessibility standards across high-DPI displays.
+
+
+## Interaction Color & 2026 Availability Refinement Pass
+
+### 24. Neutral Editorial Interaction States & Stale Availability Correction
+- **Decision:**
+  1. Replace blue focus/interaction tokens in `globals.css` (`--border-focus: #2563EB` / `#3B82F6`) with neutral high-contrast tokens: `#18181B` (dark zinc in light mode) and `#E2E8F0` (light slate in dark mode).
+  2. Eliminate all `hover:text-accent-primary` and `group-hover:text-accent-primary` occurrences across header, footer, mobile drawer, flagship project, and case study secondary cards in favor of restrained neutral transitions (`hover:text-text-primary`, `hover:border-text-secondary`, subtle elevation).
+  3. Apply `-webkit-tap-highlight-color: transparent` and explicit `a { color: inherit }` / `a:visited { color: inherit }` in `@layer base` to eliminate mobile blue tap flashes and browser default link coloring.
+  4. Update stale "Summer & Fall 2025 Internship Opportunities" in `AboutSection` quick facts to "Summer & Fall 2026 Internship Opportunities", preserving authentic historical dates (e.g. SIH hackathon 2024–2025 and tender reference numbers).
+- **Reasoning:**
+  - The editorial engineering aesthetic requires quiet, restrained, technical interactions rather than generic web-blue/cyan hover states or default browser outlines.
+  - Neutral focus tokens preserve WCAG keyboard accessibility (> 15:1 contrast against canvas) while removing distracting saturated blue rings.
+  - The candidate is presenting the portfolio in 2026 for 2026 internship cycles.

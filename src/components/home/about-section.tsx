@@ -10,7 +10,7 @@ export function AboutSection() {
     { label: "Target Roles", value: "Software Engineering Intern · Applied AI · Full-Stack" },
     { label: "Community", value: "Google Developer Groups (GDG) on Campus Contributor" },
     { label: "Primary Stack", value: "Next.js 14, TypeScript, FastAPI, PostgreSQL, Qdrant, Docker" },
-    { label: "Availability", value: "Summer & Fall 2025 Internship Opportunities" },
+    { label: "Availability", value: "Summer & Fall 2026 Internship Opportunities" },
     { label: "Direct Email", value: siteConfig.email },
   ];
 

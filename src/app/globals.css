@@ -7,7 +7,7 @@
   --bg-surface: #FFFFFF;
   --bg-surface-elevated: #F4F3F0;
   --border-subtle: #E7E6E2;
-  --border-focus: #2563EB;
+  --border-focus: #18181B;
   --text-primary: #141619;
   --text-secondary: #5A5D64;
   --text-tertiary: #8C9098;
@@ -21,7 +21,7 @@
   --bg-surface: #12151B;
   --bg-surface-elevated: #181C24;
   --border-subtle: #1F242E;
-  --border-focus: #3B82F6;
+  --border-focus: #E2E8F0;
   --text-primary: #F3F4F6;
   --text-secondary: #94A3B8;
   --text-tertiary: #64748B;
@@ -31,6 +31,11 @@
 }
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    -webkit-tap-highlight-color: transparent;
+  }
   html {
     scroll-behavior: smooth;
   }
@@ -41,6 +46,13 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  a:visited {
+    color: inherit;
   }
 }
 

@@ -23,7 +23,7 @@ export function TechTag({
           ? "border-accent-primary/40 bg-accent-primary/10 text-accent-primary"
           : "border-border-subtle bg-surface-elevated text-text-secondary",
         interactive &&
-          "cursor-pointer hover:border-border-focus hover:text-text-primary",
+          "cursor-pointer hover:border-text-secondary hover:text-text-primary",
         className
       )}
       {...props}

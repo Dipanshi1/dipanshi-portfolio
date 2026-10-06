@@ -193,7 +193,7 @@ export function ProjectOutcome() {
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="font-semibold text-text-primary text-sm font-sans group-hover:text-accent-primary transition-colors duration-150">
+                    <span className="font-semibold text-text-primary text-sm font-sans transition-colors duration-150">
                       {work.title}
                     </span>
                     <span className="text-text-tertiary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-150" aria-hidden="true">
@@ -208,7 +208,7 @@ export function ProjectOutcome() {
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-border-subtle/50 text-[11px] text-accent-primary font-medium">
+                <div className="pt-2 border-t border-border-subtle/50 text-[11px] text-text-secondary group-hover:text-text-primary font-medium transition-colors duration-150">
                   {work.external ? "View Repository ↗" : "Inspect System Architecture →"}
                 </div>
               </a>

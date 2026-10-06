@@ -55,7 +55,7 @@ export function CopyButton({
     badge:
       "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-border-subtle bg-surface font-mono text-xs text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150",
     inline:
-      "inline-flex items-center gap-1.5 text-xs text-accent-primary hover:underline underline-offset-4 font-mono",
+      "inline-flex items-center gap-1.5 text-xs text-text-secondary hover:text-text-primary hover:underline underline-offset-4 font-mono",
   };
 
   return (

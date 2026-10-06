@@ -238,7 +238,7 @@ export function FlagshipProject() {
                 </div>
                 <a
                   href="/work/manaksetu"
-                  className="text-accent-primary hover:underline text-[11px]"
+                  className="text-text-secondary hover:text-text-primary hover:underline transition-colors duration-150 text-[11px]"
                 >
                   Read full case study →
                 </a>

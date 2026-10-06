@@ -50,7 +50,7 @@ export function Footer() {
               <li>
                 <a
                   href={siteConfig.links.resume}
-                  className="text-text-secondary hover:text-accent-primary transition-colors duration-150 inline-flex items-center gap-1"
+                  className="text-text-secondary hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1"
                 >
                   <span>Resume</span>
                   <span className="text-xs">↗</span>

@@ -49,7 +49,7 @@ export function Header() {
             <span className="font-mono text-xs font-bold px-2 py-1 rounded border border-border-subtle bg-surface text-text-primary group-hover:border-text-secondary transition-colors duration-150">
               {siteConfig.monogram}
             </span>
-            <span className="text-sm font-semibold tracking-tight text-text-primary group-hover:text-accent-primary transition-colors duration-150">
+            <span className="text-sm font-semibold tracking-tight text-text-primary transition-colors duration-150">
               {siteConfig.name}
             </span>
           </a>
@@ -211,7 +211,7 @@ export function Header() {
             <a
               href={siteConfig.links.resume}
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-between min-h-[44px] py-2.5 px-3 rounded-md text-accent-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+              className="flex items-center justify-between min-h-[44px] py-2.5 px-3 rounded-md text-text-primary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
             >
               <span className="font-sans font-medium text-base">
                 View Resume
@@ -226,7 +226,7 @@ export function Header() {
               <span className="text-text-tertiary uppercase tracking-wider">Direct Contact</span>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-text-primary hover:text-accent-primary transition-colors duration-150 inline-flex items-center gap-1 font-mono text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+                className="text-text-primary hover:underline hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1 font-mono text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
               >
                 <span>{siteConfig.email}</span>
                 <span className="text-xs" aria-hidden="true">↗</span>
