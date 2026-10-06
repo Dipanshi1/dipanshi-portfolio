@@ -193,3 +193,10 @@
   - The editorial engineering aesthetic requires quiet, restrained, technical interactions rather than generic web-blue/cyan hover states or default browser outlines.
   - Neutral focus tokens preserve WCAG keyboard accessibility (> 15:1 contrast against canvas) while removing distracting saturated blue rings.
   - The candidate is presenting the portfolio in 2026 for 2026 internship cycles.
+
+
+## Next.js Runtime Webpack Chunk Mismatch Resolution
+
+### 25. Process Desynchronization & Clean Production Server Isolation
+- **Diagnosis:** A background development process (`next dev`, PIDs 57888 / 57889 / 57905) was running concurrently on port 3000. When `npm run build` was subsequently executed, it wiped and replaced `.next` with production bundle assets. The active `next dev` process retained in-memory webpack manifests expecting development chunks (specifically failing with `Error: Cannot find module './993.js'`), emitting HTTP 500 responses and triggering client-side `TypeError: __webpack_modules__[moduleId] is not a function` during React error hydration.
+- **Remediation:** Terminated all stale `next dev` and orphaned node processes occupying port 3000, removed `.next` cleanly, executed a fresh production build (`npm run build`), and verified static asset delivery and SSR execution across both `/` and `/work/manaksetu` on a dedicated production server (`PORT=3099 npm run start`).
