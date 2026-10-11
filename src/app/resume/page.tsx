@@ -7,54 +7,63 @@ import { StatusPill } from "@/components/ui/status-pill";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Resume & Credentials — Dipanshi Gupta",
+  title: "Resume & Qualifications — Dipanshi Gupta",
   description:
-    "Curriculum Vitae and verified technical background of Dipanshi Gupta. 3rd-year Computer Science student available for Summer & Fall 2026 internship opportunities.",
+    "Resume and verified technical background of Dipanshi Gupta. 3rd-year Computer Science student specializing in Applied AI Systems, Scalable Backends, and Product Design.",
 };
 
 export default function ResumePage() {
-  const competencies = [
+  const skillGroups = [
     {
-      domain: "01 / Applied AI & Retrieval",
-      badge: "Flagship Domain",
-      description:
-        "Hybrid vector search (Qdrant) + BM25 lexical matching, structured LLM extraction (Gemini API), and computer vision inference.",
-      technologies: "Qdrant · Gemini API · PyMuPDF · BM25 · OpenCV",
+      category: "AI & Retrieval",
+      skills:
+        "Hybrid vector search (Qdrant), BM25 lexical ranking, Gemini API structured extraction, OpenCV image preprocessing",
     },
     {
-      domain: "02 / Systems & Backend",
-      badge: "Core Strength",
-      description:
-        "Asynchronous FastAPI microservices, relational schema modeling (PostgreSQL / SQLAlchemy), row-level tenant security, and Docker.",
-      technologies: "FastAPI · PostgreSQL · SQLAlchemy · Docker",
+      category: "Systems & Backend",
+      skills:
+        "FastAPI asynchronous microservices, PostgreSQL relational schemas, SQLAlchemy, RESTful APIs, Docker",
     },
     {
-      domain: "03 / Product Design & UI",
-      badge: "Frontend Craft",
-      description:
-        "Production Next.js App Router engineering, token-driven Figma design systems, WCAG 2.1 AA accessibility, and responsive layouts.",
-      technologies: "Next.js 14 · TypeScript · Tailwind CSS · Figma",
+      category: "Frontend & UI Engineering",
+      skills:
+        "Next.js 14 App Router, TypeScript, Tailwind CSS, component systems, WCAG 2.1 AA accessibility",
     },
   ];
 
-  const highlights = [
+  const selectedProjects = [
     {
-      title: "ManakSetu — AI Regulatory Procurement Intelligence",
-      role: "Lead Full-Stack & AI Systems Contributor · SIH 26108 Flagship",
-      details:
-        "Built hybrid Qdrant and BM25 retrieval engine, deterministic multi-signal scoring, and evidence-grounded verification interface for complex public tender compliance.",
+      name: "ManakSetu",
+      description:
+        "AI-powered regulatory procurement compliance platform utilizing hybrid vector and lexical retrieval for public tender analysis.",
+      contributions:
+        "Engineered dual-pass PDF ingestion, hybrid Qdrant and BM25 retrieval pipeline, deterministic multi-signal ranking, and verifiable citation interface.",
+      technologies: ["Qdrant", "BM25", "FastAPI", "Gemini API", "Next.js"],
+      link: "/work/manaksetu",
+      linkText: "View Case Study",
+      external: false,
     },
     {
-      title: "AgriVision AI — Deep Learning Crop Health",
-      role: "Computer Vision & Backend Engineering",
-      details:
-        "Engineered visual diagnostic inference pipeline with automated leaf pathology detection and responsive Next.js inspection tooling.",
+      name: "AgriVision AI",
+      description:
+        "Computer vision pipeline classifying crop leaf pathologies with automated image enhancement and containerized inference.",
+      contributions:
+        "Implemented OpenCV CLAHE preprocessing, input normalization, feature extraction, and containerized FastAPI inference endpoint.",
+      technologies: ["OpenCV", "FastAPI", "Docker", "Python", "NumPy"],
+      link: "https://github.com/Dipanshi1/agri-vision-ai",
+      linkText: "View Repository",
+      external: true,
     },
     {
-      title: "Google Developer Groups (GDG) on Campus",
-      role: "Active Community Contributor",
-      details:
-        "Collaborated with student engineers, conducted architectural code reviews, and organized developer sessions on modern web engineering and developer tooling.",
+      name: "Interview Tracker Pro",
+      description:
+        "Recruitment workflow service featuring relational lifecycle state modeling and row-level tenant security.",
+      contributions:
+        "Architected normalized PostgreSQL relational schemas, lifecycle state transitions, Pydantic v2 validation, and stateless JWT authentication.",
+      technologies: ["FastAPI", "PostgreSQL", "SQLAlchemy", "JWT Auth", "Docker"],
+      link: siteConfig.links.github,
+      linkText: "View Repository Profile",
+      external: true,
     },
   ];
 
@@ -69,19 +78,19 @@ export default function ResumePage() {
               aria-hidden="true"
             />
             <Eyebrow className="text-text-tertiary font-semibold tracking-wider">
-              Candidate Background · Resume &amp; Credentials
+              Candidate Background · Resume &amp; Availability
             </Eyebrow>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-text-primary">
-            Curriculum Vitae &amp; Credentials
+            Resume &amp; Qualifications
           </h1>
           <p className="text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
             Dipanshi Gupta · 3rd-Year Computer Science Student specializing in Applied AI,
-            scalable FastAPI/PostgreSQL backend services, and production Next.js interfaces.
+            scalable FastAPI/PostgreSQL backend services, and modern Next.js interfaces.
           </p>
         </div>
 
-        {/* Status Callout Banner (Gracefully Reflecting Limitation) */}
+        {/* Status Callout Banner (Resume Request Panel — Main Focus) */}
         <div className="my-10 rounded-xl border border-border-subtle bg-surface/60 p-6 sm:p-8 space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-2.5">
@@ -103,16 +112,15 @@ export default function ResumePage() {
               Official PDF Resume Available Upon Request
             </h2>
             <p className="text-sm text-text-secondary leading-relaxed">
-              The tailored PDF resume document is provided directly to recruiters and hiring teams
-              upon request. To receive a copy or schedule an introductory interview, please email
-              canonical contact{" "}
+              The official PDF resume is available upon request for Summer and Fall 2026 internship
+              opportunities. Request a copy directly via email at{" "}
               <a
                 href={`mailto:${siteConfig.email}?subject=Resume%20Request%20%E2%80%94%20Dipanshi%20Gupta`}
                 className="text-text-primary underline hover:text-text-primary font-mono text-xs"
               >
                 {siteConfig.email}
-              </a>
-              .
+              </a>{" "}
+              or review verified qualifications and selected engineering projects below.
             </p>
           </div>
 
@@ -144,11 +152,11 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* 2-Column Overview Grid */}
+        {/* Compact 2-Column Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start pt-4">
-          {/* Left Column: Academic & Technical Pillars */}
-          <div className="lg:col-span-7 space-y-10">
-            {/* Academic Standing */}
+          {/* Left Column: Education & Technical Competencies */}
+          <div className="lg:col-span-5 space-y-10">
+            {/* Education & Standing */}
             <section className="space-y-3" aria-labelledby="education-heading">
               <h2
                 id="education-heading"
@@ -156,23 +164,24 @@ export default function ResumePage() {
               >
                 Education &amp; Standing
               </h2>
-              <div className="rounded-lg border border-border-subtle bg-surface/40 p-5 space-y-1.5">
+              <div className="rounded-lg border border-border-subtle bg-surface/40 p-5 space-y-2">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="font-semibold text-text-primary text-base">
                     Bachelor of Technology in Computer Science &amp; Engineering
                   </span>
                   <span className="font-mono text-xs text-text-tertiary">3rd Year</span>
                 </div>
-                <p className="text-xs text-text-secondary">
-                  Focus: Applied Artificial Intelligence, Asynchronous Microservices, Distributed Vector Retrieval.
+                <p className="text-xs text-text-secondary leading-relaxed">
+                  Focus: Applied Artificial Intelligence, Asynchronous Microservices, and Distributed Vector Retrieval.
                 </p>
-                <div className="font-mono text-[11px] text-emerald-600 dark:text-emerald-400 pt-1">
-                  Availability: Summer &amp; Fall 2026 Internship Opportunities
+                <div className="pt-1 flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-mono text-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" aria-hidden="true" />
+                  <span>Available for Summer &amp; Fall 2026 Internships</span>
                 </div>
               </div>
             </section>
 
-            {/* Core Competencies */}
+            {/* Technical Competencies */}
             <section className="space-y-4" aria-labelledby="skills-heading">
               <h2
                 id="skills-heading"
@@ -181,93 +190,85 @@ export default function ResumePage() {
                 Technical Competencies
               </h2>
               <div className="space-y-3">
-                {competencies.map((comp) => (
+                {skillGroups.map((group) => (
                   <div
-                    key={comp.domain}
-                    className="rounded-lg border border-border-subtle bg-surface/40 p-5 space-y-2"
+                    key={group.category}
+                    className="rounded-lg border border-border-subtle bg-surface/40 p-4 space-y-1.5"
                   >
-                    <div className="flex items-center justify-between font-mono text-xs">
-                      <span className="font-semibold text-text-primary uppercase tracking-wider">
-                        {comp.domain}
-                      </span>
-                      <span className="text-accent-primary text-[11px]">{comp.badge}</span>
+                    <div className="font-mono text-xs font-semibold text-text-primary uppercase tracking-wider">
+                      {group.category}
                     </div>
-                    <p className="text-xs text-text-secondary font-sans leading-relaxed">
-                      {comp.description}
+                    <p className="text-xs text-text-secondary leading-relaxed">
+                      {group.skills}
                     </p>
-                    <div className="font-mono text-[11px] text-text-tertiary pt-0.5">
-                      {comp.technologies}
-                    </div>
                   </div>
                 ))}
               </div>
             </section>
           </div>
 
-          {/* Right Column: Engineering Highlights & Direct Outbound */}
-          <div className="lg:col-span-5 space-y-8">
-            <section className="space-y-4" aria-labelledby="experience-heading">
+          {/* Right Column: Selected Projects (Max 3) */}
+          <div className="lg:col-span-7 space-y-4">
+            <section className="space-y-4" aria-labelledby="projects-heading">
               <h2
-                id="experience-heading"
+                id="projects-heading"
                 className="font-mono text-xs font-semibold uppercase tracking-wider text-text-tertiary"
               >
-                Production Highlights
+                Selected Engineering Projects
               </h2>
-              <div className="space-y-3.5">
-                {highlights.map((item) => (
+              <div className="space-y-4">
+                {selectedProjects.map((project) => (
                   <div
-                    key={item.title}
-                    className="rounded-lg border border-border-subtle bg-surface/40 p-4 sm:p-5 space-y-1.5"
+                    key={project.name}
+                    className="rounded-lg border border-border-subtle bg-surface/40 p-5 space-y-3"
                   >
-                    <h3 className="font-medium text-sm text-text-primary">
-                      {item.title}
-                    </h3>
-                    <div className="font-mono text-[11px] text-text-tertiary">
-                      {item.role}
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <h3 className="font-semibold text-base text-text-primary">
+                        {project.name}
+                      </h3>
+                      {project.external ? (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-xs text-text-secondary hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1"
+                        >
+                          <span>{project.linkText}</span>
+                          <span aria-hidden="true">↗</span>
+                        </a>
+                      ) : (
+                        <Link
+                          href={project.link}
+                          className="font-mono text-xs text-text-secondary hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1"
+                        >
+                          <span>{project.linkText}</span>
+                          <span aria-hidden="true">↗</span>
+                        </Link>
+                      )}
                     </div>
-                    <p className="text-xs text-text-secondary leading-relaxed pt-1">
-                      {item.details}
+                    <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
+                      {project.description}
                     </p>
+                    <div className="p-3 rounded border border-border-subtle bg-surface-elevated/40 text-xs text-text-secondary leading-relaxed">
+                      <span className="font-mono text-[11px] text-text-tertiary block mb-1 uppercase tracking-wider">
+                        Technical Contributions
+                      </span>
+                      {project.contributions}
+                    </div>
+                    <div className="flex flex-wrap gap-1.5 font-mono text-[11px] pt-1">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-0.5 rounded border border-border-subtle bg-surface text-text-secondary"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
             </section>
-
-            {/* Contact Card */}
-            <div className="rounded-lg border border-border-subtle bg-surface/50 p-5 space-y-3 font-mono text-xs">
-              <div className="text-text-tertiary uppercase tracking-wider text-[11px]">
-                Recruiter Direct Contact
-              </div>
-              <div className="text-text-primary font-sans font-medium text-sm">
-                Dipanshi Gupta
-              </div>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="text-text-secondary hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1.5 break-all text-xs"
-              >
-                <span>{siteConfig.email}</span>
-                <span className="text-xs" aria-hidden="true">↗</span>
-              </a>
-              <div className="pt-2 border-t border-border-subtle flex items-center gap-4 text-text-secondary text-xs">
-                <a
-                  href={siteConfig.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-text-primary transition-colors duration-150"
-                >
-                  GitHub ↗
-                </a>
-                <span className="text-border-subtle">·</span>
-                <a
-                  href={siteConfig.links.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-text-primary transition-colors duration-150"
-                >
-                  LinkedIn ↗
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </Container>
