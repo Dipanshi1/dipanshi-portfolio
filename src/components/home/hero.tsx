@@ -79,7 +79,7 @@ export function Hero() {
                   href={siteConfig.links.resume}
                   className="justify-center gap-1.5 h-11 px-6 text-sm font-medium"
                 >
-                  <span>View Resume</span>
+                  <span>Resume (On Request)</span>
                   <span className="text-xs" aria-hidden="true">↗</span>
                 </Button>
               </div>

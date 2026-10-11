@@ -76,7 +76,7 @@ export function AboutSection() {
                 href={siteConfig.links.resume}
                 className="gap-2 text-xs h-10 px-5"
               >
-                <span>View Full Resume</span>
+                <span>Resume (On Request)</span>
                 <span className="text-xs" aria-hidden="true">↗</span>
               </Button>
 

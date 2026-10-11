@@ -21,3 +21,10 @@
 - **Status:** No blockers.
 - All dependencies, scripts, and content are local and fully verified.
 - Validation succeeded across typecheck, lint, build, and SSR response inspection.
+
+## Resume PDF Asset
+- **Status:** Blocked / Pending Asset Delivery.
+- **Missing Asset:** Production resume PDF document (e.g., `public/resume.pdf` or equivalent candidate CV artifact) is not present in the repository or local filesystem.
+- **Impact & Handling:** To prevent 404 errors and avoid fabricating placeholder or mock PDF downloads, all Resume CTAs route to the `/resume` overview page. The route gracefully communicates that the resume PDF is available upon request for Summer & Fall 2026 internship recruiting and provides direct email contact (`dipanshig98@gmail.com`).
+- **Resolution Plan:** When the finalized candidate resume PDF is provided, place it in `public/` and configure direct download or link destination accordingly.
+
