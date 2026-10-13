@@ -214,7 +214,7 @@ export function Header() {
               className="flex items-center justify-between min-h-[44px] py-2.5 px-3 rounded-md text-text-primary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
             >
               <span className="font-sans font-medium text-base">
-                Resume (On Request)
+                View Resume
               </span>
               <span className="text-xs">↗</span>
             </a>

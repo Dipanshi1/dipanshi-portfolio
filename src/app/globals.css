@@ -51,9 +51,6 @@
     color: inherit;
     text-decoration: inherit;
   }
-  a:visited {
-    color: inherit;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

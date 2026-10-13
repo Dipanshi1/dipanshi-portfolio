@@ -65,7 +65,7 @@ export function Hero() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="w-4 h-4 text-canvas"
+                    className="w-4 h-4"
                     aria-hidden="true"
                   >
                     <line x1="12" y1="5" x2="12" y2="19" />
@@ -77,9 +77,10 @@ export function Hero() {
                   variant="secondary"
                   size="lg"
                   href={siteConfig.links.resume}
+                  external
                   className="justify-center gap-1.5 h-11 px-6 text-sm font-medium"
                 >
-                  <span>Resume (On Request)</span>
+                  <span>View Resume</span>
                   <span className="text-xs" aria-hidden="true">↗</span>
                 </Button>
               </div>

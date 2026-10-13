@@ -50,9 +50,11 @@ export function Footer() {
               <li>
                 <a
                   href={siteConfig.links.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-text-secondary hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1"
                 >
-                  <span>Resume (On Request)</span>
+                  <span>Resume</span>
                   <span className="text-xs">↗</span>
                 </a>
               </li>

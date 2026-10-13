@@ -200,3 +200,36 @@
 ### 25. Process Desynchronization & Clean Production Server Isolation
 - **Diagnosis:** A background development process (`next dev`, PIDs 57888 / 57889 / 57905) was running concurrently on port 3000. When `npm run build` was subsequently executed, it wiped and replaced `.next` with production bundle assets. The active `next dev` process retained in-memory webpack manifests expecting development chunks (specifically failing with `Error: Cannot find module './993.js'`), emitting HTTP 500 responses and triggering client-side `TypeError: __webpack_modules__[moduleId] is not a function` during React error hydration.
 - **Remediation:** Terminated all stale `next dev` and orphaned node processes occupying port 3000, removed `.next` cleanly, executed a fresh production build (`npm run build`), and verified static asset delivery and SSR execution across both `/` and `/work/manaksetu` on a dedicated production server (`PORT=3099 npm run start`).
+
+## Production Resume PDF Integration Pass
+
+### 26. Direct Resume PDF Download & View Integration
+- **Decision:**
+  1. Integrated verified candidate resume PDF at `public/resume.pdf` (source: `Dipanshi Gupta_resume.pdf`).
+  2. Replaced the on-request email CTA banner in `/resume` with direct "View Resume" (`/resume.pdf`, new tab) and "Download Resume" (`download="Dipanshi Gupta_resume.pdf"`) actions.
+  3. Updated `siteConfig.links.resume` to `/resume.pdf` and aligned global header, hero, About, and footer CTAs to point to the PDF asset directly in new tabs with neutral interaction states.
+  4. Retained verified academic standing, technical competencies, and selected projects on `/resume` without fabricating ungrounded metrics or achievements.
+  5. Resolved `BLOCKED.md` item for the Resume PDF asset.
+- **Reasoning:**
+  - Recruiters have immediate access to both inline viewing and clean downloading of Dipanshi's verified PDF resume with proper filename metadata.
+  - Ensures 100% consistency between header, hero, About, footer, and the dedicated `/resume` hub.
+
+
+## Button Interaction Contrast & Visited Pseudo-Class Collision Resolution
+
+### 27. Primary Button Foreground Contrast & Global `:visited` Isolation
+- **Diagnosis:**
+  - In `src/app/globals.css`, the rule `a:visited { color: inherit; }` in `@layer base` had a selector specificity of `(0, 1, 1)` due to the `:visited` pseudo-class.
+  - Tailwind utility classes like `.text-canvas` in `Button` (`variant="primary"`) have a selector specificity of `(0, 1, 0)`.
+  - When compiled and flattened, `a:visited { color: inherit; }` overrode `.text-canvas` on any anchor button whose target URL had been visited in the browser session (`#work`, `/work/manaksetu`, `#architecture`, `/resume.pdf`, etc.).
+  - `color: inherit` caused the anchor text to inherit `var(--text-primary)` from `body`.
+  - In dark mode, `var(--text-primary)` is `#F3F4F6` (white), which exactly matches the button's background `bg-text-primary` (`#F3F4F6`), rendering the button as a solid blank white rectangle with 1:1 contrast (invisible label and icon).
+- **Remediation:**
+  1. Removed `a:visited { color: inherit; }` from `src/app/globals.css`, allowing `a { color: inherit; }` in `@layer base` to handle link resets without creating a high-specificity pseudo-class override that breaks utility color classes.
+  2. Enhanced `src/components/ui/button.tsx` by adding explicit `visited:` color variants across all styles (`visited:text-canvas` on `primary`, `visited:text-text-primary` on `secondary`, `outline`, and `link`, `visited:text-text-secondary` on `ghost`).
+  3. Cleaned SVG icon styling in `src/components/home/hero.tsx` to inherit `stroke="currentColor"` naturally from the button.
+- **Verification:**
+  - In dark mode: `bg-text-primary` (`#F3F4F6`) with `text-canvas` / `visited:text-canvas` (`#0D0F12`) provides 17.5:1 contrast (exceeds WCAG AAA).
+  - In light mode: `bg-text-primary` (`#141619`) with `text-canvas` / `visited:text-canvas` (`#FBFBFA`) provides 17.8:1 contrast (exceeds WCAG AAA).
+  - Buttons maintain 100% visible labels and icons in unvisited, visited, hover, and focused states.
+

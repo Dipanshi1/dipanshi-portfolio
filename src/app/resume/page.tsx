@@ -90,12 +90,12 @@ export default function ResumePage() {
           </p>
         </div>
 
-        {/* Status Callout Banner (Resume Request Panel — Main Focus) */}
+        {/* Direct Resume Download & View Panel */}
         <div className="my-10 rounded-xl border border-border-subtle bg-surface/60 p-6 sm:p-8 space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-2.5">
               <span className="font-mono text-xs uppercase tracking-wider text-text-secondary font-semibold">
-                Resume Status
+                Resume Document
               </span>
               <span className="text-border-subtle">·</span>
               <StatusPill variant="available">
@@ -103,24 +103,17 @@ export default function ResumePage() {
               </StatusPill>
             </div>
             <span className="font-mono text-xs text-text-tertiary">
-              Summer &amp; Fall 2026 Internship Recruiting
+              PDF Document · Summer &amp; Fall 2026
             </span>
           </div>
 
           <div className="space-y-2 max-w-2xl">
             <h2 className="text-lg font-semibold text-text-primary">
-              Official PDF Resume Available Upon Request
+              Official Resume (PDF)
             </h2>
             <p className="text-sm text-text-secondary leading-relaxed">
-              The official PDF resume is available upon request for Summer and Fall 2026 internship
-              opportunities. Request a copy directly via email at{" "}
-              <a
-                href={`mailto:${siteConfig.email}?subject=Resume%20Request%20%E2%80%94%20Dipanshi%20Gupta`}
-                className="text-text-primary underline hover:text-text-primary font-mono text-xs"
-              >
-                {siteConfig.email}
-              </a>{" "}
-              or review verified qualifications and selected engineering projects below.
+              Verified curriculum vitae for Dipanshi Gupta. View the document directly in your
+              browser or download a local copy for recruitment and engineering evaluation.
             </p>
           </div>
 
@@ -128,14 +121,41 @@ export default function ResumePage() {
             <Button
               variant="primary"
               size="md"
-              href={`mailto:${siteConfig.email}?subject=Resume%20Request%20%E2%80%94%20Dipanshi%20Gupta`}
+              href="/resume.pdf"
+              external
               className="gap-2 text-xs h-10 px-5"
             >
-              <span>Request PDF via Email</span>
-              <span className="text-xs" aria-hidden="true">✉</span>
+              <span>View Resume</span>
+              <span className="text-xs" aria-hidden="true">↗</span>
             </Button>
             <Button
               variant="secondary"
+              size="md"
+              href="/resume.pdf"
+              download="Dipanshi Gupta_resume.pdf"
+              className="gap-2 text-xs h-10 px-5"
+            >
+              <span>Download Resume</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-3.5 h-3.5"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </Button>
+            <Button
+              variant="outline"
               size="md"
               href="/work/manaksetu"
               className="gap-2 text-xs h-10 px-5"

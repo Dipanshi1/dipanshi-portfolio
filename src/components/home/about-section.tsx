@@ -74,9 +74,10 @@ export function AboutSection() {
                 variant="primary"
                 size="md"
                 href={siteConfig.links.resume}
+                external
                 className="gap-2 text-xs h-10 px-5"
               >
-                <span>Resume (On Request)</span>
+                <span>View Full Resume</span>
                 <span className="text-xs" aria-hidden="true">↗</span>
               </Button>
 

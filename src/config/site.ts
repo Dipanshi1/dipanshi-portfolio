@@ -10,7 +10,7 @@ export const siteConfig = {
   links: {
     github: "https://github.com/Dipanshi1",
     linkedin: "https://linkedin.com/in/dipanshi-gupta",
-    resume: "/resume",
+    resume: "/resume.pdf",
     email: "mailto:dipanshig98@gmail.com",
   },
   nav: [
