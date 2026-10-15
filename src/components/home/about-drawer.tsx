@@ -199,7 +199,7 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
         <div className="sticky bottom-0 z-20 bg-surface/95 backdrop-blur-md border-t border-border-subtle p-5 flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-2.5">
             <Button
-              variant="primary"
+              variant="brass"
               size="md"
               href={siteConfig.links.resume}
               external
@@ -210,7 +210,7 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
             </Button>
 
             <Button
-              variant="secondary"
+              variant="primary"
               size="md"
               onClick={() => {
                 onClose();

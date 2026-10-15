@@ -271,7 +271,7 @@ export function WelcomeScene({
             id="directory-beacon"
             className="transition-transform duration-150 group-hover:-translate-y-1.5 group-focus-visible:-translate-y-1.5"
           >
-            <rect x="46" y="20" width="128" height="20" rx="3" fill="#1C1815" stroke="#C85A32" strokeWidth="1.5" className="group-hover:stroke-accent-warning" />
+            <rect x="46" y="20" width="128" height="20" rx="2" fill="#1C1815" stroke="#6E3A26" strokeWidth="1" className="group-hover:stroke-accent-warning" />
             <circle cx="56" cy="30" r="3" fill="#D89B52" className="animate-pulse" />
             <text x="66" y="34" fill="#F7F2E7" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
               VIEW TECH STACK ↵
@@ -412,14 +412,14 @@ export function WelcomeScene({
               y="102"
               width="150"
               height="34"
-              fill="#FFFFFF"
-              rx="4"
-              stroke="#3D2E24"
-              strokeWidth="1.5"
+              fill="#FAF6EE"
+              rx="3"
+              stroke="#4A392C"
+              strokeWidth="1.2"
               className="group-hover:stroke-accent-primary"
             />
-            <polygon points="368,136 360,144 376,136" fill="#FFFFFF" stroke="#3D2E24" strokeWidth="1.5" />
-            <polygon points="369,135 362,142 375,135" fill="#FFFFFF" />
+            <polygon points="368,136 360,144 376,136" fill="#FAF6EE" stroke="#4A392C" strokeWidth="1.2" />
+            <polygon points="369,135 362,142 375,135" fill="#FAF6EE" />
             <text x="439" y="117" textAnchor="middle" fill="#1C1916" fontSize="9" fontFamily="monospace" fontWeight="bold">
               Hi, I&apos;m Dipanshi! 👋
             </text>
@@ -589,10 +589,10 @@ export function WelcomeScene({
               y="48"
               width="188"
               height="30"
-              rx="3"
+              rx="2"
               fill="#1B1714"
-              stroke="#C85A32"
-              strokeWidth="1.5"
+              stroke="#6E3A26"
+              strokeWidth="1"
               className="group-hover:stroke-accent-warning"
             />
             <circle cx="562" cy="63" r="4" fill="#D89B52" className="motion-reduce:animate-none animate-pulse" />
@@ -617,7 +617,7 @@ export function WelcomeScene({
             >
               ↵
             </text>
-            <polygon points="636,78 642,84 648,78" fill="#1B1714" stroke="#C85A32" strokeWidth="1" />
+            <polygon points="636,78 642,84 648,78" fill="#1B1714" stroke="#6E3A26" strokeWidth="1" />
           </g>
         </g>
       </svg>

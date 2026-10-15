@@ -37,26 +37,26 @@ export function Header() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border-subtle bg-canvas/92 backdrop-blur-md transition-colors duration-150">
-      <Container className="flex h-16 items-center justify-between">
-        {/* Left: Identity & Availability */}
-        <div className="flex items-center gap-3 sm:gap-4">
+    <header className="sticky top-0 z-50 w-full border-b border-[#2C231C] bg-[#14110F]/95 backdrop-blur-md transition-colors duration-150">
+      <Container className="flex h-11 sm:h-12 items-center justify-between px-3 sm:px-6">
+        {/* Left: Identity & Availability Nameplate */}
+        <div className="flex items-center gap-2.5 sm:gap-3">
           <a
             href="/"
-            className="group flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:ring-offset-2 focus-visible:ring-offset-canvas rounded-sm"
-            aria-label={`${siteConfig.name} Home`}
+            className="group flex items-center gap-2 rounded-xs focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
+            aria-label={`${siteConfig.name} Studio Home`}
           >
-            <span className="font-mono text-xs font-bold px-2 py-1 rounded-sm border border-border-subtle bg-surface-elevated text-text-primary group-hover:border-accent-warning/60 group-hover:text-accent-warning transition-colors duration-150 shadow-2xs">
+            <span className="font-mono text-[10px] sm:text-[11px] font-bold px-1.5 py-0.5 rounded-xs border border-[#4D3A2A] bg-[#221B16] text-[#D89B52] group-hover:border-[#D89B52] transition-colors shadow-2xs">
               {siteConfig.monogram}
             </span>
-            <span className="text-sm font-semibold tracking-tight text-text-primary group-hover:text-accent-warning transition-colors duration-150">
+            <span className="font-mono text-xs sm:text-[13px] font-semibold tracking-tight text-[#EDE6D9] group-hover:text-[#D89B52] transition-colors">
               {siteConfig.name}
             </span>
           </a>
 
-          {/* Subtle Availability Indicator (Desktop) */}
-          <div className="hidden lg:flex items-center pl-3 border-l border-border-subtle">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-sm text-xs font-mono text-text-secondary bg-surface border border-border-subtle select-none">
+          {/* Subtle Studio Status Indicator (Desktop) */}
+          <div className="hidden lg:flex items-center pl-2.5 border-l border-[#2C231C]">
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-xs text-[10px] font-mono text-text-tertiary bg-[#1A1512] border border-[#2A211A] select-none">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-success animate-pulse shrink-0" aria-hidden="true" />
               <span>{siteConfig.status}</span>
             </span>
@@ -64,50 +64,50 @@ export function Header() {
         </div>
 
         {/* Right: Unified Navigation & Actions */}
-        <div className="flex items-center gap-5 sm:gap-6 lg:gap-7">
+        <div className="flex items-center gap-2 sm:gap-3">
           {/* Desktop Navigation Links */}
           <nav
-            className="hidden md:flex items-center gap-5 lg:gap-7 text-xs font-mono uppercase tracking-wider"
+            className="hidden md:flex items-center gap-1 text-[11px] font-mono uppercase tracking-wider"
             aria-label="Main Navigation"
           >
             {siteConfig.nav.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-text-secondary hover:text-text-primary px-1 py-0.5 transition-colors duration-150 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+                className="text-text-secondary hover:text-[#EDE6D9] hover:bg-[#221B16] px-2 py-1 transition-colors duration-150 rounded-xs focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          {/* Subtle Hairline Divider between Nav Links and Actions (Desktop) */}
+          {/* Subtle Hairline Divider (Desktop) */}
           <span
-            className="hidden md:block h-4 w-px bg-border-subtle shrink-0"
+            className="hidden md:block h-3.5 w-px bg-[#2C231C] shrink-0"
             aria-hidden="true"
           />
 
           {/* Actions: Resume, Theme Toggle, Mobile Trigger */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <Button
-              variant="outline"
+              variant="brass"
               size="sm"
               href={siteConfig.links.resume}
               external
-              className="hidden md:inline-flex text-xs h-9 px-3.5 border-accent-warning/60 bg-accent-warning/10 text-accent-warning hover:bg-accent-warning/20 hover:border-accent-warning font-mono rounded-sm transition-colors"
+              className="hidden md:inline-flex text-[11px] h-7 px-2.5 font-mono"
             >
               <span>Resume</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="14"
-                height="14"
+                width="12"
+                height="12"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="w-3.5 h-3.5"
+                className="w-3 h-3 ml-0.5"
                 aria-hidden="true"
               >
                 <path d="M7 7h10v10" />
@@ -125,20 +125,20 @@ export function Header() {
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
               aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-              className="inline-flex md:hidden w-9 h-9 items-center justify-center rounded-sm border border-border-subtle bg-surface text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+              className="inline-flex md:hidden w-7 h-7 items-center justify-center rounded-xs border border-[#3D342C] bg-[#241E1A] text-text-secondary hover:text-text-primary hover:bg-[#2C221C] transition-colors duration-150 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
             >
               {isOpen ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
+                  width="14"
+                  height="14"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="w-4 h-4"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                 >
                   <path d="M18 6 6 18" />
@@ -148,14 +148,14 @@ export function Header() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
+                  width="14"
+                  height="14"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="w-4 h-4"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                 >
                   <line x1="4" x2="20" y1="12" y2="12" />
@@ -173,17 +173,17 @@ export function Header() {
         id="mobile-navigation"
         ref={menuRef}
         className={cn(
-          "md:hidden fixed inset-x-0 top-16 bg-canvas/98 border-b border-border-subtle backdrop-blur-xl transition-all duration-200 ease-out-expo overflow-y-auto max-h-[calc(100vh-4rem)]",
+          "md:hidden fixed inset-x-0 top-11 sm:top-12 z-50 bg-[#181411] border-b border-[#2C231C] backdrop-blur-xl transition-all duration-200 ease-out-expo overflow-y-auto max-h-[calc(100vh-3rem)] shadow-2xl",
           isOpen
             ? "opacity-100 translate-y-0 visible"
             : "opacity-0 -translate-y-2 invisible pointer-events-none"
         )}
       >
-        <Container className="py-6 space-y-6">
+        <Container className="py-4 space-y-4">
           {/* Mobile Status Header */}
-          <div className="flex items-center justify-between pb-4 border-b border-border-subtle">
+          <div className="flex items-center justify-between pb-3 border-b border-[#2C231C]">
             <span className="font-mono text-xs text-text-tertiary uppercase tracking-wider">
-              Status
+              Studio Status
             </span>
             <StatusPill variant="available">
               {siteConfig.status}
@@ -191,15 +191,15 @@ export function Header() {
           </div>
 
           {/* Numbered Nav Links */}
-          <nav className="flex flex-col space-y-2 font-mono text-sm" aria-label="Mobile Navigation">
+          <nav className="flex flex-col space-y-1 font-mono text-xs" aria-label="Mobile Navigation">
             {siteConfig.nav.map((item, index) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-between min-h-[44px] py-2.5 px-3 rounded-md text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+                className="flex items-center justify-between min-h-[40px] py-2 px-3 rounded-xs text-text-secondary hover:text-[#EDE6D9] hover:bg-[#221B16] transition-colors duration-150 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
               >
-                <span className="font-sans font-medium text-base text-text-primary">
+                <span className="font-mono font-medium text-sm text-[#EDE6D9]">
                   {item.label}
                 </span>
                 <span className="text-text-tertiary text-xs">
@@ -212,43 +212,43 @@ export function Header() {
             <a
               href={siteConfig.links.resume}
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-between min-h-[44px] py-2.5 px-3 rounded-md text-text-primary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+              className="flex items-center justify-between min-h-[40px] py-2 px-3 rounded-xs text-[#E0A35C] bg-[#A8763E]/10 border border-[#A8763E]/40 hover:bg-[#A8763E]/20 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
             >
-              <span className="font-sans font-medium text-base">
-                View Resume
+              <span className="font-mono font-medium text-sm">
+                View Resume PDF
               </span>
               <span className="text-xs">↗</span>
             </a>
           </nav>
 
           {/* Outbound & Contact Footer in Drawer */}
-          <div className="pt-4 border-t border-border-subtle flex flex-col gap-3 font-mono text-xs">
+          <div className="pt-3 border-t border-[#2C231C] flex flex-col gap-2 font-mono text-xs">
             <div className="flex items-center justify-between">
-              <span className="text-text-tertiary uppercase tracking-wider">Direct Contact</span>
+              <span className="text-text-tertiary uppercase tracking-wider text-[11px]">Direct Contact</span>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-text-primary hover:underline hover:text-text-primary transition-colors duration-150 inline-flex items-center gap-1 font-mono text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+                className="text-[#EDE6D9] hover:text-[#D89B52] transition-colors duration-150 inline-flex items-center gap-1 font-mono text-xs focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
               >
                 <span>{siteConfig.email}</span>
                 <span className="text-xs" aria-hidden="true">↗</span>
               </a>
             </div>
-            <div className="flex items-center gap-4 text-text-secondary pt-2">
+            <div className="flex items-center gap-4 text-text-secondary pt-1">
               <a
                 href={siteConfig.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-text-primary transition-colors duration-150 flex items-center gap-1"
+                className="hover:text-[#EDE6D9] transition-colors duration-150 flex items-center gap-1"
               >
                 <span>GitHub</span>
                 <span>↗</span>
               </a>
-              <span className="text-border-subtle">·</span>
+              <span className="text-[#382C22]">·</span>
               <a
                 href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-text-primary transition-colors duration-150 flex items-center gap-1"
+                className="hover:text-[#EDE6D9] transition-colors duration-150 flex items-center gap-1"
               >
                 <span>LinkedIn</span>
                 <span>↗</span>

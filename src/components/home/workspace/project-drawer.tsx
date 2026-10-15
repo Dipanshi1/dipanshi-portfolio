@@ -352,11 +352,11 @@ export function ProjectDrawer({
             )}
 
             <Button
-              variant="outline"
+              variant="brass"
               size="md"
               href={siteConfig.links.resume}
               external
-              className="gap-1.5 text-xs text-accent-warning border-accent-warning/60 hover:bg-accent-warning/10 hover:border-accent-warning"
+              className="gap-1.5 text-xs"
             >
               <span>Résumé PDF</span>
               <span className="text-xs" aria-hidden="true">↗</span>
