@@ -1,17 +1,15 @@
 import * as React from "react";
-import { Hero } from "@/components/home/hero";
+import { WelcomeArea } from "@/components/home/welcome/welcome-section";
 import { CapabilityPillars } from "@/components/home/capability-pillars";
-import { FlagshipProject } from "@/components/home/flagship-project";
-import { SecondaryProjects } from "@/components/home/secondary-projects";
+import { WorkspaceSection } from "@/components/home/workspace/workspace-section";
 import { AboutSection } from "@/components/home/about-section";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <WelcomeArea />
       <CapabilityPillars />
-      <FlagshipProject />
-      <SecondaryProjects />
+      <WorkspaceSection />
       <AboutSection />
     </>
   );
