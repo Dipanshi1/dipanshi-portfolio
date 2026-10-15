@@ -3,31 +3,35 @@
 @tailwind utilities;
 
 :root {
-  --bg-canvas: #FBFBFA;
-  --bg-surface: #FFFFFF;
-  --bg-surface-elevated: #F4F3F0;
-  --border-subtle: #E7E6E2;
-  --border-focus: #18181B;
-  --text-primary: #141619;
-  --text-secondary: #5A5D64;
-  --text-tertiary: #8C9098;
-  --accent-primary: #0284C7;
-  --accent-success: #059669;
-  --accent-warning: #D97706;
+  --bg-canvas: #F7F3EB;
+  --bg-surface: #FDFBF7;
+  --bg-surface-elevated: #EDE6D9;
+  --border-subtle: #DDD3C1;
+  --border-focus: #B85330;
+  --text-primary: #1C1916;
+  --text-secondary: #5C5346;
+  --text-tertiary: #8C8070;
+  --accent-primary: #B85330;
+  --accent-success: #287239;
+  --accent-warning: #B47E32;
+  --accent-amber: #D89B52;
+  --walnut-wood: #5A3820;
 }
 
 .dark {
-  --bg-canvas: #0D0F12;
-  --bg-surface: #12151B;
-  --bg-surface-elevated: #181C24;
-  --border-subtle: #1F242E;
-  --border-focus: #E2E8F0;
-  --text-primary: #F3F4F6;
-  --text-secondary: #94A3B8;
-  --text-tertiary: #64748B;
-  --accent-primary: #38BDF8;
-  --accent-success: #10B981;
-  --accent-warning: #F59E0B;
+  --bg-canvas: #14110F;
+  --bg-surface: #1B1714;
+  --bg-surface-elevated: #241E1A;
+  --border-subtle: #332B24;
+  --border-focus: #D89B52;
+  --text-primary: #F7F3EB;
+  --text-secondary: #C4B9A9;
+  --text-tertiary: #8A7E6F;
+  --accent-primary: #C85A32;
+  --accent-success: #3DA154;
+  --accent-warning: #D89B52;
+  --accent-amber: #E5A85A;
+  --walnut-wood: #6B4224;
 }
 
 @layer base {

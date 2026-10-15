@@ -28,7 +28,9 @@ const config: Config = {
           primary: "var(--accent-primary)",
           success: "var(--accent-success)",
           warning: "var(--accent-warning)",
+          amber: "var(--accent-amber)",
         },
+        walnut: "var(--walnut-wood)",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],

@@ -16,7 +16,7 @@ export function WelcomeScene({
   portalRef,
 }: WelcomeSceneProps) {
   return (
-    <div className="relative w-full h-full flex items-center justify-center select-none overflow-hidden bg-[#16141D]">
+    <div className="relative w-full h-full flex items-center justify-center select-none overflow-hidden bg-canvas">
       <svg
         viewBox="0 0 800 440"
         className="w-full h-auto max-h-full max-w-[1400px] mx-auto block"
@@ -32,11 +32,11 @@ export function WelcomeScene({
             <stop offset="100%" stopColor="#F59E0B" stopOpacity="0" />
           </radialGradient>
 
-          {/* Project Lab doorway interior light */}
+          {/* Project Lab doorway interior warm studio light */}
           <linearGradient id="labDoorwayLight" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#0284C7" stopOpacity="0.45" />
-            <stop offset="50%" stopColor="#38BDF8" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#0EA5E9" stopOpacity="0.55" />
+            <stop offset="0%" stopColor="#D97706" stopOpacity="0.45" />
+            <stop offset="50%" stopColor="#F59E0B" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#B45309" stopOpacity="0.5" />
           </linearGradient>
 
           {/* Desk lamp warm pool */}
@@ -154,12 +154,12 @@ export function WelcomeScene({
             height="52"
             fill="#452712"
             rx="4"
-            className="group-hover:stroke-accent-primary group-hover:stroke-2 group-focus-visible:stroke-border-focus group-focus-visible:stroke-2 transition-all"
+            className="group-hover:stroke-accent-warning group-hover:stroke-2 group-focus-visible:stroke-border-focus group-focus-visible:stroke-2 transition-all"
           />
           {/* Brass Inset Bevel */}
           <rect x="260" y="40" width="260" height="44" fill="#B47E32" rx="2" />
           {/* Dark Charcoal Slate Face */}
-          <rect x="264" y="44" width="252" height="36" fill="#0D1117" rx="1" />
+          <rect x="264" y="44" width="252" height="36" fill="#161311" rx="1" />
 
           {/* Accent Screws */}
           <rect x="266" y="46" width="3" height="3" fill="#FDE68A" />
@@ -184,7 +184,7 @@ export function WelcomeScene({
             x="390"
             y="72"
             textAnchor="middle"
-            fill="#38BDF8"
+            fill="#EDE6D9"
             fontSize="8.5"
             fontFamily="monospace"
             fontWeight="bold"
@@ -223,15 +223,15 @@ export function WelcomeScene({
           {/* Frame */}
           <rect x="44" y="44" width="132" height="100" fill="#4B2C14" rx="2" />
           <rect x="48" y="48" width="124" height="92" fill="#FAF6EE" />
-          <rect x="52" y="52" width="116" height="84" fill="#1C2128" />
+          <rect x="52" y="52" width="116" height="84" fill="#1C1815" />
 
           {/* Directory Title */}
-          <rect x="56" y="56" width="108" height="10" fill="#0D1117" />
+          <rect x="56" y="56" width="108" height="10" fill="#14110F" />
           <text
             x="110"
             y="64"
             textAnchor="middle"
-            fill="#F3F4F6"
+            fill="#F7F2E7"
             fontSize="7"
             fontFamily="monospace"
             fontWeight="bold"
@@ -241,28 +241,28 @@ export function WelcomeScene({
           </text>
 
           {/* Directory Entries */}
-          <rect x="56" y="70" width="4" height="4" fill="#10B981" />
-          <text x="64" y="74" fill="#10B981" fontSize="6.5" fontFamily="monospace" fontWeight="bold">
+          <rect x="56" y="70" width="4" height="4" fill="#3DA154" />
+          <text x="64" y="74" fill="#3DA154" fontSize="6.5" fontFamily="monospace" fontWeight="bold">
             01 RECEPTION (HERE)
           </text>
 
-          <rect x="56" y="82" width="4" height="4" fill="#38BDF8" />
-          <text x="64" y="86" fill="#E2E8F0" fontSize="6.5" fontFamily="monospace">
+          <rect x="56" y="82" width="4" height="4" fill="#C85A32" />
+          <text x="64" y="86" fill="#F7F2E7" fontSize="6.5" fontFamily="monospace">
             02 PROJECT LAB →
           </text>
 
-          <rect x="56" y="94" width="4" height="4" fill="#F59E0B" />
+          <rect x="56" y="94" width="4" height="4" fill="#D89B52" />
           <text x="64" y="98" fill="#FDE68A" fontSize="6.5" fontFamily="monospace">
             03 SKILLS BENCHES
           </text>
 
-          <rect x="56" y="106" width="4" height="4" fill="#A78BFA" />
-          <text x="64" y="110" fill="#DDD6FE" fontSize="6.5" fontFamily="monospace">
+          <rect x="56" y="106" width="4" height="4" fill="#B3A18E" />
+          <text x="64" y="110" fill="#E2D9CA" fontSize="6.5" fontFamily="monospace">
             04 ABOUT &amp; PROFILE
           </text>
 
-          <rect x="56" y="118" width="4" height="4" fill="#34D399" />
-          <text x="64" y="122" fill="#A7F3D0" fontSize="6.5" fontFamily="monospace">
+          <rect x="56" y="118" width="4" height="4" fill="#B47E32" />
+          <text x="64" y="122" fill="#ECC47F" fontSize="6.5" fontFamily="monospace">
             05 CONTACT / RÉSUMÉ
           </text>
 
@@ -271,9 +271,9 @@ export function WelcomeScene({
             id="directory-beacon"
             className="transition-transform duration-150 group-hover:-translate-y-1.5 group-focus-visible:-translate-y-1.5"
           >
-            <rect x="46" y="20" width="128" height="20" rx="4" fill="#0D1117" stroke="#0284C7" strokeWidth="1.5" className="group-hover:stroke-accent-primary" />
-            <circle cx="56" cy="30" r="3" fill="#38BDF8" className="animate-pulse" />
-            <text x="66" y="34" fill="#F3F4F6" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
+            <rect x="46" y="20" width="128" height="20" rx="3" fill="#1C1815" stroke="#C85A32" strokeWidth="1.5" className="group-hover:stroke-accent-warning" />
+            <circle cx="56" cy="30" r="3" fill="#D89B52" className="animate-pulse" />
+            <text x="66" y="34" fill="#F7F2E7" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
               VIEW TECH STACK ↵
             </text>
           </g>
@@ -283,7 +283,7 @@ export function WelcomeScene({
         <g id="entrance-clock">
           <circle cx="216" cy="72" r="18" fill="#B47E32" />
           <circle cx="216" cy="72" r="15" fill="#FAF6EE" />
-          <circle cx="216" cy="72" r="2" fill="#0284C7" />
+          <circle cx="216" cy="72" r="2" fill="#C85A32" />
           <line x1="216" y1="72" x2="216" y2="62" stroke="#18181B" strokeWidth="2" strokeLinecap="round" />
           <line x1="216" y1="72" x2="223" y2="72" stroke="#18181B" strokeWidth="2" strokeLinecap="round" />
         </g>
@@ -413,17 +413,17 @@ export function WelcomeScene({
               width="150"
               height="34"
               fill="#FFFFFF"
-              rx="6"
-              stroke="#18181B"
+              rx="4"
+              stroke="#3D2E24"
               strokeWidth="1.5"
               className="group-hover:stroke-accent-primary"
             />
-            <polygon points="368,136 360,144 376,136" fill="#FFFFFF" stroke="#18181B" strokeWidth="1.5" />
+            <polygon points="368,136 360,144 376,136" fill="#FFFFFF" stroke="#3D2E24" strokeWidth="1.5" />
             <polygon points="369,135 362,142 375,135" fill="#FFFFFF" />
-            <text x="439" y="117" textAnchor="middle" fill="#0F172A" fontSize="9" fontFamily="monospace" fontWeight="bold">
+            <text x="439" y="117" textAnchor="middle" fill="#1C1916" fontSize="9" fontFamily="monospace" fontWeight="bold">
               Hi, I&apos;m Dipanshi! 👋
             </text>
-            <text x="439" y="128" textAnchor="middle" fill="#0284C7" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
+            <text x="439" y="128" textAnchor="middle" fill="#C85A32" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
               [ ✦ CLICK TO MEET ↵ ]
             </text>
           </g>
@@ -469,11 +469,11 @@ export function WelcomeScene({
 
           {/* Studio Check-In Tablet Terminal */}
           <g id="counter-tablet">
-            <rect x="382" y="192" width="24" height="16" fill="#1E242C" rx="1" />
-            <rect x="384" y="194" width="20" height="12" fill="#0D1117" />
-            <rect x="386" y="196" width="16" height="2" fill="#38BDF8" />
-            <rect x="386" y="200" width="10" height="2" fill="#34D399" />
-            <rect x="390" y="207" width="8" height="2" fill="#334155" />
+            <rect x="382" y="192" width="24" height="16" fill="#1E1A16" rx="1" />
+            <rect x="384" y="194" width="20" height="12" fill="#12100E" />
+            <rect x="386" y="196" width="16" height="2" fill="#C85A32" />
+            <rect x="386" y="200" width="10" height="2" fill="#D89B52" />
+            <rect x="390" y="207" width="8" height="2" fill="#3D342C" />
           </g>
         </g>
 
@@ -500,7 +500,7 @@ export function WelcomeScene({
             y="76"
             width="200"
             height="296"
-            rx="12"
+            rx="8"
             fill="transparent"
             className="transition-all duration-200 pointer-events-none group-hover:stroke-accent-primary/70 group-hover:stroke-2 group-focus-visible:stroke-border-focus group-focus-visible:stroke-2"
           />
@@ -509,35 +509,36 @@ export function WelcomeScene({
           <rect x="546" y="360" width="192" height="16" fill="#1C1612" opacity="0.35" />
 
           {/* Heavy Architectural Portal Frame */}
-          <rect x="548" y="90" width="188" height="276" fill="#1F2937" rx="4" />
-          <rect x="554" y="96" width="176" height="266" fill="#111827" rx="2" />
+          <rect x="548" y="90" width="188" height="276" fill="#241E1A" rx="3" />
+          <rect x="554" y="96" width="176" height="266" fill="#14110F" rx="2" />
 
           {/* Interior Doorway Light Glowing from Project Lab Beyond */}
           <rect x="560" y="104" width="164" height="254" fill="url(#labDoorwayLight)" />
 
           {/* Double Sliding Glass Doors */}
-          <rect x="564" y="108" width="76" height="246" fill="#1E293B" opacity="0.8" rx="1" />
-          <rect x="568" y="112" width="68" height="114" fill="#0284C7" opacity="0.35" />
-          <rect x="568" y="234" width="68" height="114" fill="#0284C7" opacity="0.25" />
-          <rect x="634" y="210" width="4" height="32" fill="#E2E8F0" rx="1" />
+          <rect x="564" y="108" width="76" height="246" fill="#1C1815" opacity="0.85" rx="1" />
+          <rect x="568" y="112" width="68" height="114" fill="#B47E32" opacity="0.18" />
+          <rect x="568" y="234" width="68" height="114" fill="#B47E32" opacity="0.14" />
+          <rect x="634" y="210" width="4" height="32" fill="#E2D9CA" rx="1" />
 
-          <rect x="644" y="108" width="76" height="246" fill="#1E293B" opacity="0.8" rx="1" />
-          <rect x="648" y="112" width="68" height="114" fill="#0284C7" opacity="0.35" />
-          <rect x="648" y="234" width="68" height="114" fill="#0284C7" opacity="0.25" />
-          <rect x="646" y="210" width="4" height="32" fill="#E2E8F0" rx="1" />
+          {/* Right Door */}
+          <rect x="644" y="108" width="76" height="246" fill="#1C1815" opacity="0.85" rx="1" />
+          <rect x="648" y="112" width="68" height="114" fill="#B47E32" opacity="0.18" />
+          <rect x="648" y="234" width="68" height="114" fill="#B47E32" opacity="0.14" />
+          <rect x="646" y="210" width="4" height="32" fill="#E2D9CA" rx="1" />
 
           {/* Frosted Door Glass Reflection Accents */}
-          <polygon points="572,116 600,116 580,220 568,220" fill="#FFFFFF" opacity="0.12" />
-          <polygon points="652,116 680,116 660,220 648,220" fill="#FFFFFF" opacity="0.12" />
+          <polygon points="572,116 600,116 580,220 568,220" fill="#FFFFFF" opacity="0.08" />
+          <polygon points="652,116 680,116 660,220 648,220" fill="#FFFFFF" opacity="0.08" />
 
           {/* Illuminated Portal Lintel Header */}
-          <rect x="552" y="94" width="180" height="24" fill="#0D1117" rx="2" />
-          <rect x="556" y="98" width="6" height="6" fill="#10B981" className="motion-reduce:animate-none animate-pulse" />
+          <rect x="552" y="94" width="180" height="24" fill="#1B1714" rx="2" />
+          <rect x="556" y="98" width="6" height="6" fill="#3DA154" className="motion-reduce:animate-none animate-pulse" />
           <text
             x="644"
             y="110"
             textAnchor="middle"
-            fill="#F3F4F6"
+            fill="#F7F2E7"
             fontSize="10"
             fontFamily="monospace"
             fontWeight="bold"
@@ -547,12 +548,12 @@ export function WelcomeScene({
           </text>
 
           {/* Subtitle Badge on Doors */}
-          <rect x="584" y="260" width="116" height="18" fill="#0F172A" rx="4" stroke="#0284C7" strokeWidth="1" />
+          <rect x="584" y="260" width="116" height="18" fill="#1B1714" rx="2" stroke="#B47E32" strokeWidth="1" />
           <text
             x="642"
             y="272"
             textAnchor="middle"
-            fill="#38BDF8"
+            fill="#D89B52"
             fontSize="7.5"
             fontFamily="monospace"
             fontWeight="bold"
@@ -562,12 +563,12 @@ export function WelcomeScene({
 
           {/* Floor Directional Chevron Mat */}
           <g id="floor-chevrons">
-            <rect x="580" y="364" width="124" height="18" fill="#1E293B" rx="2" />
+            <rect x="580" y="364" width="124" height="18" fill="#241E1A" rx="2" />
             <text
               x="642"
               y="377"
               textAnchor="middle"
-              fill="#38BDF8"
+              fill="#C85A32"
               fontSize="10"
               fontFamily="monospace"
               fontWeight="bold"
@@ -582,23 +583,23 @@ export function WelcomeScene({
             id="doorway-beacon"
             className="transition-transform duration-150 group-hover:-translate-y-1.5 group-focus-visible:-translate-y-1.5"
           >
-            <rect x="548" y="52" width="188" height="30" rx="6" fill="#05070A" opacity="0.65" />
+            <rect x="548" y="52" width="188" height="30" rx="3" fill="#14110F" opacity="0.65" />
             <rect
               x="546"
               y="48"
               width="188"
               height="30"
-              rx="6"
-              fill="#0D1117"
-              stroke="#0284C7"
+              rx="3"
+              fill="#1B1714"
+              stroke="#C85A32"
               strokeWidth="1.5"
-              className="group-hover:stroke-accent-primary"
+              className="group-hover:stroke-accent-warning"
             />
-            <circle cx="562" cy="63" r="4" fill="#38BDF8" className="motion-reduce:animate-none animate-pulse" />
+            <circle cx="562" cy="63" r="4" fill="#D89B52" className="motion-reduce:animate-none animate-pulse" />
             <text
               x="574"
               y="67"
-              fill="#F3F4F6"
+              fill="#F7F2E7"
               fontSize="10"
               fontFamily="monospace"
               fontWeight="bold"
@@ -609,14 +610,14 @@ export function WelcomeScene({
             <text
               x="718"
               y="67"
-              fill="#38BDF8"
+              fill="#C85A32"
               fontSize="12"
               fontFamily="monospace"
               fontWeight="bold"
             >
               ↵
             </text>
-            <polygon points="636,78 642,84 648,78" fill="#0D1117" stroke="#0284C7" strokeWidth="1" />
+            <polygon points="636,78 642,84 648,78" fill="#1B1714" stroke="#C85A32" strokeWidth="1" />
           </g>
         </g>
       </svg>

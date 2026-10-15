@@ -114,7 +114,7 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
             type="button"
             onClick={onClose}
             aria-label="Close skills drawer (Esc)"
-            className="p-1.5 rounded-lg border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary focus-visible:outline-2 focus-visible:outline-border-focus transition-colors"
+            className="p-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary focus-visible:outline-2 focus-visible:outline-border-focus transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -123,22 +123,22 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
         </div>
 
         {/* Directory Map Vignette */}
-        <div className="px-5 py-4 bg-[#14121A] border-b border-border-subtle flex items-center gap-4">
-          <div className="w-20 h-20 rounded-lg bg-[#1F1C27] border border-border-subtle/40 flex items-center justify-center p-2 shrink-0">
+        <div className="px-5 py-4 bg-[#181411] border-b border-border-subtle flex items-center gap-4">
+          <div className="w-20 h-20 rounded-sm bg-[#241E1A] border border-border-subtle flex items-center justify-center p-2 shrink-0 shadow-inner">
             <svg viewBox="0 0 48 48" className="w-full h-full" style={{ shapeRendering: "crispEdges" }} aria-hidden="true">
               {/* Directory frame */}
-              <rect x="6" y="6" width="36" height="36" fill="#1C2128" rx="2" stroke="#4B2C14" strokeWidth="2" />
-              <rect x="10" y="10" width="28" height="6" fill="#0D1117" />
-              <rect x="12" y="20" width="4" height="4" fill="#10B981" />
-              <rect x="18" y="21" width="16" height="2" fill="#E2E8F0" />
-              <rect x="12" y="28" width="4" height="4" fill="#38BDF8" />
-              <rect x="18" y="29" width="16" height="2" fill="#E2E8F0" />
-              <rect x="12" y="36" width="4" height="4" fill="#F59E0B" />
-              <rect x="18" y="37" width="16" height="2" fill="#E2E8F0" />
+              <rect x="6" y="6" width="36" height="36" fill="#1C1815" rx="2" stroke="#4B2C14" strokeWidth="2" />
+              <rect x="10" y="10" width="28" height="6" fill="#12100E" />
+              <rect x="12" y="20" width="4" height="4" fill="#3DA154" />
+              <rect x="18" y="21" width="16" height="2" fill="#E2D9CA" />
+              <rect x="12" y="28" width="4" height="4" fill="#C85A32" />
+              <rect x="18" y="29" width="16" height="2" fill="#E2D9CA" />
+              <rect x="12" y="36" width="4" height="4" fill="#D89B52" />
+              <rect x="18" y="37" width="16" height="2" fill="#E2D9CA" />
             </svg>
           </div>
 
-          <div className="p-3 rounded-lg bg-surface border border-border-subtle flex-1 shadow-xs">
+          <div className="p-3 rounded-sm bg-surface-elevated border border-border-subtle flex-1 shadow-2xs">
             <span className="font-mono text-[10px] uppercase tracking-wider text-accent-primary font-semibold block mb-0.5">
               Capabilities Overview
             </span>
@@ -166,7 +166,7 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
             {skillsData.map((item) => (
               <div
                 key={item.number}
-                className="p-4 rounded-xl border border-border-subtle bg-surface-elevated/40 space-y-3"
+                className="p-4 rounded-sm border border-border-subtle bg-surface-elevated/40 space-y-3 shadow-2xs"
               >
                 <div className="flex items-center justify-between font-mono text-xs pb-2 border-b border-border-subtle">
                   <span className="font-bold text-accent-primary">{item.number}</span>
@@ -183,7 +183,7 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
                   {item.tech.map((t) => (
                     <span
                       key={t}
-                      className="px-2 py-0.5 rounded border border-border-subtle bg-surface font-mono text-[11px] text-text-primary"
+                      className="px-2 py-0.5 rounded-sm border border-border-subtle bg-surface font-mono text-[11px] text-text-primary shadow-2xs"
                     >
                       {t}
                     </span>
@@ -204,7 +204,7 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
                 onClose();
                 onOpenProjects?.();
               }}
-              className="gap-1.5 text-xs h-10 px-4 font-medium"
+              className="gap-1.5 text-xs"
             >
               <span>Explore Projects in Lab</span>
               <span aria-hidden="true">→</span>
@@ -215,7 +215,7 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
               size="md"
               href={siteConfig.links.resume}
               external
-              className="gap-1.5 text-xs h-10 px-3.5 font-medium"
+              className="gap-1.5 text-xs text-accent-warning border-accent-warning/60 hover:bg-accent-warning/10 hover:border-accent-warning"
             >
               <span>Résumé PDF</span>
               <span className="text-xs" aria-hidden="true">↗</span>

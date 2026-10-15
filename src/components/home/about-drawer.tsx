@@ -76,7 +76,7 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
         {/* Top Header */}
         <div className="sticky top-0 z-20 bg-surface/95 backdrop-blur-md border-b border-border-subtle px-5 py-3.5 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+            <span className="w-2 h-2 rounded-full bg-accent-success animate-pulse" aria-hidden="true" />
             <span className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
               Engineer Profile · Studio Lead
             </span>
@@ -87,7 +87,7 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
             type="button"
             onClick={onClose}
             aria-label="Close profile drawer (Esc)"
-            className="p-1.5 rounded-lg border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary focus-visible:outline-2 focus-visible:outline-border-focus transition-colors"
+            className="p-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary focus-visible:outline-2 focus-visible:outline-border-focus transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -96,8 +96,8 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
         </div>
 
         {/* Pixel Character Vignette */}
-        <div className="px-5 py-4 bg-[#14121A] border-b border-border-subtle flex items-center gap-4">
-          <div className="w-20 h-20 rounded-lg bg-[#1F1C27] border border-border-subtle/40 flex items-center justify-center p-1 shrink-0">
+        <div className="px-5 py-4 bg-[#181411] border-b border-border-subtle flex items-center gap-4">
+          <div className="w-20 h-20 rounded-sm bg-[#241E1A] border border-border-subtle flex items-center justify-center p-1 shrink-0 shadow-inner">
             <svg viewBox="0 0 48 48" className="w-full h-full" style={{ shapeRendering: "crispEdges" }} aria-hidden="true">
               {/* Head & Neck */}
               <rect x="20" y="16" width="8" height="6" fill="#E5B899" />
@@ -119,7 +119,7 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
             </svg>
           </div>
 
-          <div className="p-3 rounded-lg bg-surface border border-border-subtle flex-1 shadow-xs">
+          <div className="p-3 rounded-sm bg-surface-elevated border border-border-subtle flex-1 shadow-2xs">
             <span className="font-mono text-[10px] uppercase tracking-wider text-accent-primary font-semibold block mb-0.5">
               Personal Welcome
             </span>
@@ -141,8 +141,8 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
             <h2 id="drawer-about-title" className="text-2xl font-semibold tracking-tight text-text-primary">
               Engineering Candidate &amp; Student
             </h2>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium border border-emerald-500/20 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 select-none">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-sm text-xs font-mono font-medium border border-accent-success/30 bg-accent-success/10 text-accent-success select-none">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-success animate-pulse" aria-hidden="true" />
               <span>{siteConfig.status}</span>
             </div>
           </div>
@@ -168,7 +168,7 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
           </div>
 
           {/* Recruiter Fast-Facts Ledger */}
-          <div className="rounded-xl border border-border-subtle bg-surface-elevated/40 p-4 space-y-2.5 font-mono text-xs">
+          <div className="rounded-sm border border-border-subtle bg-surface-elevated/40 p-4 space-y-2.5 font-mono text-xs shadow-2xs">
             <span className="font-semibold text-text-primary uppercase tracking-wider text-[11px] block pb-1 border-b border-border-subtle">
               Recruiter Quick Facts
             </span>
@@ -203,7 +203,7 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
               size="md"
               href={siteConfig.links.resume}
               external
-              className="gap-1.5 text-xs h-10 px-4 font-medium"
+              className="gap-1.5 text-xs"
             >
               <span>View Résumé PDF</span>
               <span className="text-xs" aria-hidden="true">↗</span>
@@ -216,7 +216,7 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
                 onClose();
                 onOpenProjects?.();
               }}
-              className="gap-1.5 text-xs h-10 px-4 font-medium"
+              className="gap-1.5 text-xs"
             >
               <span>Explore Projects</span>
               <span aria-hidden="true">→</span>
@@ -228,15 +228,16 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
               href={siteConfig.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-secondary hover:text-text-primary underline"
+              className="text-text-secondary hover:text-text-primary transition-colors"
             >
               GitHub ↗
             </a>
+            <span className="text-border-subtle">·</span>
             <a
               href={siteConfig.links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-secondary hover:text-text-primary underline"
+              className="text-text-secondary hover:text-text-primary transition-colors"
             >
               LinkedIn ↗
             </a>

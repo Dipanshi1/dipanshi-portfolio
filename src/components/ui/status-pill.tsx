@@ -15,23 +15,23 @@ export function StatusPill({
 }: StatusPillProps) {
   const variantStyles = {
     available:
-      "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
+      "bg-accent-success/10 text-accent-success border-accent-success/30",
     neutral:
       "bg-surface-elevated text-text-secondary border-border-subtle",
     warning:
-      "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20",
+      "bg-accent-warning/10 text-accent-warning border-accent-warning/30",
   };
 
   const dotStyles = {
-    available: "bg-emerald-500 dark:bg-emerald-400",
+    available: "bg-accent-success",
     neutral: "bg-text-tertiary",
-    warning: "bg-amber-500 dark:bg-amber-400",
+    warning: "bg-accent-warning",
   };
 
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-mono font-medium border select-none transition-colors duration-150",
+        "inline-flex items-center gap-2 px-2.5 py-1 rounded-sm text-xs font-mono font-medium border select-none transition-colors duration-150 shadow-2xs",
         variantStyles[variant],
         className
       )}

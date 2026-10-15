@@ -68,52 +68,54 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative w-full h-[calc(100dvh-4rem)] max-h-[calc(100dvh-4rem)] overflow-hidden bg-[#16141D] flex flex-col justify-between select-none">
+    <div className="relative w-full h-[calc(100dvh-4rem)] max-h-[calc(100dvh-4rem)] overflow-hidden bg-canvas flex flex-col justify-between select-none">
       {/* 1. TOP STATUS OVERLAY STRIP */}
-      <div className="relative z-20 w-full shrink-0 px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between border-b border-[#2A2638]/70 bg-[#16141D]/90 backdrop-blur-xs text-xs font-mono">
+      <div className="relative z-20 w-full shrink-0 px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between border-b border-border-subtle bg-surface/90 backdrop-blur-xs text-xs font-mono text-text-secondary">
         {/* Left: Studio Location & Availability */}
         <div className="flex items-center gap-3">
-          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#241F32] border border-[#3A334E] text-[#E2DDF0]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" aria-hidden="true" />
-            <span className="font-semibold text-[11px] sm:text-xs">LEVEL 01: RECEPTION</span>
+          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-surface-elevated border border-border-subtle text-text-primary shadow-2xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent-success animate-pulse" aria-hidden="true" />
+            <span className="font-semibold text-[11px] sm:text-xs tracking-wider">LEVEL 01: RECEPTION</span>
           </span>
-          <span className="hidden md:inline-flex items-center gap-1.5 text-[#9D94B8] text-[11px]">
+          <span className="hidden md:inline-flex items-center gap-1.5 text-text-secondary text-[11px]">
             <span>Dipanshi Gupta</span>
-            <span className="text-[#4E4666]">/</span>
+            <span className="text-border-subtle">/</span>
             <span>3rd-Year CS</span>
-            <span className="text-[#4E4666]">/</span>
-            <span className="text-[#38BDF8]">Applied AI &amp; Backend</span>
+            <span className="text-border-subtle">/</span>
+            <span className="text-accent-primary font-medium">Applied AI &amp; Backend</span>
           </span>
         </div>
 
         {/* Right: Interaction Guide Tip */}
-        <div className="flex items-center gap-2 text-[#9D94B8] text-[11px]">
+        <div className="flex items-center gap-2 text-text-secondary text-[11px]">
           <span className="hidden sm:inline">Click scene hotspots or navigate below:</span>
-          <span className="px-2 py-0.5 rounded bg-[#241F32] border border-[#3A334E] text-[#F3F4F6] text-[10px]">
-            INTERACTIVE
+          <span className="px-2 py-0.5 rounded-sm bg-accent-primary/10 border border-accent-primary/30 text-accent-primary text-[10px] font-semibold tracking-wider">
+            INTERACTIVE STUDIO
           </span>
         </div>
       </div>
 
       {/* 2. CENTER STAGE: FULL-SCREEN PIXEL-ART RECEPTION SCENE */}
-      <div className="relative flex-1 min-h-0 w-full h-full flex items-center justify-center overflow-hidden">
-        <WelcomeScene
-          onEnterProjects={() => handleOpenProjects()}
-          onOpenAbout={handleOpenAbout}
-          onOpenSkills={handleOpenSkills}
-        />
+      <div className="relative flex-1 min-h-0 w-full h-full flex items-center justify-center overflow-hidden p-2 sm:p-3 bg-canvas">
+        <div className="relative w-full max-w-[1440px] flex items-center justify-center rounded-sm border border-border-subtle/70 bg-surface/40 overflow-hidden shadow-inner sm:h-full my-auto">
+          <WelcomeScene
+            onEnterProjects={() => handleOpenProjects()}
+            onOpenAbout={handleOpenAbout}
+            onOpenSkills={handleOpenSkills}
+          />
+        </div>
       </div>
 
       {/* 3. PERSISTENT RECRUITER HUD STRIP (Docked Bottom Toolbar) */}
       <footer
-        className="relative z-20 w-full shrink-0 border-t border-[#2A2638] bg-[#121018]/95 backdrop-blur-md px-3 sm:px-6 py-2 sm:py-2.5 text-xs font-mono"
+        className="relative z-20 w-full shrink-0 border-t border-border-subtle bg-surface/95 backdrop-blur-md px-3 sm:px-6 py-2 sm:py-2.5 text-xs font-mono"
         role="region"
         aria-label="Direct Portfolio & Recruiter Navigation"
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 sm:gap-3">
           {/* Left: Room Fast-Travel Buttons */}
           <div className="flex items-center gap-1.5 sm:gap-2 w-full md:w-auto overflow-x-auto no-scrollbar">
-            <span className="text-[10px] text-[#7E7498] uppercase tracking-wider hidden sm:inline mr-1">
+            <span className="text-[10px] text-text-tertiary uppercase tracking-wider hidden sm:inline mr-1">
               Rooms:
             </span>
 
@@ -121,11 +123,14 @@ export default function Home() {
             <button
               type="button"
               onClick={() => handleOpenProjects()}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#0284C7]/60 bg-[#0F172A] text-[#38BDF8] hover:bg-[#0284C7]/20 hover:border-[#38BDF8] transition-colors focus-visible:outline-2 focus-visible:outline-[#38BDF8]"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-sm border border-accent-primary/60 bg-accent-primary/10 text-text-primary hover:bg-accent-primary/20 hover:border-accent-primary transition-colors focus-visible:outline-2 focus-visible:outline-border-focus font-medium text-xs shadow-2xs"
             >
-              <span className="text-sm">🚪</span>
-              <span className="font-semibold text-xs">Project Lab</span>
-              <span className="text-[10px] px-1 py-0.2 rounded bg-[#0284C7]/30 text-[#E0F2FE]">
+              <svg className="w-3.5 h-3.5 text-accent-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="3" width="16" height="18" rx="1" strokeWidth="2" />
+                <circle cx="15" cy="12" r="1.5" fill="currentColor" />
+              </svg>
+              <span>Project Lab</span>
+              <span className="text-[10px] px-1 py-0.2 rounded-xs bg-accent-primary/25 text-accent-primary font-bold">
                 4
               </span>
             </button>
@@ -134,31 +139,35 @@ export default function Home() {
             <button
               type="button"
               onClick={handleOpenSkills}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#3A334E] bg-[#1F1B2C] text-[#D8CEF0] hover:bg-[#2A243D] hover:border-[#6D5D8F] transition-colors focus-visible:outline-2 focus-visible:outline-[#A78BFA]"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors focus-visible:outline-2 focus-visible:outline-border-focus font-medium text-xs shadow-2xs"
             >
-              <span className="text-sm">🛠️</span>
-              <span className="font-semibold text-xs">Stack &amp; Skills</span>
+              <svg className="w-3.5 h-3.5 text-text-tertiary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+              <span>Stack &amp; Skills</span>
             </button>
 
             {/* About Hotkey Button */}
             <button
               type="button"
               onClick={handleOpenAbout}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#3A334E] bg-[#1F1B2C] text-[#D8CEF0] hover:bg-[#2A243D] hover:border-[#6D5D8F] transition-colors focus-visible:outline-2 focus-visible:outline-[#A78BFA]"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors focus-visible:outline-2 focus-visible:outline-border-focus font-medium text-xs shadow-2xs"
             >
-              <span className="text-sm">👩‍💻</span>
-              <span className="font-semibold text-xs">About Dipanshi</span>
+              <svg className="w-3.5 h-3.5 text-text-tertiary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              <span>About Dipanshi</span>
             </button>
           </div>
 
           {/* Right: Direct Recruiter Actions (Resume, GitHub, LinkedIn, Email) */}
-          <div className="flex items-center justify-between md:justify-end gap-2 w-full md:w-auto border-t md:border-t-0 border-[#2A2638] pt-1.5 md:pt-0">
+          <div className="flex items-center justify-between md:justify-end gap-2 w-full md:w-auto border-t md:border-t-0 border-border-subtle pt-1.5 md:pt-0">
             {/* View Resume PDF Button */}
             <a
               href={siteConfig.links.resume}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#F59E0B]/70 bg-[#2E1D05] text-[#FDE68A] hover:bg-[#F59E0B]/20 hover:border-[#FDE68A] transition-colors focus-visible:outline-2 focus-visible:outline-[#F59E0B]"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-sm border border-accent-warning/60 bg-accent-warning/10 text-accent-warning hover:bg-accent-warning/20 hover:border-accent-warning transition-colors focus-visible:outline-2 focus-visible:outline-border-focus font-medium text-xs shadow-2xs"
             >
               <svg
                 className="w-3.5 h-3.5"
@@ -174,7 +183,7 @@ export default function Home() {
                   d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                 />
               </svg>
-              <span className="font-semibold text-xs">Resume PDF</span>
+              <span>Resume PDF</span>
               <span className="text-[10px] opacity-80">↗</span>
             </a>
 
@@ -184,7 +193,7 @@ export default function Home() {
                 href={siteConfig.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1.5 rounded-md border border-[#3A334E] bg-[#1F1B2C] text-[#C5BCD8] hover:text-white hover:border-[#6D5D8F] transition-colors focus-visible:outline-2 focus-visible:outline-[#38BDF8]"
+                className="p-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors focus-visible:outline-2 focus-visible:outline-border-focus"
                 aria-label="Dipanshi Gupta on GitHub (opens in new tab)"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -200,7 +209,7 @@ export default function Home() {
                 href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1.5 rounded-md border border-[#3A334E] bg-[#1F1B2C] text-[#C5BCD8] hover:text-white hover:border-[#6D5D8F] transition-colors focus-visible:outline-2 focus-visible:outline-[#38BDF8]"
+                className="p-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors focus-visible:outline-2 focus-visible:outline-border-focus"
                 aria-label="Dipanshi Gupta on LinkedIn (opens in new tab)"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -210,7 +219,7 @@ export default function Home() {
 
               <a
                 href={siteConfig.links.email}
-                className="p-1.5 rounded-md border border-[#3A334E] bg-[#1F1B2C] text-[#C5BCD8] hover:text-white hover:border-[#6D5D8F] transition-colors focus-visible:outline-2 focus-visible:outline-[#38BDF8]"
+                className="p-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors focus-visible:outline-2 focus-visible:outline-border-focus"
                 aria-label="Send email to Dipanshi Gupta"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -232,7 +241,7 @@ export default function Home() {
         active={isTransitioning}
         onComplete={() => setIsTransitioning(false)}
         variant="reveal"
-        color="#0D1117"
+        color="#14110F"
       />
 
       {/* 5. SLIDE-OVER DIRECTORY DRAWERS */}

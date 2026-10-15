@@ -37,26 +37,26 @@ export function Header() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border-subtle bg-canvas/85 backdrop-blur-md transition-colors duration-150">
+    <header className="sticky top-0 z-50 w-full border-b border-border-subtle bg-canvas/92 backdrop-blur-md transition-colors duration-150">
       <Container className="flex h-16 items-center justify-between">
         {/* Left: Identity & Availability */}
         <div className="flex items-center gap-3 sm:gap-4">
           <a
             href="/"
-            className="group flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:ring-offset-2 focus-visible:ring-offset-canvas rounded-md"
+            className="group flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:ring-offset-2 focus-visible:ring-offset-canvas rounded-sm"
             aria-label={`${siteConfig.name} Home`}
           >
-            <span className="font-mono text-xs font-bold px-2 py-1 rounded border border-border-subtle bg-surface text-text-primary group-hover:border-text-secondary transition-colors duration-150">
+            <span className="font-mono text-xs font-bold px-2 py-1 rounded-sm border border-border-subtle bg-surface-elevated text-text-primary group-hover:border-accent-warning/60 group-hover:text-accent-warning transition-colors duration-150 shadow-2xs">
               {siteConfig.monogram}
             </span>
-            <span className="text-sm font-semibold tracking-tight text-text-primary transition-colors duration-150">
+            <span className="text-sm font-semibold tracking-tight text-text-primary group-hover:text-accent-warning transition-colors duration-150">
               {siteConfig.name}
             </span>
           </a>
 
           {/* Subtle Availability Indicator (Desktop) */}
           <div className="hidden lg:flex items-center pl-3 border-l border-border-subtle">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono text-text-secondary bg-surface border border-border-subtle select-none">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-sm text-xs font-mono text-text-secondary bg-surface border border-border-subtle select-none">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-success animate-pulse shrink-0" aria-hidden="true" />
               <span>{siteConfig.status}</span>
             </span>
@@ -67,7 +67,7 @@ export function Header() {
         <div className="flex items-center gap-5 sm:gap-6 lg:gap-7">
           {/* Desktop Navigation Links */}
           <nav
-            className="hidden md:flex items-center gap-5 lg:gap-7 text-sm font-medium"
+            className="hidden md:flex items-center gap-5 lg:gap-7 text-xs font-mono uppercase tracking-wider"
             aria-label="Main Navigation"
           >
             {siteConfig.nav.map((item) => (
@@ -93,7 +93,8 @@ export function Header() {
               variant="outline"
               size="sm"
               href={siteConfig.links.resume}
-              className="hidden md:inline-flex text-xs h-9 px-3.5"
+              external
+              className="hidden md:inline-flex text-xs h-9 px-3.5 border-accent-warning/60 bg-accent-warning/10 text-accent-warning hover:bg-accent-warning/20 hover:border-accent-warning font-mono rounded-sm transition-colors"
             >
               <span>Resume</span>
               <svg
@@ -124,7 +125,7 @@ export function Header() {
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
               aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-              className="inline-flex md:hidden w-9 h-9 items-center justify-center rounded-md border border-border-subtle bg-surface text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
+              className="inline-flex md:hidden w-9 h-9 items-center justify-center rounded-sm border border-border-subtle bg-surface text-text-secondary hover:text-text-primary hover:bg-surface-elevated transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-focus"
             >
               {isOpen ? (
                 <svg

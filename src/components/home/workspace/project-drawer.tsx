@@ -135,7 +135,7 @@ export function ProjectDrawer({
             type="button"
             onClick={onClose}
             aria-label="Close project directory (Esc)"
-            className="p-1.5 rounded-lg border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary focus-visible:outline-2 focus-visible:outline-border-focus transition-colors shrink-0"
+            className="p-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary focus-visible:outline-2 focus-visible:outline-border-focus transition-colors shrink-0"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -149,7 +149,7 @@ export function ProjectDrawer({
             type="button"
             onClick={handlePrev}
             aria-label="Previous project"
-            className="p-1.5 rounded border border-border-subtle bg-surface hover:bg-surface-elevated text-text-secondary hover:text-text-primary font-mono text-xs shrink-0"
+            className="p-1.5 rounded-sm border border-border-subtle bg-surface hover:bg-surface-elevated text-text-secondary hover:text-text-primary font-mono text-xs shrink-0"
           >
             ◀
           </button>
@@ -163,9 +163,9 @@ export function ProjectDrawer({
                   type="button"
                   onClick={() => handleSelectTab(proj.id)}
                   aria-pressed={isSelected}
-                  className={`flex items-center gap-2 px-3 py-1.5 rounded-lg font-mono text-xs font-medium whitespace-nowrap shrink-0 transition-all ${
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded-sm font-mono text-xs font-medium whitespace-nowrap shrink-0 transition-all ${
                     isSelected
-                      ? "bg-text-primary text-canvas shadow-xs"
+                      ? "bg-accent-primary text-[#FDFBF7] border border-accent-primary shadow-2xs"
                       : "bg-surface border border-border-subtle text-text-secondary hover:text-text-primary hover:bg-surface-elevated"
                   }`}
                 >
@@ -180,69 +180,69 @@ export function ProjectDrawer({
             type="button"
             onClick={handleNext}
             aria-label="Next project"
-            className="p-1.5 rounded border border-border-subtle bg-surface hover:bg-surface-elevated text-text-secondary hover:text-text-primary font-mono text-xs shrink-0"
+            className="p-1.5 rounded-sm border border-border-subtle bg-surface hover:bg-surface-elevated text-text-secondary hover:text-text-primary font-mono text-xs shrink-0"
           >
             ▶
           </button>
         </div>
 
         {/* Middle Pixel-Art Vignette Banner (Pocket FM inspired) */}
-        <div className="px-4 sm:px-5 py-3.5 sm:py-4 bg-[#14121A] border-b border-border-subtle flex flex-col sm:flex-row items-center gap-3 sm:gap-4 min-w-0">
+        <div className="px-4 sm:px-5 py-3.5 sm:py-4 bg-[#181411] border-b border-border-subtle flex flex-col sm:flex-row items-center gap-3 sm:gap-4 min-w-0">
           {/* Mini Pixel Rig SVG */}
-          <div className="shrink-0 w-24 h-24 rounded-lg bg-[#1F1C27] border border-border-subtle/40 flex items-center justify-center p-2">
+          <div className="shrink-0 w-24 h-24 rounded-sm bg-[#241E1A] border border-border-subtle flex items-center justify-center p-2 shadow-inner">
             <svg viewBox="0 0 80 80" className="w-full h-full" style={{ shapeRendering: "crispEdges" }} aria-hidden="true">
               {/* Desk */}
               <rect x="8" y="52" width="64" height="6" fill="#7E4720" />
               <rect x="12" y="58" width="4" height="18" fill="#4B270F" />
               <rect x="64" y="58" width="4" height="18" fill="#4B270F" />
               {/* Monitor */}
-              <rect x="22" y="16" width="36" height="28" fill="#161B22" rx="2" />
-              <rect x="24" y="18" width="32" height="24" fill="#0D1117" />
-              <rect x="38" y="44" width="4" height="8" fill="#30363D" />
-              <rect x="32" y="50" width="16" height="2" fill="#30363D" />
+              <rect x="22" y="16" width="36" height="28" fill="#1B1714" rx="2" />
+              <rect x="24" y="18" width="32" height="24" fill="#12100E" />
+              <rect x="38" y="44" width="4" height="8" fill="#3D342C" />
+              <rect x="32" y="50" width="16" height="2" fill="#3D342C" />
               {/* Animated Monitor Screen Content based on project */}
               {currentProject.id === "manaksetu" && (
                 <g>
-                  <rect x="26" y="20" width="28" height="3" fill="#10B981" />
-                  <rect x="26" y="25" width="12" height="2" fill="#38BDF8" />
-                  <rect x="26" y="29" width="16" height="2" fill="#38BDF8" />
-                  <rect x="26" y="33" width="10" height="2" fill="#F59E0B" />
-                  <rect x="42" y="25" width="12" height="10" fill="#0284C7" opacity="0.4" />
+                  <rect x="26" y="20" width="28" height="3" fill="#3DA154" />
+                  <rect x="26" y="25" width="12" height="2" fill="#D89B52" />
+                  <rect x="26" y="29" width="16" height="2" fill="#D89B52" />
+                  <rect x="26" y="33" width="10" height="2" fill="#C85A32" />
+                  <rect x="42" y="25" width="12" height="10" fill="#B47E32" opacity="0.4" />
                 </g>
               )}
               {currentProject.id === "agrivision" && (
                 <g>
-                  <rect x="26" y="20" width="28" height="3" fill="#22C55E" />
-                  <circle cx="34" cy="28" r="4" fill="#16A34A" />
-                  <rect x="42" y="25" width="12" height="2" fill="#38BDF8" />
-                  <rect x="42" y="29" width="8" height="2" fill="#38BDF8" />
+                  <rect x="26" y="20" width="28" height="3" fill="#3DA154" />
+                  <circle cx="34" cy="28" r="4" fill="#287239" />
+                  <rect x="42" y="25" width="12" height="2" fill="#D89B52" />
+                  <rect x="42" y="29" width="8" height="2" fill="#C85A32" />
                 </g>
               )}
               {currentProject.id === "interview-tracker" && (
                 <g>
-                  <rect x="26" y="20" width="28" height="3" fill="#8B5CF6" />
-                  <rect x="26" y="25" width="8" height="6" fill="#3B82F6" />
-                  <rect x="36" y="25" width="8" height="6" fill="#10B981" />
-                  <rect x="46" y="25" width="8" height="6" fill="#F59E0B" />
-                  <line x1="34" y1="28" x2="36" y2="28" stroke="#FFFFFF" strokeWidth="1" />
+                  <rect x="26" y="20" width="28" height="3" fill="#B47E32" />
+                  <rect x="26" y="25" width="8" height="6" fill="#C85A32" />
+                  <rect x="36" y="25" width="8" height="6" fill="#3DA154" />
+                  <rect x="46" y="25" width="8" height="6" fill="#D89B52" />
+                  <line x1="34" y1="28" x2="36" y2="28" stroke="#EDE6D8" strokeWidth="1" />
                 </g>
               )}
               {currentProject.id === "career-adviser" && (
                 <g>
-                  <rect x="26" y="20" width="28" height="3" fill="#EC4899" />
-                  <rect x="26" y="25" width="28" height="2" fill="#F472B6" />
-                  <rect x="26" y="29" width="20" height="2" fill="#A855F7" />
-                  <rect x="26" y="33" width="14" height="2" fill="#38BDF8" />
+                  <rect x="26" y="20" width="28" height="3" fill="#C85A32" />
+                  <rect x="26" y="25" width="28" height="2" fill="#D89B52" />
+                  <rect x="26" y="29" width="20" height="2" fill="#EDE6D8" />
+                  <rect x="26" y="33" width="14" height="2" fill="#B47E32" />
                 </g>
               )}
               {/* Keyboard & Mouse */}
-              <rect x="28" y="53" width="16" height="3" fill="#30363D" />
-              <rect x="48" y="53" width="4" height="3" fill="#30363D" />
+              <rect x="28" y="53" width="16" height="3" fill="#3D342C" />
+              <rect x="48" y="53" width="4" height="3" fill="#3D342C" />
             </svg>
           </div>
 
           {/* Speech Bubble Quote */}
-          <div className="relative flex-1 p-3 rounded-lg bg-surface border border-border-subtle shadow-xs">
+          <div className="relative flex-1 p-3 rounded-sm bg-surface-elevated border border-border-subtle shadow-2xs">
             <span className="font-mono text-[10px] uppercase tracking-wider text-accent-primary font-semibold block mb-0.5">
               Engineering Stance
             </span>
@@ -266,8 +266,8 @@ export function ProjectDrawer({
               <h2 id="drawer-project-title" className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-primary">
                 {currentProject.title}
               </h2>
-              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-mono font-medium border border-emerald-500/20 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-sm text-[10px] font-mono font-medium border border-accent-success/30 bg-accent-success/10 text-accent-success">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-success animate-pulse" aria-hidden="true" />
                 <span>{currentProject.status}</span>
               </span>
             </div>
@@ -303,7 +303,7 @@ export function ProjectDrawer({
               {currentProject.technicalSignals.map((signal) => (
                 <span
                   key={signal}
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-elevated border border-border-subtle font-mono text-xs text-text-primary"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-surface-elevated border border-border-subtle font-mono text-xs text-text-primary shadow-2xs"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-accent-primary" aria-hidden="true" />
                   <span>{signal}</span>
@@ -313,7 +313,7 @@ export function ProjectDrawer({
           </div>
 
           {/* Context Note */}
-          <div className="p-3.5 rounded-lg border border-border-subtle bg-surface-elevated/60 font-mono text-xs text-text-tertiary space-y-1">
+          <div className="p-3.5 rounded-sm border border-border-subtle bg-surface-elevated/70 font-mono text-xs text-text-tertiary space-y-1 shadow-2xs">
             <span className="text-text-secondary font-medium text-[11px] block">
               {currentProject.contextNote.badge}
             </span>
@@ -331,7 +331,7 @@ export function ProjectDrawer({
                 variant="primary"
                 size="md"
                 href="/work/manaksetu"
-                className="gap-2 text-xs h-9 sm:h-10 px-3 sm:px-4 font-medium"
+                className="gap-2 text-xs"
               >
                 <span>Read Full Case Study</span>
                 <span aria-hidden="true">→</span>
@@ -340,11 +340,11 @@ export function ProjectDrawer({
 
             {currentProject.externalLink && (
               <Button
-                variant={currentProject.id === "manaksetu" ? "outline" : "primary"}
+                variant={currentProject.id === "manaksetu" ? "secondary" : "primary"}
                 size="md"
                 href={currentProject.externalLink}
                 external
-                className="gap-1.5 text-xs h-9 sm:h-10 px-3 sm:px-4 font-medium"
+                className="gap-1.5 text-xs"
               >
                 <span>Codebase Repository</span>
                 <span className="text-xs" aria-hidden="true">↗</span>
@@ -356,7 +356,7 @@ export function ProjectDrawer({
               size="md"
               href={siteConfig.links.resume}
               external
-              className="gap-1.5 text-xs h-9 sm:h-10 px-3 sm:px-3.5 font-medium"
+              className="gap-1.5 text-xs text-accent-warning border-accent-warning/60 hover:bg-accent-warning/10 hover:border-accent-warning"
             >
               <span>Résumé PDF</span>
               <span className="text-xs" aria-hidden="true">↗</span>

@@ -18,7 +18,7 @@ export function TechTag({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider px-2 py-0.5 rounded border transition-colors duration-150 select-none",
+        "inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider px-2 py-0.5 rounded-sm border transition-colors duration-150 select-none shadow-2xs",
         active
           ? "border-accent-primary/40 bg-accent-primary/10 text-accent-primary"
           : "border-border-subtle bg-surface-elevated text-text-secondary",

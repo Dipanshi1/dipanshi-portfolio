@@ -33,13 +33,13 @@ export const Button = React.forwardRef<
 
     const variantStyles = {
       primary:
-        "bg-text-primary text-canvas visited:text-canvas rounded-md hover:opacity-90 active:scale-[0.98] shadow-sm",
+        "bg-accent-primary text-[#FDFBF7] visited:text-[#FDFBF7] rounded-sm hover:opacity-90 active:scale-[0.98] shadow-2xs font-mono",
       secondary:
-        "border border-border-subtle bg-surface text-text-primary visited:text-text-primary rounded-md hover:bg-surface-elevated hover:border-text-secondary active:scale-[0.98]",
+        "border border-border-subtle bg-surface text-text-primary visited:text-text-primary rounded-sm hover:bg-surface-elevated hover:border-text-secondary active:scale-[0.98] font-mono",
       outline:
-        "border border-border-subtle bg-transparent text-text-primary visited:text-text-primary rounded-md hover:bg-surface-elevated hover:border-text-secondary active:scale-[0.98]",
+        "border border-border-subtle bg-transparent text-text-primary visited:text-text-primary rounded-sm hover:bg-surface-elevated hover:border-text-secondary active:scale-[0.98] font-mono",
       ghost:
-        "bg-transparent text-text-secondary visited:text-text-secondary hover:text-text-primary hover:bg-surface-elevated rounded-md active:scale-[0.98]",
+        "bg-transparent text-text-secondary visited:text-text-secondary hover:text-text-primary hover:bg-surface-elevated rounded-sm active:scale-[0.98] font-mono",
       link:
         "bg-transparent text-text-primary visited:text-text-primary hover:underline underline-offset-4 p-0 h-auto font-normal",
     };
