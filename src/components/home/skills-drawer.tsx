@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { Eyebrow } from "@/components/ui/eyebrow";
 import { siteConfig } from "@/config/site";
 
 interface SkillsDrawerProps {
@@ -87,7 +86,7 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
 
   return (
     <div
-      className="fixed inset-0 z-50 flex justify-end bg-black/65 backdrop-blur-xs transition-opacity duration-200 animate-in fade-in"
+      className="fixed inset-0 z-50 flex justify-end bg-black/65 backdrop-blur-xs transition-opacity duration-200 animate-in fade-in overflow-hidden"
       role="presentation"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
@@ -98,14 +97,16 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
         role="dialog"
         aria-modal="true"
         aria-labelledby="drawer-skills-title"
-        className="relative w-full max-w-xl h-full bg-surface border-l border-border-subtle shadow-2xl flex flex-col overflow-y-auto text-text-primary animate-in slide-in-from-right duration-250"
+        className="relative w-full sm:max-w-xl md:max-w-2xl min-w-0 h-full bg-[#16120E] border-l border-[#382C22] shadow-2xl flex flex-col overflow-y-auto overflow-x-hidden text-text-primary animate-in slide-in-from-right duration-250"
       >
-        {/* Top Header */}
-        <div className="sticky top-0 z-20 bg-surface/95 backdrop-blur-md border-b border-border-subtle px-5 py-3.5 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" aria-hidden="true" />
-            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
-              Studio Directory · Technical Stack
+        {/* 1. TOP ARCHITECTURAL HEADER BAR */}
+        <div className="sticky top-0 z-20 bg-[#181310]/95 backdrop-blur-md border-b border-[#2A211A] px-4 sm:px-5 py-3 flex items-center justify-between gap-2 min-w-0">
+          <div className="flex items-center gap-2 min-w-0 flex-1">
+            <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-xs bg-[#221B16] border border-[#382C22] text-[#EDE6D9]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D89B52] animate-pulse shrink-0" aria-hidden="true" />
+              <span className="font-mono text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase">
+                LEVEL 04 // TECHNICAL STACK &amp; BENCHES
+              </span>
             </span>
           </div>
 
@@ -113,18 +114,19 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
             ref={closeBtnRef}
             type="button"
             onClick={onClose}
-            aria-label="Close skills drawer (Esc)"
-            className="p-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary focus-visible:outline-2 focus-visible:outline-border-focus transition-colors"
+            aria-label="Close skills directory (Esc)"
+            className="flex items-center gap-1.5 px-2 py-1 rounded-xs border border-[#382C22] bg-[#221B16] text-[#A69279] hover:text-[#EDE6D9] hover:border-[#D89B52] font-mono text-xs transition-colors shrink-0 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <span>ESC</span>
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        {/* Directory Map Vignette */}
-        <div className="px-5 py-4 bg-[#181411] border-b border-border-subtle flex items-center gap-4">
-          <div className="w-20 h-20 rounded-sm bg-[#241E1A] border border-border-subtle flex items-center justify-center p-2 shrink-0 shadow-inner">
+        {/* 2. DIRECTORY MAP VIGNETTE */}
+        <div className="px-4 sm:px-5 py-3 bg-[#181310] border-b border-[#2A211A] flex items-center gap-3 sm:gap-4 min-w-0">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xs bg-[#120F0D] border border-[#382C22] flex items-center justify-center p-1.5 shrink-0 shadow-inner">
             <svg viewBox="0 0 48 48" className="w-full h-full" style={{ shapeRendering: "crispEdges" }} aria-hidden="true">
               {/* Directory frame */}
               <rect x="6" y="6" width="36" height="36" fill="#1C1815" rx="2" stroke="#4B2C14" strokeWidth="2" />
@@ -138,52 +140,52 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
             </svg>
           </div>
 
-          <div className="p-3 rounded-sm bg-surface-elevated border border-border-subtle flex-1 shadow-2xs">
-            <span className="font-mono text-[10px] uppercase tracking-wider text-accent-primary font-semibold block mb-0.5">
-              Capabilities Overview
+          <div className="relative flex-1 p-2.5 sm:p-3 rounded-xs bg-[#1E1713] border border-[#2E241D] shadow-2xs">
+            <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-[#C85A32] font-semibold block mb-0.5">
+              Capabilities Overview // Studio Benches
             </span>
-            <p className="font-mono text-xs text-text-primary leading-relaxed font-medium">
+            <p className="font-mono text-xs text-[#EDE6D9] leading-relaxed font-medium">
               Verified technical proficiencies spanning applied AI retrieval, relational database engineering, and modern web interfaces.
             </p>
           </div>
         </div>
 
-        {/* Skills List */}
-        <div className="flex-1 p-5 sm:p-6 space-y-6">
+        {/* 3. SKILLS LIST BODY */}
+        <div className="flex-1 w-full max-w-full min-w-0 p-4 sm:p-5 space-y-4">
           <div className="space-y-1">
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-primary" aria-hidden="true" />
-              <Eyebrow className="text-text-tertiary font-semibold tracking-wider text-[11px]">
-                Engineering Toolchains
-              </Eyebrow>
+            <div className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C85A32]" aria-hidden="true" />
+              <span className="text-[#A69279] font-mono font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
+                Engineering Toolchains &amp; Stack
+              </span>
             </div>
-            <h2 id="drawer-skills-title" className="text-2xl font-semibold tracking-tight text-text-primary">
+            <h2 id="drawer-skills-title" className="text-xl sm:text-2xl font-bold tracking-tight text-[#EDE6D9]">
               Core Competencies
             </h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {skillsData.map((item) => (
               <div
                 key={item.number}
-                className="p-4 rounded-sm border border-border-subtle bg-surface-elevated/40 space-y-3 shadow-2xs"
+                className="p-3 sm:p-3.5 rounded-xs border border-[#2E241D] bg-[#181310] space-y-2.5 shadow-2xs"
               >
-                <div className="flex items-center justify-between font-mono text-xs pb-2 border-b border-border-subtle">
-                  <span className="font-bold text-accent-primary">{item.number}</span>
-                  <span className="font-semibold text-text-primary uppercase tracking-wider">
+                <div className="flex items-center justify-between font-mono text-xs pb-1.5 border-b border-[#2A211A]">
+                  <span className="font-bold text-[#C85A32]">{item.number}</span>
+                  <span className="font-semibold text-[#EDE6D9] uppercase tracking-wider text-[11px]">
                     {item.discipline}
                   </span>
                 </div>
 
-                <p className="font-mono text-xs text-text-secondary leading-relaxed">
+                <p className="font-sans text-xs sm:text-[13px] text-[#C4B9A9] leading-relaxed">
                   {item.description}
                 </p>
 
-                <div className="flex flex-wrap gap-1.5 pt-1">
+                <div className="flex flex-wrap gap-1.5 pt-0.5">
                   {item.tech.map((t) => (
                     <span
                       key={t}
-                      className="px-2 py-0.5 rounded-sm border border-border-subtle bg-surface font-mono text-[11px] text-text-primary shadow-2xs"
+                      className="px-2 py-0.5 rounded-xs border border-[#382C22] bg-[#1E1713] font-mono text-[11px] text-[#EDE6D9] shadow-2xs"
                     >
                       {t}
                     </span>
@@ -194,17 +196,17 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
           </div>
         </div>
 
-        {/* Footer Actions */}
-        <div className="sticky bottom-0 z-20 bg-surface/95 backdrop-blur-md border-t border-border-subtle p-5 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-2.5">
+        {/* 4. FOOTER ACTIONS */}
+        <div className="sticky bottom-0 z-20 bg-[#181310]/95 backdrop-blur-md border-t border-[#2A211A] p-3.5 sm:p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
             <Button
               variant="primary"
-              size="md"
+              size="sm"
               onClick={() => {
                 onClose();
                 onOpenProjects?.();
               }}
-              className="gap-1.5 text-xs"
+              className="gap-1.5 text-xs h-7.5 px-3"
             >
               <span>Explore Projects in Lab</span>
               <span aria-hidden="true">→</span>
@@ -212,10 +214,10 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
 
             <Button
               variant="brass"
-              size="md"
+              size="sm"
               href={siteConfig.links.resume}
               external
-              className="gap-1.5 text-xs"
+              className="gap-1.5 text-xs h-7.5 px-2.5"
             >
               <span>Résumé PDF</span>
               <span className="text-xs" aria-hidden="true">↗</span>
@@ -225,7 +227,7 @@ export function SkillsDrawer({ isOpen, onClose, onOpenProjects }: SkillsDrawerPr
           <button
             type="button"
             onClick={onClose}
-            className="text-xs font-mono text-text-secondary hover:text-text-primary underline-offset-4 hover:underline transition-colors px-2 py-1"
+            className="text-xs font-mono text-[#A69279] hover:text-[#EDE6D9] underline-offset-4 hover:underline transition-colors px-2 py-1 self-center sm:self-auto"
           >
             Back to Studio (Esc)
           </button>

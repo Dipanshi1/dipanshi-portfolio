@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { Eyebrow } from "@/components/ui/eyebrow";
 import { siteConfig } from "@/config/site";
 
 interface AboutDrawerProps {
@@ -60,7 +59,7 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
 
   return (
     <div
-      className="fixed inset-0 z-50 flex justify-end bg-black/65 backdrop-blur-xs transition-opacity duration-200 animate-in fade-in"
+      className="fixed inset-0 z-50 flex justify-end bg-black/65 backdrop-blur-xs transition-opacity duration-200 animate-in fade-in overflow-hidden"
       role="presentation"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
@@ -71,14 +70,16 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
         role="dialog"
         aria-modal="true"
         aria-labelledby="drawer-about-title"
-        className="relative w-full max-w-xl h-full bg-surface border-l border-border-subtle shadow-2xl flex flex-col overflow-y-auto text-text-primary animate-in slide-in-from-right duration-250"
+        className="relative w-full sm:max-w-xl md:max-w-2xl min-w-0 h-full bg-[#16120E] border-l border-[#382C22] shadow-2xl flex flex-col overflow-y-auto overflow-x-hidden text-text-primary animate-in slide-in-from-right duration-250"
       >
-        {/* Top Header */}
-        <div className="sticky top-0 z-20 bg-surface/95 backdrop-blur-md border-b border-border-subtle px-5 py-3.5 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-accent-success animate-pulse" aria-hidden="true" />
-            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-text-primary">
-              Engineer Profile · Studio Lead
+        {/* 1. TOP ARCHITECTURAL HEADER BAR */}
+        <div className="sticky top-0 z-20 bg-[#181310]/95 backdrop-blur-md border-b border-[#2A211A] px-4 sm:px-5 py-3 flex items-center justify-between gap-2 min-w-0">
+          <div className="flex items-center gap-2 min-w-0 flex-1">
+            <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-xs bg-[#221B16] border border-[#382C22] text-[#EDE6D9]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D89B52] animate-pulse shrink-0" aria-hidden="true" />
+              <span className="font-mono text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase">
+                LEVEL 03 // STUDIO LEAD &amp; PROFILE
+              </span>
             </span>
           </div>
 
@@ -87,17 +88,18 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
             type="button"
             onClick={onClose}
             aria-label="Close profile drawer (Esc)"
-            className="p-1.5 rounded-sm border border-border-subtle bg-surface-elevated text-text-secondary hover:text-text-primary hover:border-text-secondary focus-visible:outline-2 focus-visible:outline-border-focus transition-colors"
+            className="flex items-center gap-1.5 px-2 py-1 rounded-xs border border-[#382C22] bg-[#221B16] text-[#A69279] hover:text-[#EDE6D9] hover:border-[#D89B52] font-mono text-xs transition-colors shrink-0 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <span>ESC</span>
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        {/* Pixel Character Vignette */}
-        <div className="px-5 py-4 bg-[#181411] border-b border-border-subtle flex items-center gap-4">
-          <div className="w-20 h-20 rounded-sm bg-[#241E1A] border border-border-subtle flex items-center justify-center p-1 shrink-0 shadow-inner">
+        {/* 2. PIXEL CHARACTER VIGNETTE */}
+        <div className="px-4 sm:px-5 py-3 bg-[#181310] border-b border-[#2A211A] flex items-center gap-3 sm:gap-4 min-w-0">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xs bg-[#120F0D] border border-[#382C22] flex items-center justify-center p-1 shrink-0 shadow-inner">
             <svg viewBox="0 0 48 48" className="w-full h-full" style={{ shapeRendering: "crispEdges" }} aria-hidden="true">
               {/* Head & Neck */}
               <rect x="20" y="16" width="8" height="6" fill="#E5B899" />
@@ -119,91 +121,96 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
             </svg>
           </div>
 
-          <div className="p-3 rounded-sm bg-surface-elevated border border-border-subtle flex-1 shadow-2xs">
-            <span className="font-mono text-[10px] uppercase tracking-wider text-accent-primary font-semibold block mb-0.5">
-              Personal Welcome
+          <div className="relative flex-1 p-2.5 sm:p-3 rounded-xs bg-[#1E1713] border border-[#2E241D] shadow-2xs">
+            <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-[#C85A32] font-semibold block mb-0.5">
+              Personal Welcome // Studio Lead
             </span>
-            <p className="font-mono text-xs text-text-primary leading-relaxed font-medium">
+            <p className="font-mono text-xs text-[#EDE6D9] leading-relaxed font-medium">
               &ldquo;Hi, I&apos;m Dipanshi! I build software that bridges applied AI models with reliable, production user experiences.&rdquo;
             </p>
           </div>
         </div>
 
-        {/* Content Body */}
-        <div className="flex-1 p-5 sm:p-6 space-y-6">
-          <div className="space-y-1.5">
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-primary" aria-hidden="true" />
-              <Eyebrow className="text-text-tertiary font-semibold tracking-wider text-[11px]">
+        {/* 3. CONTENT BODY */}
+        <div className="flex-1 w-full max-w-full min-w-0 p-4 sm:p-5 space-y-4">
+          {/* Title & Status */}
+          <div className="space-y-1">
+            <div className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C85A32]" aria-hidden="true" />
+              <span className="text-[#A69279] font-mono font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
                 About Dipanshi Gupta
-              </Eyebrow>
+              </span>
             </div>
-            <h2 id="drawer-about-title" className="text-2xl font-semibold tracking-tight text-text-primary">
-              Engineering Candidate &amp; Student
-            </h2>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-sm text-xs font-mono font-medium border border-accent-success/30 bg-accent-success/10 text-accent-success select-none">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-success animate-pulse" aria-hidden="true" />
-              <span>{siteConfig.status}</span>
+            <div className="flex items-center justify-between gap-3">
+              <h2 id="drawer-about-title" className="text-xl sm:text-2xl font-bold tracking-tight text-[#EDE6D9]">
+                Engineering Candidate &amp; Student
+              </h2>
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-xs text-[10px] font-mono font-medium border border-[#3DA154]/40 bg-[#3DA154]/15 text-[#4ADE80]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3DA154] animate-pulse" aria-hidden="true" />
+                <span>{siteConfig.status}</span>
+              </span>
             </div>
           </div>
 
-          {/* Narrative Paragraphs */}
-          <div className="space-y-3 text-xs sm:text-sm text-text-secondary leading-relaxed font-sans">
-            <p>
-              I am a 3rd-year Computer Science and Engineering student focused on building
-              systems that bridge applied AI models with robust, production-ready interfaces.
-              My work centers on turning complex algorithmic requirements into reliable,
-              verifiable user experiences.
-            </p>
-            <p>
-              My core technical strengths include designing hybrid retrieval pipelines
-              (vector embeddings + BM25 lexical search), developing asynchronous FastAPI
-              microservices with strict PostgreSQL relational schemas, and engineering responsive,
-              token-driven interfaces in Next.js 14 and Tailwind CSS.
-            </p>
-            <p>
-              Beyond individual projects, I actively contribute to Google Developer Groups
-              (GDG) on Campus, collaborating with student engineers on web architecture and developer tooling.
-            </p>
+          {/* Narrative Dossier Cards */}
+          <div className="space-y-3 text-xs sm:text-[13px] text-[#C4B9A9] leading-relaxed font-sans">
+            <div className="p-3 sm:p-3.5 rounded-xs bg-[#181310] border border-[#2E241D] space-y-2">
+              <p>
+                I am a 3rd-year Computer Science and Engineering student focused on building
+                systems that bridge applied AI models with robust, production-ready interfaces.
+                My work centers on turning complex algorithmic requirements into reliable,
+                verifiable user experiences.
+              </p>
+              <p>
+                My core technical strengths include designing hybrid retrieval pipelines
+                (vector embeddings + BM25 lexical search), developing asynchronous FastAPI
+                microservices with strict PostgreSQL relational schemas, and engineering responsive,
+                token-driven interfaces in Next.js 14 and Tailwind CSS.
+              </p>
+              <p>
+                Beyond individual projects, I actively contribute to Google Developer Groups
+                (GDG) on Campus, collaborating with student engineers on web architecture and developer tooling.
+              </p>
+            </div>
           </div>
 
           {/* Recruiter Fast-Facts Ledger */}
-          <div className="rounded-sm border border-border-subtle bg-surface-elevated/40 p-4 space-y-2.5 font-mono text-xs shadow-2xs">
-            <span className="font-semibold text-text-primary uppercase tracking-wider text-[11px] block pb-1 border-b border-border-subtle">
-              Recruiter Quick Facts
+          <div className="rounded-xs border border-[#2E241D] bg-[#181310] p-3 sm:p-3.5 space-y-2 font-mono text-xs shadow-2xs">
+            <span className="font-semibold text-[#D89B52] uppercase tracking-wider text-[10px] sm:text-[11px] block pb-1.5 border-b border-[#2A211A]">
+              Recruiter Quick Facts // Verification Ledger
             </span>
             <div className="flex justify-between items-baseline gap-2 pt-1">
-              <span className="text-text-tertiary">Degree &amp; Standing:</span>
-              <span className="text-text-primary font-medium text-right">B.Tech CSE (3rd Year)</span>
+              <span className="text-[#A69279]">Degree &amp; Standing:</span>
+              <span className="text-[#EDE6D9] font-medium text-right">B.Tech CSE (3rd Year)</span>
             </div>
             <div className="flex justify-between items-baseline gap-2">
-              <span className="text-text-tertiary">Target Roles:</span>
-              <span className="text-text-primary font-medium text-right">SWE Intern · Applied AI · Backend</span>
+              <span className="text-[#A69279]">Target Roles:</span>
+              <span className="text-[#EDE6D9] font-medium text-right">SWE Intern · Applied AI · Backend</span>
             </div>
             <div className="flex justify-between items-baseline gap-2">
-              <span className="text-text-tertiary">Hackathons:</span>
-              <span className="text-text-primary font-medium text-right">Smart India Hackathon (SIH 26108)</span>
+              <span className="text-[#A69279]">Hackathons:</span>
+              <span className="text-[#EDE6D9] font-medium text-right">Smart India Hackathon (SIH 26108)</span>
             </div>
             <div className="flex justify-between items-baseline gap-2">
-              <span className="text-text-tertiary">Community:</span>
-              <span className="text-text-primary font-medium text-right">GDG on Campus Contributor</span>
+              <span className="text-[#A69279]">Community:</span>
+              <span className="text-[#EDE6D9] font-medium text-right">GDG on Campus Contributor</span>
             </div>
             <div className="flex justify-between items-baseline gap-2">
-              <span className="text-text-tertiary">Location:</span>
-              <span className="text-text-primary font-medium text-right">India</span>
+              <span className="text-[#A69279]">Location:</span>
+              <span className="text-[#EDE6D9] font-medium text-right">India</span>
             </div>
           </div>
         </div>
 
-        {/* Footer Actions */}
-        <div className="sticky bottom-0 z-20 bg-surface/95 backdrop-blur-md border-t border-border-subtle p-5 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex flex-wrap items-center gap-2.5">
+        {/* 4. FOOTER ACTIONS */}
+        <div className="sticky bottom-0 z-20 bg-[#181310]/95 backdrop-blur-md border-t border-[#2A211A] p-3.5 sm:p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
             <Button
               variant="brass"
-              size="md"
+              size="sm"
               href={siteConfig.links.resume}
               external
-              className="gap-1.5 text-xs"
+              className="gap-1.5 text-xs h-7.5 px-2.5"
             >
               <span>View Résumé PDF</span>
               <span className="text-xs" aria-hidden="true">↗</span>
@@ -211,33 +218,33 @@ export function AboutDrawer({ isOpen, onClose, onOpenProjects }: AboutDrawerProp
 
             <Button
               variant="primary"
-              size="md"
+              size="sm"
               onClick={() => {
                 onClose();
                 onOpenProjects?.();
               }}
-              className="gap-1.5 text-xs"
+              className="gap-1.5 text-xs h-7.5 px-3"
             >
-              <span>Explore Projects</span>
+              <span>Explore Projects in Lab</span>
               <span aria-hidden="true">→</span>
             </Button>
           </div>
 
-          <div className="flex items-center gap-3 text-xs font-mono">
+          <div className="flex items-center gap-2.5 text-xs font-mono self-center sm:self-auto">
             <a
               href={siteConfig.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-secondary hover:text-text-primary transition-colors"
+              className="text-[#A69279] hover:text-[#EDE6D9] transition-colors"
             >
               GitHub ↗
             </a>
-            <span className="text-border-subtle">·</span>
+            <span className="text-[#382C22]">·</span>
             <a
               href={siteConfig.links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-secondary hover:text-text-primary transition-colors"
+              className="text-[#A69279] hover:text-[#EDE6D9] transition-colors"
             >
               LinkedIn ↗
             </a>

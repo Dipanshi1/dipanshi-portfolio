@@ -124,6 +124,7 @@ export default function Home() {
 
             {/* Project Lab Hotkey Button */}
             <button
+              id="dock-btn-project"
               type="button"
               onClick={() => handleOpenProjects()}
               className="flex items-center gap-1.5 px-2.5 py-1 rounded-sm border border-[#4D3A2A] bg-[#221B16] text-[#EDE6D9] hover:bg-[#2C221C] hover:border-[#6B4B32] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70 font-medium text-xs shadow-2xs shrink-0"
@@ -140,6 +141,7 @@ export default function Home() {
 
             {/* Skills Hotkey Button */}
             <button
+              id="dock-btn-skills"
               type="button"
               onClick={handleOpenSkills}
               className="flex items-center gap-1.5 px-2.5 py-1 rounded-sm border border-[#382C22] bg-[#1E1814] text-text-secondary hover:text-[#EDE6D9] hover:bg-[#28201A] hover:border-[#523E2E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70 font-medium text-xs shadow-2xs shrink-0"
@@ -152,6 +154,7 @@ export default function Home() {
 
             {/* About Hotkey Button */}
             <button
+              id="dock-btn-about"
               type="button"
               onClick={handleOpenAbout}
               className="flex items-center gap-1.5 px-2.5 py-1 rounded-sm border border-[#382C22] bg-[#1E1814] text-text-secondary hover:text-[#EDE6D9] hover:bg-[#28201A] hover:border-[#523E2E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70 font-medium text-xs shadow-2xs shrink-0"
