@@ -1,10 +1,17 @@
+"use client";
+
 import * as React from "react";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/layout/container";
 import { StatusPill } from "@/components/ui/status-pill";
 
 export function Footer() {
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+
+  // The full-screen interactive pixel-art studio on "/" manages its own HUD footer
+  if (pathname === "/") return null;
 
   return (
     <footer className="w-full border-t border-border-subtle bg-canvas mt-auto transition-colors duration-150">
