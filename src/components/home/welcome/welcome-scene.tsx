@@ -19,7 +19,8 @@ export function WelcomeScene({
     <div className="relative w-full h-full flex items-center justify-center select-none overflow-hidden bg-canvas">
       <svg
         viewBox="0 0 800 440"
-        className="w-full h-auto max-h-full max-w-[1400px] mx-auto block"
+        preserveAspectRatio="xMidYMid meet"
+        className="w-full h-full max-h-full max-w-full block mx-auto"
         style={{ shapeRendering: "crispEdges" }}
         role="img"
         aria-label="Interactive full-screen isometric pixel-art reception entrance of Dipanshi's engineering studio. Click characters, plaques, directory, or Project Lab doorway to interact."

@@ -38,12 +38,12 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#2C231C] bg-[#14110F]/95 backdrop-blur-md transition-colors duration-150">
-      <Container className="flex h-11 sm:h-12 items-center justify-between px-3 sm:px-6">
+      <div className="w-full max-w-7xl mx-auto flex h-10 sm:h-11 items-center justify-between px-3 sm:px-5">
         {/* Left: Identity & Availability Nameplate */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-2.5">
           <a
             href="/"
-            className="group flex items-center gap-2 rounded-xs focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
+            className="group flex items-center gap-1.5 sm:gap-2 rounded-xs focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
             aria-label={`${siteConfig.name} Studio Home`}
           >
             <span className="font-mono text-[10px] sm:text-[11px] font-bold px-1.5 py-0.5 rounded-xs border border-[#4D3A2A] bg-[#221B16] text-[#D89B52] group-hover:border-[#D89B52] transition-colors shadow-2xs">
@@ -55,8 +55,8 @@ export function Header() {
           </a>
 
           {/* Subtle Studio Status Indicator (Desktop) */}
-          <div className="hidden lg:flex items-center pl-2.5 border-l border-[#2C231C]">
-            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-xs text-[10px] font-mono text-text-tertiary bg-[#1A1512] border border-[#2A211A] select-none">
+          <div className="hidden lg:flex items-center pl-2 border-l border-[#2C231C]">
+            <span className="inline-flex items-center gap-1.5 px-1.5 py-0.2 rounded-xs text-[10px] font-mono text-text-tertiary bg-[#1A1512] border border-[#2A211A] select-none">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-success animate-pulse shrink-0" aria-hidden="true" />
               <span>{siteConfig.status}</span>
             </span>
@@ -64,17 +64,17 @@ export function Header() {
         </div>
 
         {/* Right: Unified Navigation & Actions */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           {/* Desktop Navigation Links */}
           <nav
-            className="hidden md:flex items-center gap-1 text-[11px] font-mono uppercase tracking-wider"
+            className="hidden md:flex items-center gap-0.5 sm:gap-1 text-[11px] font-mono uppercase tracking-wider"
             aria-label="Main Navigation"
           >
             {siteConfig.nav.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-text-secondary hover:text-[#EDE6D9] hover:bg-[#221B16] px-2 py-1 transition-colors duration-150 rounded-xs focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
+                className="text-text-secondary hover:text-[#EDE6D9] hover:bg-[#221B16] px-1.5 sm:px-2 py-0.5 transition-colors duration-150 rounded-xs focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D89B52]/70"
               >
                 {item.label}
               </a>
@@ -83,25 +83,25 @@ export function Header() {
 
           {/* Subtle Hairline Divider (Desktop) */}
           <span
-            className="hidden md:block h-3.5 w-px bg-[#2C231C] shrink-0"
+            className="hidden md:block h-3 w-px bg-[#2C231C] shrink-0"
             aria-hidden="true"
           />
 
           {/* Actions: Resume, Theme Toggle, Mobile Trigger */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
+          <div className="flex items-center gap-1 sm:gap-1.5">
             <Button
               variant="brass"
               size="sm"
               href={siteConfig.links.resume}
               external
-              className="hidden md:inline-flex text-[11px] h-7 px-2.5 font-mono"
+              className="hidden md:inline-flex text-[11px] h-6.5 px-2 font-mono"
             >
               <span>Resume</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="12"
-                height="12"
+                width="11"
+                height="11"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -166,14 +166,14 @@ export function Header() {
             </button>
           </div>
         </div>
-      </Container>
+      </div>
 
       {/* Accessible Mobile Navigation Drawer */}
       <div
         id="mobile-navigation"
         ref={menuRef}
         className={cn(
-          "md:hidden fixed inset-x-0 top-11 sm:top-12 z-50 bg-[#181411] border-b border-[#2C231C] backdrop-blur-xl transition-all duration-200 ease-out-expo overflow-y-auto max-h-[calc(100vh-3rem)] shadow-2xl",
+          "md:hidden fixed inset-x-0 top-10 sm:top-11 z-50 bg-[#181411] border-b border-[#2C231C] backdrop-blur-xl transition-all duration-200 ease-out-expo overflow-y-auto max-h-[calc(100vh-2.75rem)] shadow-2xl",
           isOpen
             ? "opacity-100 translate-y-0 visible"
             : "opacity-0 -translate-y-2 invisible pointer-events-none"
