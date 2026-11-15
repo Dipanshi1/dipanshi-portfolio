@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dipanshi Gupta — Software Engineer & AI Systems Developer",
   description:
-    "Portfolio of Dipanshi Gupta showcasing full-stack software engineering, applied machine learning systems, semantic search tools, and assistive perception.",
+    "Portfolio of Dipanshi Gupta showcasing full-stack software engineering, surface-defect inspection agents, model-routing frameworks, and semantic search tools.",
   keywords: [
     "Dipanshi Gupta",
     "Software Engineer",

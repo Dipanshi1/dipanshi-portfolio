@@ -39,8 +39,8 @@ pnpm build
 ```
 
 ## Featured Work
-- **ManakSetu**: Real-time BIS standards search & compliance tool with multilingual retrieval.
-- **SightLoop**: Assistive perception system bridging visual understanding for visually impaired users.
-- **Arbiter**: Intelligent deliberation framework for algorithmic debate and resolution.
-- **University AI Chatbot**: Domain-specific conversational agent streamlining academic queries.
-- **Interview Tracker Pro**: End-to-end recruitment lifecycle and candidate pipeline tracking platform.
+- **ManakSetu**: Prototype standards search and multilingual clause retrieval for Bureau of Indian Standards (BIS) documents.
+- **SightLoop**: Adaptive surface-defect inspection agent developed for the OpenCV AI Competition 2026.
+- **Arbiter**: Experimental model-routing and evaluation framework for adaptive compute allocation across LLMs.
+- **University AI Chatbot**: Early machine learning experiment evaluating intent classification baselines on university support queries.
+- **Interview Tracker Pro**: Personal frontend workflow prototype for organizing application stages and interview rounds.

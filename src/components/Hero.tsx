@@ -29,7 +29,7 @@ export default function Hero() {
 
             {/* Descriptive Subtitle */}
             <p className="text-base sm:text-lg text-stone-600 leading-relaxed max-w-2xl mb-8 font-light">
-              Hi, I&apos;m <strong className="font-semibold text-stone-900">Dipanshi Gupta</strong>. Developer and GDG on Campus Design Coordinator building full-stack web applications, semantic search tools, and assistive computer vision prototypes with clean typography and human accessibility.
+              Hi, I&apos;m <strong className="font-semibold text-stone-900">Dipanshi Gupta</strong>. Developer and GDG on Campus Design Coordinator building full-stack web applications, surface-defect inspection agents, model-routing frameworks, and semantic search tools with clean typography.
             </p>
 
             {/* Key Capabilities Pills */}
@@ -38,16 +38,16 @@ export default function Hero() {
                 Next.js &amp; TypeScript
               </span>
               <span className="px-2.5 py-1 bg-white border border-stone-300 rounded-md text-stone-700 shadow-2xs">
-                PyTorch &amp; Computer Vision
+                Python &amp; FastAPI
               </span>
               <span className="px-2.5 py-1 bg-white border border-stone-300 rounded-md text-stone-700 shadow-2xs">
-                FastAPI &amp; Python
+                OpenCV 5 &amp; Computer Vision
               </span>
               <span className="px-2.5 py-1 bg-white border border-stone-300 rounded-md text-stone-700 shadow-2xs">
-                Multi-Agent Protocols
+                Model Routing &amp; Evaluation
               </span>
               <span className="px-2.5 py-1 bg-stone-100 border border-stone-200 rounded-md text-violet-700 font-semibold">
-                WCAG AA Accessible
+                Semantic Search
               </span>
             </div>
 

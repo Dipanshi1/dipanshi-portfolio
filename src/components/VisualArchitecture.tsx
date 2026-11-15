@@ -81,7 +81,7 @@ function PortraitFallback() {
         </div>
 
         <p className="text-xs text-stone-500 max-w-xs leading-relaxed">
-          Exploring full-stack applications, semantic search tools, and assistive perception experiments.
+          Exploring full-stack applications, surface-defect inspection, model-routing frameworks, and semantic search tools.
         </p>
       </div>
 

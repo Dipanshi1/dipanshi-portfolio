@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   category: string;
   summary: string;
-  stage: "Prototype / Hackathon" | "Research Prototype" | "Personal Project Prototype";
+  stage: string;
   implementedFeatures: string[];
   prototypeScope: string;
   limitations: string[];
@@ -42,7 +42,7 @@ export interface CertificationItem {
 export const PERSONAL_INFO = {
   name: "Dipanshi Gupta",
   role: "Software & AI Systems Developer",
-  headline: "Building full-stack web applications, assistive computer vision experiments, and semantic search prototypes.",
+  headline: "Building full-stack web applications, surface-defect inspection agents, model-routing frameworks, and semantic search prototypes.",
   shortBio:
     "Developer and student engineer exploring applied machine learning, semantic retrieval, and full-stack web architectures. Experienced in community design leadership with GDG on Campus, rapid hackathon prototyping, and accessible interface design.",
   location: "India (IST)",
@@ -83,25 +83,28 @@ export const FEATURED_PROJECTS: Project[] = [
   {
     id: "sightloop",
     title: "SightLoop",
-    category: "Assistive Computer Vision",
-    stage: "Prototype / Hackathon",
-    summary: "Experimental visual perception prototype providing auditory scene cues for visually impaired users.",
+    category: "Adaptive Surface Inspection",
+    stage: "Feasibility Prototype",
+    summary:
+      "Adaptive surface-defect inspection agent developed for the OpenCV AI Competition 2026.",
     prototypeScope:
-      "A prototype assistive pipeline exploring real-time webcam object detection coupled with synthetic audio feedback to convey spatial surroundings.",
+      "A local-first, test-driven feasibility project exploring measurement-driven OpenCV operations (denoising, speckle filtering, anomaly map rebuild) and auditable perception-to-action traces.",
     implementedFeatures: [
-      "Local camera stream inference using PyTorch object detection models",
-      "Auditory notification trigger mapping detected object labels to audio prompts",
-      "Experimental spatial volume scaling based on bounding box proportions",
+      "Local measurement-driven inspection loop assessing noise, contrast, and candidate defect geometry",
+      "Adaptive operation selection testing denoising, speckle filtering, and anomaly map rebuilding",
+      "Perception-to-action trace generation producing visual overlays and diagnostic logs",
+      "Test-driven synthetic test fixture suite verifying algorithmic pipeline stages",
     ],
     limitations: [
-      "Tested only on local webcam feed; not deployed on wearable or edge-embedded hardware",
-      "Depth estimation is approximated via 2D bounding box geometry, not dedicated depth sensors",
+      "Early feasibility and implementation phase; hardware edge deployment and live camera streaming remain unverified",
+      "Synthetic fixture results reflect behavioral tests rather than benchmarked real-world accuracy",
+      "Cloud and AWS synchronization components are currently undeployed and unverified",
     ],
     futurePlans: [
-      "Integrate lightweight edge models (e.g., MobileNet/YOLO-Nano) for mobile deployment",
-      "Conduct user usability evaluations with accessibility practitioners",
+      "Evaluate algorithmic pipelines on standardized real-world surface defect datasets (e.g. VisA)",
+      "Integrate and benchmark on target competition embedded hardware",
     ],
-    technologies: ["Python", "PyTorch", "OpenCV", "Text-to-Speech API"],
+    technologies: ["Python", "OpenCV 5", "PyTest", "Computer Vision"],
     repoStatus: "Private Repository (In Active Development)",
     repoUrl: "https://github.com/Dipanshi1/SightLoop",
     featured: true,
@@ -109,25 +112,28 @@ export const FEATURED_PROJECTS: Project[] = [
   {
     id: "arbiter",
     title: "Arbiter",
-    category: "Multi-Agent Deliberation",
-    stage: "Research Prototype",
-    summary: "Experimental framework exploring multi-agent debate scripts for evaluating contentious prompts.",
+    category: "Model Routing & Evaluation",
+    stage: "Experimental Research Prototype",
+    summary:
+      "Experimental model-routing and evaluation framework designed for adaptive compute allocation across LLMs.",
     prototypeScope:
-      "An exploratory Python prototype testing structured debate flows between simulated agents to observe consensus formation and contradiction detection.",
+      "A modular evaluation prototype implementing routing contracts, cost accounting, and deterministic replay to evaluate compute paths across language models.",
     implementedFeatures: [
-      "Structured agent prompt execution pipeline for dialectical proposition evaluation",
-      "Heuristic scoring pass to extract agreed consensus points and unresolved divergences",
-      "Formatted JSON output schema tracing multi-turn argument steps",
+      "Routing contracts and mock execution pipeline validating provider interfaces",
+      "Model registry, telemetry logging, and cost accounting modules",
+      "Policy isolation, deterministic replay engine, and bootstrap components",
+      "Comprehensive suite of 141 passing unit and behavioral tests across milestone 3",
     ],
     limitations: [
-      "Evaluated only on controlled experimental prompt sets; unverified for open-domain fact checking",
-      "Uses heuristic string matching and prompt constraints rather than fine-tuned verification models",
+      "Experimental prototype operating against mock provider interfaces and synthetic fixtures",
+      "Does not perform dialectical debate, multi-agent consensus, or automated fact verification",
+      "Contains active unresolved design and architecture audit items tracked in project documentation",
     ],
     futurePlans: [
-      "Implement formal dialectical truth-maintenance algorithms",
-      "Build a visual step-by-step trace interface for inspection",
+      "Integrate live local model endpoints under strict latency and cost policy ceilings",
+      "Address open architecture audit items identified during milestone reviews",
     ],
-    technologies: ["Python", "AsyncIO", "LLM Prompt Chaining", "JSON Schema Validation"],
+    technologies: ["Python", "AsyncIO", "PyTest", "JSON Schema", "Architecture Testing"],
     repoStatus: "Private Repository (In Active Development)",
     repoUrl: "https://github.com/Dipanshi1/arbiter",
     featured: true,
@@ -135,25 +141,29 @@ export const FEATURED_PROJECTS: Project[] = [
   {
     id: "university-ai-chatbot",
     title: "University AI Chatbot",
-    category: "Conversational Assistance",
-    stage: "Personal Project Prototype",
-    summary: "Conversational query interface for common university curriculum and campus inquiries.",
+    category: "Support Chatbot Machine Learning Experiment",
+    stage: "Machine Learning Experiment",
+    summary:
+      "Early machine learning experiment evaluating multi-class intent classification on university support queries.",
     prototypeScope:
-      "A domain-adapted chatbot system built to test intent classification and FAQ matching for university academic schedules and course prerequisites.",
+      "An exploratory machine learning prototype investigating classical text classification baselines and fallback routing for campus academic inquiries.",
     implementedFeatures: [
-      "Web chat interface with responsive conversation history and input controls",
-      "Intent matching logic routing academic questions to pre-indexed responses",
-      "Fallback handler providing guidance for unclassified student queries",
+      "Exploratory Data Analysis (EDA) on a 200-row university student inquiry dataset",
+      "TF-IDF text feature extraction and train/test evaluation splitting",
+      "Supervised baseline classification experiments comparing Logistic Regression, Linear SVM, and Naive Bayes",
+      "Recorded validation accuracy baselines: Logistic Regression 0.42, Linear SVM 0.50",
+      "Defensive fallback rule routing low-confidence predictions to human escalation",
+      "Prototype Streamlit web interface (app.py) for testing query intent matching",
     ],
     limitations: [
-      "Knowledge base limited to sample departmental syllabus information",
-      "Manual intent tagging without continuous production learning loops",
+      "Exploratory baseline only; dataset restricted to 200 sample student queries",
+      "Not a production-ready chat service; relies on classical TF-IDF rather than deep contextual semantics",
     ],
     futurePlans: [
-      "Connect with student portal authentication to provide personalized course tracking",
-      "Migrate intent classification to semantic vector retrieval",
+      "Expand and balance sample query corpus across departmental domains",
+      "Experiment with dense semantic embeddings and retrieval-augmented context",
     ],
-    technologies: ["TypeScript", "React", "Node.js", "Express", "PostgreSQL"],
+    technologies: ["Python", "Scikit-learn", "Streamlit", "TF-IDF", "Jupyter Notebook"],
     repoStatus: "Public Repository",
     repoUrl: "https://github.com/Dipanshi1/ai_chatbot_system",
     featured: true,
@@ -203,7 +213,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: "Next.js (App Router)", context: "Server and client components, routing, and static page generation" },
       { name: "React", context: "Component architectures, hooks, and client-side state" },
       { name: "Tailwind CSS", context: "Utility-first responsive layouts, design tokens, and fluid styling" },
-      { name: "HTML5 / Semantic Web", context: "Accessible DOM structure, WCAG AA contrast, and screen reader labels" },
+      { name: "HTML5 / Semantic Web", context: "Accessible DOM structure, contrast ratios, and semantic tags" },
     ],
   },
   {
@@ -220,11 +230,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     category: "AI & ML Libraries",
-    description: "Libraries and tools explored for computer vision, NLP, and assistive prototypes.",
+    description: "Libraries and tools explored for computer vision, classical ML, and evaluation pipelines.",
     items: [
-      { name: "PyTorch", context: "Exploratory model inference and tensor manipulation" },
-      { name: "OpenCV", context: "Image preprocessing, frame capture, and camera feeds" },
-      { name: "Vector Embeddings", context: "Sentence embeddings and semantic similarity comparisons" },
+      { name: "OpenCV", context: "Measurement-driven image processing, noise filtering, and defect masking" },
+      { name: "Scikit-learn", context: "Text feature extraction (TF-IDF), train/test splits, and baseline classification" },
+      { name: "PyTorch", context: "Exploratory tensor operations and neural network model inference" },
+      { name: "Vector Embeddings", context: "Semantic sentence similarity and nearest-neighbor retrieval" },
     ],
   },
 ];
@@ -248,29 +259,29 @@ export const EXPERIENCE_ENTRIES: ExperienceEntry[] = [
   {
     role: "Hackathon Projects & Participation",
     organization: "Competitive Hackathons & Engineering Sprints",
-    period: "2023 — 2024",
+    period: "Selected Hackathon Projects",
     location: "National / Regional",
     type: "Hackathons & Sprints",
     summary:
       "Collaborated in multidisciplinary teams to rapidly prototype functional solutions addressing real-world problem statements.",
     highlights: [
       "Co-developed ManakSetu during a competitive hackathon sprint, delivering a functioning semantic standards search prototype.",
-      "Designed the initial SightLoop concept pipeline for real-time assistive perception and spatial auditory feedback.",
-      "Collaborated under tight time constraints, practicing rapid scoping, component modularity, and technical presentations.",
+      "Contributed to rapid iterative prototyping, UI structuring, and technical demonstrations under sprint constraints.",
+      "Practiced agile scoping, component modularity, and reproducible technical presentation workflows.",
     ],
-    technologies: ["Next.js", "Python", "FastAPI", "OpenCV", "Git", "Rapid Prototyping"],
+    technologies: ["Next.js", "Python", "FastAPI", "Vector Embeddings", "Git"],
   },
   {
     role: "Independent Software Developer",
     organization: "Self-Directed Projects & Technical Learning",
-    period: "2023 — Present",
+    period: "Ongoing",
     location: "Remote",
     type: "Independent Development",
     summary:
       "Designing and implementing personal projects to practice modern web development, API integrations, and type-safe architectures.",
     highlights: [
       "Built and maintained personal project repositories with structured commits and documentation.",
-      "Explored multi-agent prompt chains in Arbiter and domain-specific query handling in University AI Chatbot.",
+      "Explored model routing and deterministic replay in Arbiter alongside intent classification baselines in University AI Chatbot.",
       "Applied strict linting, typechecking, and responsive accessibility practices across all personal web projects.",
     ],
     technologies: ["TypeScript", "Next.js", "React", "Python", "Tailwind CSS", "GitHub"],

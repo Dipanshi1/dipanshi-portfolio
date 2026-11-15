@@ -12,15 +12,15 @@ export default function About() {
     },
     {
       icon: <Cpu className="w-5 h-5 text-lime-700" />,
-      title: "Exploratory AI & Perception",
+      title: "Exploratory AI & Systems",
       description:
-        "Prototyping applied machine learning ideas—from semantic retrieval for regulatory standards to computer vision-driven auditory scene perception in hackathon builds.",
+        "Prototyping applied machine learning systems—from semantic retrieval for regulatory standards to surface-defect inspection and model-routing frameworks.",
     },
     {
       icon: <ShieldCheck className="w-5 h-5 text-stone-800" />,
       title: "Community & Collaborative Design",
       description:
-        "Coordinating visual design and UI assets for GDG on Campus, aligning team efforts under hackathon constraints, and upholding WCAG accessibility standards.",
+        "Coordinating visual design and UI assets for GDG on Campus, aligning team efforts under hackathon constraints, and emphasizing accessible, structured design.",
     },
   ];
 
@@ -45,7 +45,7 @@ export default function About() {
               I am a developer and student engineer passionate about building accessible full-stack applications and exploring applied machine learning. My focus balances clean code discipline with creative visual design.
             </p>
             <p>
-              As the <strong className="font-medium text-stone-900">Design Coordinator for GDG on Campus</strong>, I lead visual branding and creative direction for developer workshops, collaborative sessions, and student community events. In competitive hackathons, I have co-developed working prototypes including <strong className="font-medium text-stone-900">ManakSetu</strong> (multilingual standards search) and <strong className="font-medium text-stone-900">SightLoop</strong> (assistive vision to audio cues).
+              As the <strong className="font-medium text-stone-900">Design Coordinator for GDG on Campus</strong>, I lead visual branding and creative direction for developer workshops, collaborative sessions, and student community events. In competitive hackathons, I have co-developed working prototypes including <strong className="font-medium text-stone-900">ManakSetu</strong> (multilingual standards search), alongside independent technical exploration on <strong className="font-medium text-stone-900">SightLoop</strong> (adaptive surface inspection for the OpenCV AI Competition 2026).
             </p>
             <p>
               I believe in honest engineering: building working prototypes, acknowledging technical trade-offs, writing transparent documentation, and continuously strengthening fundamentals through coursework like AWS Cloud Foundations.
