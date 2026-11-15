@@ -19,17 +19,17 @@ export default function Hero() {
             {/* Supertitle badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-stone-200/60 border border-stone-300 rounded-full text-xs font-mono text-stone-700 w-fit mb-6">
               <span className="w-2 h-2 rounded-full bg-violet-600 animate-pulse" />
-              <span>Full-Stack &amp; Applied AI Engineer</span>
+              <span>Software &amp; AI Systems Developer</span>
             </div>
 
             {/* Main Editorial Headline */}
             <h1 className="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-stone-900 leading-[1.08] mb-6">
-              Architecting <span className="italic font-normal text-violet-700">intelligent systems</span> with rigorous software craftsmanship.
+              Developing <span className="italic font-normal text-violet-700">applied intelligent systems</span> and accessible web interfaces.
             </h1>
 
             {/* Descriptive Subtitle */}
             <p className="text-base sm:text-lg text-stone-600 leading-relaxed max-w-2xl mb-8 font-light">
-              Hi, I&apos;m <strong className="font-semibold text-stone-900">Dipanshi Gupta</strong>. I build high-performance full-stack applications, semantic search tools, and computer vision architectures designed for reliability, clarity, and human accessibility.
+              Hi, I&apos;m <strong className="font-semibold text-stone-900">Dipanshi Gupta</strong>. Developer and GDG on Campus Design Coordinator building full-stack web applications, semantic search tools, and assistive computer vision prototypes with clean typography and human accessibility.
             </p>
 
             {/* Key Capabilities Pills */}

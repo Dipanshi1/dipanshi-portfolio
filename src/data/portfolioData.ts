@@ -3,220 +3,303 @@ export interface Project {
   title: string;
   category: string;
   summary: string;
-  description: string;
+  stage: "Prototype / Hackathon" | "Research Prototype" | "Personal Project Prototype";
+  implementedFeatures: string[];
+  prototypeScope: string;
+  limitations: string[];
+  futurePlans: string[];
   technologies: string[];
-  keyHighlights: string[];
-  githubUrl: string;
-  demoUrl?: string;
+  repoStatus: "Public Repository" | "Private Repository (In Active Development)" | "Local Project (Not Published)";
+  repoUrl?: string;
   featured: boolean;
 }
 
-export interface SkillGroup {
-  domain: string;
+export interface SkillCategory {
+  category: string;
   description: string;
-  skills: { name: string; level: "Proficient" | "Advanced" | "Core"; focus: string }[];
+  items: { name: string; context: string }[];
 }
 
-export interface ExperienceItem {
+export interface ExperienceEntry {
   role: string;
   organization: string;
   period: string;
   location: string;
+  type: "Campus Community" | "Hackathons & Sprints" | "Independent Development";
   summary: string;
-  contributions: string[];
+  highlights: string[];
   technologies: string[];
 }
 
-export interface Certification {
+export interface CertificationItem {
   title: string;
   issuer: string;
-  date: string;
-  credentialId?: string;
-  skillsCovered: string[];
+  status: "Completed" | "In Progress";
+  detail: string;
+  topics: string[];
 }
 
 export const PERSONAL_INFO = {
   name: "Dipanshi Gupta",
-  role: "Software Engineer & AI Systems Developer",
-  headline: "Architecting resilient full-stack systems, intelligent machine learning pipelines, and accessible digital products.",
+  role: "Software & AI Systems Developer",
+  headline: "Building full-stack web applications, assistive computer vision experiments, and semantic search prototypes.",
   shortBio:
-    "Software engineer with an emphasis on applied machine learning, distributed backend systems, and high-craft user interfaces. Focused on evidence-based engineering, robust software architectures, and assistive technology.",
+    "Developer and student engineer exploring applied machine learning, semantic retrieval, and full-stack web architectures. Experienced in community design leadership with GDG on Campus, rapid hackathon prototyping, and accessible interface design.",
   location: "India (IST)",
   email: "dipanshiigupta@gmail.com",
   github: "https://github.com/Dipanshi1",
   linkedin: "https://www.linkedin.com/in/dipanshi-gupta/",
-  resumeStatus: "Resume PDF is currently being updated for recent 2025/2026 milestones. Available upon direct request.",
-  availableForHire: true,
+  resumeStatus: "Resume PDF is currently being updated with recent project work and credentials. Available upon direct request.",
+  availabilityStatus: "Open to opportunities",
 };
 
 export const FEATURED_PROJECTS: Project[] = [
   {
     id: "manaksetu",
     title: "ManakSetu",
-    category: "Regulatory AI & Search",
-    summary: "Intelligent search & compliance assistant for Bureau of Indian Standards (BIS) documents.",
-    description:
-      "Engineered a regulatory search platform that streamlines access to Bureau of Indian Standards documentation. Features multilingual query processing, semantic document indexing, and instant cross-reference retrieval to accelerate standards verification for engineers and manufacturers.",
-    technologies: ["Next.js", "Python", "FastAPI", "Vector Search", "Multilingual NLP", "Tailwind CSS"],
-    keyHighlights: [
-      "Multilingual semantic query parsing across complex regulatory texts",
-      "Domain-specific vector search pipeline for rapid clause cross-referencing",
-      "Clean editorial interface optimized for standards compliance auditing",
+    category: "Regulatory Standards Search",
+    stage: "Prototype / Hackathon",
+    summary: "Prototype search and cross-referencing interface for Bureau of Indian Standards (BIS) documents.",
+    prototypeScope:
+      "Developed as a hackathon prototype to explore semantic search and multilingual clause retrieval across sample Bureau of Indian Standards regulatory texts.",
+    implementedFeatures: [
+      "Search interface with query parsing across multilingual test queries",
+      "Vector embedding-based document retrieval across sample regulatory corpus",
+      "Clause card view showing matching sections with citation context",
     ],
-    githubUrl: "https://github.com/Dipanshi1",
+    limitations: [
+      "Operates on a curated sample dataset; not integrated with live official BIS database",
+      "Search latency and index scaling unbenchmarked beyond local demonstration dataset",
+    ],
+    futurePlans: [
+      "Evaluate hybrid sparse-dense retrieval for technical jargon",
+      "Explore official API integration and automated document ingestion pipelines",
+    ],
+    technologies: ["Next.js", "Python", "FastAPI", "Vector Embeddings", "Tailwind CSS"],
+    repoStatus: "Public Repository",
+    repoUrl: "https://github.com/Dipanshi1/ManakSetu",
     featured: true,
   },
   {
     id: "sightloop",
     title: "SightLoop",
-    category: "Computer Vision & Assistive Tech",
-    summary: "Closed-loop visual perception and auditory feedback system for the visually impaired.",
-    description:
-      "A real-time assistive perception architecture designed to translate dynamic physical environments into descriptive audio signals. Built with latency-optimized object localization, spatial depth estimation, and prioritized cue synthesis to support user autonomy.",
-    technologies: ["PyTorch", "OpenCV", "Computer Vision", "Python", "Spatial Audio API"],
-    keyHighlights: [
-      "Low-latency real-time inference pipeline for continuous scene parsing",
-      "Spatial depth estimation coupled with prioritized auditory notifications",
-      "Designed with human-centered accessibility and reduced cognitive load principles",
+    category: "Assistive Computer Vision",
+    stage: "Prototype / Hackathon",
+    summary: "Experimental visual perception prototype providing auditory scene cues for visually impaired users.",
+    prototypeScope:
+      "A prototype assistive pipeline exploring real-time webcam object detection coupled with synthetic audio feedback to convey spatial surroundings.",
+    implementedFeatures: [
+      "Local camera stream inference using PyTorch object detection models",
+      "Auditory notification trigger mapping detected object labels to audio prompts",
+      "Experimental spatial volume scaling based on bounding box proportions",
     ],
-    githubUrl: "https://github.com/Dipanshi1",
+    limitations: [
+      "Tested only on local webcam feed; not deployed on wearable or edge-embedded hardware",
+      "Depth estimation is approximated via 2D bounding box geometry, not dedicated depth sensors",
+    ],
+    futurePlans: [
+      "Integrate lightweight edge models (e.g., MobileNet/YOLO-Nano) for mobile deployment",
+      "Conduct user usability evaluations with accessibility practitioners",
+    ],
+    technologies: ["Python", "PyTorch", "OpenCV", "Text-to-Speech API"],
+    repoStatus: "Private Repository (In Active Development)",
+    repoUrl: "https://github.com/Dipanshi1/SightLoop",
     featured: true,
   },
   {
     id: "arbiter",
     title: "Arbiter",
     category: "Multi-Agent Deliberation",
-    summary: "Autonomous multi-agent framework for algorithmic debate and prompt reconciliation.",
-    description:
-      "A structured deliberation architecture using multi-agent debate protocols to critique complex inputs, uncover logical biases, and reconcile contradictory evidence into verified, weighted syntheses.",
-    technologies: ["Python", "AsyncIO", "Multi-Agent Protocols", "LLM Prompt Chains", "Structured Verification"],
-    keyHighlights: [
-      "Multi-agent debate protocols for dialectical evaluation and error reduction",
-      "Automated argument scoring and consensus distillation algorithms",
-      "Reproducible prompt execution tracing with structured JSON output schemas",
+    stage: "Research Prototype",
+    summary: "Experimental framework exploring multi-agent debate scripts for evaluating contentious prompts.",
+    prototypeScope:
+      "An exploratory Python prototype testing structured debate flows between simulated agents to observe consensus formation and contradiction detection.",
+    implementedFeatures: [
+      "Structured agent prompt execution pipeline for dialectical proposition evaluation",
+      "Heuristic scoring pass to extract agreed consensus points and unresolved divergences",
+      "Formatted JSON output schema tracing multi-turn argument steps",
     ],
-    githubUrl: "https://github.com/Dipanshi1",
+    limitations: [
+      "Evaluated only on controlled experimental prompt sets; unverified for open-domain fact checking",
+      "Uses heuristic string matching and prompt constraints rather than fine-tuned verification models",
+    ],
+    futurePlans: [
+      "Implement formal dialectical truth-maintenance algorithms",
+      "Build a visual step-by-step trace interface for inspection",
+    ],
+    technologies: ["Python", "AsyncIO", "LLM Prompt Chaining", "JSON Schema Validation"],
+    repoStatus: "Private Repository (In Active Development)",
+    repoUrl: "https://github.com/Dipanshi1/arbiter",
     featured: true,
   },
   {
     id: "university-ai-chatbot",
     title: "University AI Chatbot",
-    category: "Conversational Systems",
-    summary: "Domain-adapted conversational assistant for academic and institutional navigation.",
-    description:
-      "An automated conversational assistant engineered to address university curriculum inquiries, prerequisites, administrative deadlines, and campus services through semantic intent classification and verified knowledge base retrieval.",
-    technologies: ["TypeScript", "React", "Node.js", "NLP Intent Engine", "PostgreSQL"],
-    keyHighlights: [
-      "Intent classification engine with graceful fallback to human escalation",
-      "Campus knowledge base integration with verified academic policy citations",
-      "Responsive, accessible web widget integrated into institutional portals",
+    category: "Conversational Assistance",
+    stage: "Personal Project Prototype",
+    summary: "Conversational query interface for common university curriculum and campus inquiries.",
+    prototypeScope:
+      "A domain-adapted chatbot system built to test intent classification and FAQ matching for university academic schedules and course prerequisites.",
+    implementedFeatures: [
+      "Web chat interface with responsive conversation history and input controls",
+      "Intent matching logic routing academic questions to pre-indexed responses",
+      "Fallback handler providing guidance for unclassified student queries",
     ],
-    githubUrl: "https://github.com/Dipanshi1",
+    limitations: [
+      "Knowledge base limited to sample departmental syllabus information",
+      "Manual intent tagging without continuous production learning loops",
+    ],
+    futurePlans: [
+      "Connect with student portal authentication to provide personalized course tracking",
+      "Migrate intent classification to semantic vector retrieval",
+    ],
+    technologies: ["TypeScript", "React", "Node.js", "Express", "PostgreSQL"],
+    repoStatus: "Public Repository",
+    repoUrl: "https://github.com/Dipanshi1/ai_chatbot_system",
     featured: true,
   },
   {
     id: "interview-tracker-pro",
     title: "Interview Tracker Pro",
-    category: "Full-Stack Application",
-    summary: "End-to-end recruitment lifecycle and candidate pipeline tracking platform.",
-    description:
-      "A full-stack workflow management application enabling job seekers and recruiting teams to track application stages, schedule interviews, record detailed technical feedback rounds, and monitor outcome metrics.",
-    technologies: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    keyHighlights: [
-      "Kanban-style stage progression board with real-time state synchronization",
-      "Structured feedback logging across multiple technical evaluation rounds",
-      "Data export and pipeline analytics dashboard for progression tracking",
+    stage: "Personal Project Prototype",
+    category: "Workflow Application",
+    summary: "Application pipeline management interface for organizing interview stages and feedback.",
+    prototypeScope:
+      "A prototype dashboard designed to help organize job applications across submission, interview rounds, and decision outcomes.",
+    implementedFeatures: [
+      "Kanban-style stage progression layout (Applied, Screening, Technical, Decision)",
+      "Form inputs for recording interviewer notes, dates, and follow-up requirements",
+      "Local state management and persistent browser data storage",
     ],
-    githubUrl: "https://github.com/Dipanshi1",
+    limitations: [
+      "Currently a standalone frontend prototype; backend synchronization in development",
+      "No automated email parsing or calendar integration",
+    ],
+    futurePlans: [
+      "Build authenticated REST backend with relational database persistence",
+      "Add calendar event export and follow-up email notifications",
+    ],
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    repoStatus: "Local Project (Not Published)",
     featured: true,
   },
 ];
 
-export const EXPERTISE_DOMAINS: SkillGroup[] = [
+export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    domain: "Artificial Intelligence & ML",
-    description: "Designing, evaluating, and deploying neural models and intelligent agent architectures.",
-    skills: [
-      { name: "PyTorch", level: "Proficient", focus: "Model training, inference pipelines & tensor ops" },
-      { name: "Computer Vision", level: "Proficient", focus: "Object detection, OpenCV, spatial perception" },
-      { name: "Natural Language Processing", level: "Proficient", focus: "Semantic search, tokenization, embeddings" },
-      { name: "Agent Architectures", level: "Proficient", focus: "Multi-agent coordination & prompt chaining" },
-      { name: "Model Evaluation", level: "Advanced", focus: "Benchmarking, error analysis & calibration" },
+    category: "Languages & Core",
+    description: "Core programming and scripting languages used across projects and coursework.",
+    items: [
+      { name: "TypeScript / JavaScript", context: "Full-stack web applications, React components, and Node services" },
+      { name: "Python", context: "Applied ML scripts, FastAPI prototypes, and data processing" },
+      { name: "C / C++", context: "Data structures, algorithms, and academic computing coursework" },
+      { name: "SQL", context: "Relational queries, schema design, and database interaction" },
     ],
   },
   {
-    domain: "Full-Stack Engineering",
-    description: "Developing scalable, type-safe web applications with responsive design and clean architectures.",
-    skills: [
-      { name: "Next.js & React", level: "Proficient", focus: "App Router, SSR, Server Components & Hooks" },
-      { name: "TypeScript / JavaScript", level: "Advanced", focus: "Strict typing, async architecture & modern ES" },
-      { name: "Python", level: "Advanced", focus: "FastAPI, script automation, data structures" },
-      { name: "Node.js & Express", level: "Proficient", focus: "RESTful APIs, middleware & authentication" },
-      { name: "Tailwind CSS", level: "Advanced", focus: "Responsive design, design systems & fluid layouts" },
-      { name: "PostgreSQL & MongoDB", level: "Proficient", focus: "Schema design, relational indexing & aggregation" },
+    category: "Web & Frontend",
+    description: "Frameworks and libraries for building accessible, responsive user interfaces.",
+    items: [
+      { name: "Next.js (App Router)", context: "Server and client components, routing, and static page generation" },
+      { name: "React", context: "Component architectures, hooks, and client-side state" },
+      { name: "Tailwind CSS", context: "Utility-first responsive layouts, design tokens, and fluid styling" },
+      { name: "HTML5 / Semantic Web", context: "Accessible DOM structure, WCAG AA contrast, and screen reader labels" },
     ],
   },
   {
-    domain: "Systems, Tooling & Practices",
-    description: "Upholding rigorous engineering hygiene, automated verification, and reproducible environments.",
-    skills: [
-      { name: "Git & GitHub Workflows", level: "Advanced", focus: "Trunk-based & GitFlow, PR reviews, hooks" },
-      { name: "Linux / WSL2", level: "Proficient", focus: "Shell scripting, process management, POSIX" },
-      { name: "Docker", level: "Core", focus: "Containerization & reproducible local setups" },
-      { name: "Agile / Scrum Methodologies", level: "Advanced", focus: "Sprint planning, user stories, retrospectives" },
-      { name: "Web Accessibility (WCAG)", level: "Advanced", focus: "Semantic HTML, keyboard navigation, a11y" },
+    category: "Backend & Systems",
+    description: "Server frameworks, persistence tools, and developer tooling.",
+    items: [
+      { name: "FastAPI", context: "Python REST API endpoints and data validation with Pydantic" },
+      { name: "Node.js & Express", context: "Backend routing, JSON APIs, and server middleware" },
+      { name: "PostgreSQL & MongoDB", context: "Relational tables and document data storage for project backends" },
+      { name: "Git & GitHub", context: "Branching workflows, pull request reviews, and version tracking" },
+      { name: "Linux / WSL2", context: "Daily development environment, bash scripting, and package management" },
+      { name: "Docker", context: "Basic containerization for reproducible local environments" },
+    ],
+  },
+  {
+    category: "AI & ML Libraries",
+    description: "Libraries and tools explored for computer vision, NLP, and assistive prototypes.",
+    items: [
+      { name: "PyTorch", context: "Exploratory model inference and tensor manipulation" },
+      { name: "OpenCV", context: "Image preprocessing, frame capture, and camera feeds" },
+      { name: "Vector Embeddings", context: "Sentence embeddings and semantic similarity comparisons" },
     ],
   },
 ];
 
-export const EXPERIENCE_HISTORY: ExperienceItem[] = [
+export const EXPERIENCE_ENTRIES: ExperienceEntry[] = [
   {
-    role: "Full-Stack & Systems Project Engineer",
-    organization: "Independent & Academic Engineering Projects",
+    role: "Design Coordinator",
+    organization: "Google Developer Groups on Campus (GDG on Campus)",
+    period: "2024 — Present",
+    location: "Campus Community",
+    type: "Campus Community",
+    summary:
+      "Leading visual design coordination and creative assets for student developer initiatives, workshops, and technical events.",
+    highlights: [
+      "Designed visual identity, banners, and presentation assets for student developer workshops and tech talks.",
+      "Coordinated with technical leads to produce clear promotional graphics, boosting community event engagement.",
+      "Ensured brand alignment with global Google Developer Groups community guidelines.",
+    ],
+    technologies: ["Figma", "UI/UX Design", "Brand Guidelines", "Community Leadership"],
+  },
+  {
+    role: "Hackathon Participant & Prototyping Lead",
+    organization: "Competitive Hackathons & Engineering Sprints",
+    period: "2023 — 2024",
+    location: "National / Regional",
+    type: "Hackathons & Sprints",
+    summary:
+      "Collaborated in multidisciplinary teams to rapidly prototype functional solutions addressing real-world problem statements.",
+    highlights: [
+      "Co-developed ManakSetu during a competitive hackathon sprint, delivering a functioning semantic standards search prototype.",
+      "Designed the initial SightLoop concept pipeline for real-time assistive perception and spatial auditory feedback.",
+      "Collaborated under tight time constraints, practicing rapid scoping, component modularity, and technical presentations.",
+    ],
+    technologies: ["Next.js", "Python", "FastAPI", "OpenCV", "Git", "Rapid Prototyping"],
+  },
+  {
+    role: "Independent Software Developer",
+    organization: "Self-Directed Projects & Open-Source Exploration",
     period: "2023 — Present",
-    location: "Remote / Hybrid",
+    location: "Remote",
+    type: "Independent Development",
     summary:
-      "Spearheading the architecture, prototyping, and iterative development of full-stack AI and workflow tools.",
-    contributions: [
-      "Architected and deployed high-performance Next.js and TypeScript applications with modular component systems.",
-      "Engineered RESTful API backends with FastAPI and Express, ensuring robust validation and predictable error handling.",
-      "Maintained strict version control hygiene, branch isolation, and automated linting/type-checking quality gates.",
+      "Designing and implementing open-source applications to test modern software patterns, clean architectures, and type-safe systems.",
+    highlights: [
+      "Built and maintained multiple open-source project repositories with structured commits and documentation.",
+      "Explored multi-agent prompt chains in Arbiter and domain-specific query handling in University AI Chatbot.",
+      "Applied strict linting, typechecking, and responsive accessibility practices across all personal web projects.",
     ],
-    technologies: ["Next.js", "React", "TypeScript", "Python", "FastAPI", "Tailwind CSS", "Git"],
-  },
-  {
-    role: "Machine Learning & Perception Researcher",
-    organization: "AI & Assistive Computing Initiatives",
-    period: "2024 — 2025",
-    location: "India",
-    summary:
-      "Conducted exploratory development and evaluation on computer vision pipelines and multi-agent consensus protocols.",
-    contributions: [
-      "Prototyped SightLoop's real-time object detection and spatial sound translation pipeline for visually impaired users.",
-      "Designed Arbiter's algorithmic debate rules, assessing convergence speed and output consistency across LLM agents.",
-      "Authored clean technical documentation and reproducible benchmark scripts for experimental validation.",
-    ],
-    technologies: ["PyTorch", "Python", "OpenCV", "Multi-Agent Systems", "Vector Embeddings"],
+    technologies: ["TypeScript", "Next.js", "React", "Python", "Tailwind CSS", "GitHub"],
   },
 ];
 
-export const CERTIFICATIONS: Certification[] = [
+export const CERTIFICATIONS: CertificationItem[] = [
   {
-    title: "Machine Learning & Deep Learning Specialization",
-    issuer: "Coursera / DeepLearning.AI",
-    date: "2024",
-    skillsCovered: ["Supervised Learning", "Neural Networks", "TensorFlow/PyTorch", "Model Evaluation"],
+    title: "AWS Academy Graduate – Cloud Foundations",
+    issuer: "AWS Academy",
+    status: "Completed",
+    detail: "20-Hour Coursework Completed",
+    topics: [
+      "Cloud Concepts & Security",
+      "AWS Core Services (EC2, S3, RDS, VPC)",
+      "Cloud Architecture & Pricing",
+      "Shared Responsibility Model",
+    ],
   },
   {
-    title: "Full-Stack Web Development with React & Node.js",
-    issuer: "Technical Learning Certification",
-    date: "2024",
-    skillsCovered: ["React.js", "Node.js", "RESTful APIs", "State Management", "Database Integration"],
-  },
-  {
-    title: "Version Control, Git & Open Source Collaboration",
-    issuer: "GitHub & Linux Foundation Foundations",
-    date: "2023",
-    skillsCovered: ["Git Internals", "Branching Strategies", "Continuous Integration", "Code Review Standards"],
+    title: "AWS Certified Solutions Architect",
+    issuer: "Amazon Web Services",
+    status: "In Progress",
+    detail: "Currently Preparing for Associate Certification",
+    topics: [
+      "Resilient Architecture Design",
+      "High-Performing Compute & Storage",
+      "Secure Applications & IAM",
+      "Cost-Optimized Architectures",
+    ],
   },
 ];

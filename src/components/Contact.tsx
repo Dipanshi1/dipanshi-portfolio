@@ -46,7 +46,7 @@ export default function Contact() {
             Initiate a conversation or discuss technical collaboration.
           </h2>
           <p className="text-base text-stone-600 font-light max-w-2xl">
-            Currently open to software engineering opportunities, applied AI research roles, and architectural consulting.
+            Currently open to opportunities, software development roles, and project collaborations.
           </p>
         </div>
 
