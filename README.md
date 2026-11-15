@@ -10,10 +10,11 @@ An editorial, high-performance portfolio showcasing software engineering, AI/ML 
 - **Icons:** Lucide React
 - **Package Manager:** pnpm
 
-## Agile Branch Strategy
+## Git Workflow & Branch Strategy
 - `main`: Release-ready production branch.
 - `develop`: Primary integration branch.
 - `feat/*`: Feature branches cut from `develop` and merged via Pull Requests.
+- For complete branch strategy, commit rules, and review protocols, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Getting Started
 
