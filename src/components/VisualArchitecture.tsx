@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { Sparkles, Layers, Cpu, Eye } from "lucide-react";
+import Image from "next/image";
+import { Sparkles, Layers, Cpu, CheckCircle } from "lucide-react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
 
 export default function VisualArchitecture() {
@@ -49,15 +50,17 @@ function PortraitFallback() {
       <div className="absolute bottom-0 left-0 w-40 h-40 bg-lime-200/20 rounded-full blur-2xl pointer-events-none" />
 
       <div className="relative flex flex-col items-center justify-center py-8 text-center z-10">
-        {/* Monogram Visual Avatar */}
+        {/* Profile Portrait */}
         <div className="relative mb-6">
-          <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-2 border-stone-300 bg-gradient-to-tr from-stone-900 via-stone-800 to-stone-700 flex items-center justify-center text-white shadow-xl relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
-            {/* Subtle glow circle */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(167,139,250,0.35),transparent_70%)]" />
-            
-            <span className="font-editorial text-4xl sm:text-5xl font-light tracking-wider text-amber-50 select-none">
-              DG
-            </span>
+          <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full border-2 border-stone-300 bg-stone-900 shadow-xl relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
+            <Image
+              src="/images/dipanshi-gupta.jpg"
+              alt="Portrait of Dipanshi Gupta, Software and AI Systems Developer"
+              fill
+              sizes="(max-width: 640px) 144px, 176px"
+              className="object-cover object-[center_25%]"
+              priority
+            />
           </div>
 
           {/* Verification Badge */}
@@ -89,7 +92,7 @@ function PortraitFallback() {
       <div className="pt-3 mt-3 border-t border-stone-300/60 flex items-center justify-between text-[11px] text-stone-500 font-mono">
         <span>ASSET ID: DG-PORTRAIT-V1</span>
         <span className="flex items-center gap-1 text-stone-600">
-          <Eye className="w-3 h-3" /> Visual Monogram Placeholder
+          <CheckCircle className="w-3 h-3 text-emerald-600" /> Verified Portrait
         </span>
       </div>
     </div>
