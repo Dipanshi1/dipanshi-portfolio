@@ -125,9 +125,9 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         </div>
 
         <p id="resume-modal-desc" className="text-sm sm:text-base text-stone-600 leading-relaxed mb-6 font-light">
-          Dipanshi&apos;s verified PDF resume is currently being updated with recent project work, hackathon submissions, and AWS coursework. 
+          Dipanshi&apos;s formal resume PDF is currently being updated with recent project work, hackathon submissions, and AWS coursework. 
           <br /><br />
-          In the interim, you can directly request the verified credential package and comprehensive CV via email or connect on LinkedIn.
+          In the interim, you can directly request an updated copy of my resume via email, or connect on LinkedIn.
         </p>
 
         <div className="p-4 bg-stone-50 border border-stone-200 rounded-xl mb-6">

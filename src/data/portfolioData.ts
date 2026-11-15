@@ -34,7 +34,7 @@ export interface ExperienceEntry {
 export interface CertificationItem {
   title: string;
   issuer: string;
-  status: "Completed" | "In Progress";
+  status: "Completed" | "In Preparation";
   detail: string;
   topics: string[];
 }
@@ -233,20 +233,20 @@ export const EXPERIENCE_ENTRIES: ExperienceEntry[] = [
   {
     role: "Design Coordinator",
     organization: "Google Developer Groups on Campus (GDG on Campus)",
-    period: "2024 — Present",
+    period: "Ongoing",
     location: "Campus Community",
     type: "Campus Community",
     summary:
       "Leading visual design coordination and creative assets for student developer initiatives, workshops, and technical events.",
     highlights: [
       "Designed visual identity, banners, and presentation assets for student developer workshops and tech talks.",
-      "Coordinated with technical leads to produce clear promotional graphics, boosting community event engagement.",
+      "Coordinated with technical leads to produce clear promotional graphics and digital workshop materials.",
       "Ensured brand alignment with global Google Developer Groups community guidelines.",
     ],
     technologies: ["Figma", "UI/UX Design", "Brand Guidelines", "Community Leadership"],
   },
   {
-    role: "Hackathon Participant & Prototyping Lead",
+    role: "Hackathon Projects & Participation",
     organization: "Competitive Hackathons & Engineering Sprints",
     period: "2023 — 2024",
     location: "National / Regional",
@@ -262,14 +262,14 @@ export const EXPERIENCE_ENTRIES: ExperienceEntry[] = [
   },
   {
     role: "Independent Software Developer",
-    organization: "Self-Directed Projects & Open-Source Exploration",
+    organization: "Self-Directed Projects & Technical Learning",
     period: "2023 — Present",
     location: "Remote",
     type: "Independent Development",
     summary:
-      "Designing and implementing open-source applications to test modern software patterns, clean architectures, and type-safe systems.",
+      "Designing and implementing personal projects to practice modern web development, API integrations, and type-safe architectures.",
     highlights: [
-      "Built and maintained multiple open-source project repositories with structured commits and documentation.",
+      "Built and maintained personal project repositories with structured commits and documentation.",
       "Explored multi-agent prompt chains in Arbiter and domain-specific query handling in University AI Chatbot.",
       "Applied strict linting, typechecking, and responsive accessibility practices across all personal web projects.",
     ],
@@ -291,10 +291,10 @@ export const CERTIFICATIONS: CertificationItem[] = [
     ],
   },
   {
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    status: "In Progress",
-    detail: "Currently Preparing for Associate Certification",
+    title: "AWS Solutions Architect – Associate Exam Preparation",
+    issuer: "Amazon Web Services (Self-Study Curriculum)",
+    status: "In Preparation",
+    detail: "Currently Preparing for Associate Certification Exam",
     topics: [
       "Resilient Architecture Design",
       "High-Performing Compute & Storage",

@@ -10,13 +10,13 @@ export default function Certifications() {
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-violet-700 font-semibold mb-3">
             <Award className="w-3.5 h-3.5" />
-            <span>05 / Verified Credentials</span>
+            <span>05 / Certifications &amp; Professional Development</span>
           </div>
           <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-normal text-stone-900 tracking-tight leading-tight mb-4">
             Cloud foundations and architectural coursework.
           </h2>
           <p className="text-base text-stone-600 font-light max-w-2xl">
-            Verified technical coursework with AWS Academy and ongoing preparation for cloud architecture certification.
+            Completed technical coursework with AWS Academy and ongoing self-directed study for cloud architecture certification.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function Certifications() {
                         : "bg-amber-50 text-amber-700 border-amber-200"
                     }`}
                   >
-                    {cert.status === "Completed" ? "Completed" : "In Progress"}
+                    {cert.status === "Completed" ? "Completed (20 Hours)" : "In Preparation (Not Certified)"}
                   </span>
                 </div>
 
@@ -53,7 +53,7 @@ export default function Certifications() {
                   {cert.title}
                 </h3>
                 <p className="text-xs text-stone-500 font-mono uppercase tracking-wider mb-2">
-                  Issued by {cert.issuer}
+                  {cert.issuer}
                 </p>
                 <p className="text-xs text-stone-600 font-light mb-6">
                   {cert.detail}
@@ -61,7 +61,7 @@ export default function Certifications() {
 
                 <div className="space-y-2 pt-4 border-t border-stone-100">
                   <span className="text-[11px] font-mono uppercase tracking-wider text-stone-400 block mb-1">
-                    Core Course Topics:
+                    {cert.status === "Completed" ? "Core Course Topics:" : "Study Domain Focus:"}
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {cert.topics.map((topic) => (
@@ -82,13 +82,13 @@ export default function Certifications() {
               </div>
 
               <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-stone-400">
-                <span>VERIFICATION: AWS ACADEMY</span>
+                <span>{cert.status === "Completed" ? "VERIFICATION: AWS ACADEMY" : "TRACK: SELF-STUDY PREPARATION"}</span>
                 <span
                   className={
                     cert.status === "Completed" ? "text-emerald-700 font-semibold" : "text-amber-700 font-semibold"
                   }
                 >
-                  {cert.status === "Completed" ? "VERIFIED (20 HOURS)" : "ACTIVE PREPARATION"}
+                  {cert.status === "Completed" ? "COURSEWORK COMPLETED" : "IN PREPARATION"}
                 </span>
               </div>
             </div>
