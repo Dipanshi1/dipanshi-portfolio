@@ -117,17 +117,17 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             <FileText className="w-6 h-6" />
           </div>
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-violet-700">Document Status</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-violet-700">Professional Inquiries</span>
             <h2 id="resume-modal-title" className="text-xl font-bold font-editorial text-stone-900">
-              Resume Under Finalization
+              Resume Availability
             </h2>
           </div>
         </div>
 
         <p id="resume-modal-desc" className="text-sm sm:text-base text-stone-600 leading-relaxed mb-6 font-light">
-          Dipanshi&apos;s formal resume PDF is currently being updated with recent project work, hackathon submissions, and AWS coursework. 
+          A comprehensive resume is provided upon direct request for engineering roles, technical opportunities, and collaborative initiatives.
           <br /><br />
-          In the interim, you can directly request an updated copy of my resume via email, or connect on LinkedIn.
+          Feel free to reach out via email or connect on LinkedIn to request credentials or discuss project experience.
         </p>
 
         <div className="p-4 bg-stone-50 border border-stone-200 rounded-xl mb-6">

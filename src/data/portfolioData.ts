@@ -49,7 +49,7 @@ export const PERSONAL_INFO = {
   email: "dipanshiigupta@gmail.com",
   github: "https://github.com/Dipanshi1",
   linkedin: "https://www.linkedin.com/in/dipanshi-gupta/",
-  resumeStatus: "Resume PDF is currently being updated with recent project work and credentials. Available upon direct request.",
+  resumeStatus: "Resume is available upon direct request via email or LinkedIn.",
   availabilityStatus: "Open to opportunities",
 };
 
