@@ -25,10 +25,10 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 border-t border-stone-200/80 bg-[#FAF8F5]">
+    <section id="about" className="pt-12 pb-16 md:py-28 border-t border-stone-200/80 bg-[#FAF8F5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16">
           <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-violet-700 font-semibold mb-3">
             <Compass className="w-3.5 h-3.5" />
             <span>01 / Background &amp; Philosophy</span>

@@ -8,7 +8,7 @@ import VisualArchitecture from "./VisualArchitecture";
 
 export default function Hero() {
   return (
-    <section className="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <section className="relative pt-12 pb-12 md:pt-20 md:pb-28 overflow-hidden">
       {/* Subtle background decorative shapes */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-tr from-amber-100/30 via-violet-100/20 to-lime-100/20 blur-3xl -z-10 pointer-events-none" />
 

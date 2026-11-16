@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Sparkles, Layers, Cpu, CheckCircle } from "lucide-react";
+import { Sparkles, Layers, Cpu } from "lucide-react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
 
 export default function VisualArchitecture() {
@@ -91,8 +91,8 @@ function PortraitFallback() {
       {/* Editorial Footer Note */}
       <div className="pt-3 mt-3 border-t border-stone-300/60 flex items-center justify-between text-[11px] text-stone-500 font-mono">
         <span>ASSET ID: DG-PORTRAIT-V1</span>
-        <span className="flex items-center gap-1 text-stone-600">
-          <CheckCircle className="w-3 h-3 text-emerald-600" /> Verified Portrait
+        <span className="text-stone-600 font-mono">
+          PROFILE / DG
         </span>
       </div>
     </div>
