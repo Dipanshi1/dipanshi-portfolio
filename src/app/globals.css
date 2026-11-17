@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --bg-ivory: #FAF8F5;
+  --bg-card: #FFFFFF;
+  --text-main: #16171A;
+  --text-muted: #595F6B;
+  --border-light: #E7E3DC;
+  --accent-violet: #7C3AED;
+  --accent-violet-light: #EDE9FE;
+  --accent-lime: #84CC16;
+  --accent-lime-light: #ECFCCB;
+  --charcoal-surface: #121316;
+  --charcoal-card: #1C1E23;
+  --charcoal-border: #2B2F38;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-ivory);
+  color: var(--text-main);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #EDE9FE;
+  selection-color: #5B21B6;
+}
+
+::selection {
+  background-color: #EDE9FE;
+  color: #5B21B6;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom editorial utilities */
+.font-editorial {
+  font-family: "Georgia", "Cambria", "Times New Roman", serif;
+  letter-spacing: -0.02em;
+}
+
+.subtle-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+.subtle-grid-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}

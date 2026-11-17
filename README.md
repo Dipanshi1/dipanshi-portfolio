@@ -10,10 +10,11 @@ An editorial, high-performance portfolio showcasing software engineering, AI/ML 
 - **Icons:** Lucide React
 - **Package Manager:** pnpm
 
-## Agile Branch Strategy
+## Git Workflow & Branch Strategy
 - `main`: Release-ready production branch.
 - `develop`: Primary integration branch.
 - `feat/*`: Feature branches cut from `develop` and merged via Pull Requests.
+- For complete branch strategy, commit rules, and review protocols, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Getting Started
 
@@ -39,8 +40,8 @@ pnpm build
 ```
 
 ## Featured Work
-- **ManakSetu**: Real-time BIS standards search & compliance tool with multilingual retrieval.
-- **SightLoop**: Assistive perception system bridging visual understanding for visually impaired users.
-- **Arbiter**: Intelligent deliberation framework for algorithmic debate and resolution.
-- **University AI Chatbot**: Domain-specific conversational agent streamlining academic queries.
-- **Interview Tracker Pro**: End-to-end recruitment lifecycle and candidate pipeline tracking platform.
+- **ManakSetu**: Prototype standards search and multilingual clause retrieval for Bureau of Indian Standards (BIS) documents.
+- **SightLoop**: Adaptive surface-defect inspection agent developed for the OpenCV AI Competition 2026.
+- **Arbiter**: Experimental model-routing and evaluation framework for adaptive compute allocation across LLMs.
+- **University AI Chatbot**: Early machine learning experiment evaluating intent classification baselines on university support queries.
+- **Interview Tracker Pro**: Personal frontend workflow prototype for organizing application stages and interview rounds.
