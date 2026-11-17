@@ -1,14 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { FileText, Menu, X, ArrowUpRight } from "lucide-react";
+import { Download, Menu, X, ArrowUpRight } from "lucide-react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
 
-interface NavbarProps {
-  onResumeClick: () => void;
-}
-
-export default function Navbar({ onResumeClick }: NavbarProps) {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -53,21 +49,19 @@ export default function Navbar({ onResumeClick }: NavbarProps) {
 
         {/* Actions */}
         <div className="hidden sm:flex items-center gap-3">
-          <button
-            onClick={onResumeClick}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium border border-stone-300 text-stone-700 hover:text-stone-900 hover:border-stone-400 bg-white shadow-2xs transition-all"
-            aria-label="View Resume status"
+          <a
+            href="/resume/Dipanshi_Gupta_Resume.pdf"
+            download="Dipanshi_Gupta_Resume.pdf"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium border border-stone-300 text-stone-700 hover:text-stone-900 hover:border-stone-400 bg-white shadow-2xs transition-all focus:outline-none focus:ring-2 focus:ring-violet-600"
+            aria-label="Download Dipanshi Gupta's Resume (PDF)"
           >
-            <FileText className="w-3.5 h-3.5 text-violet-600" />
-            <span>Resume</span>
-            <span className="text-[10px] uppercase font-mono px-1 py-0.2 bg-stone-100 rounded text-stone-500">
-              Notice
-            </span>
-          </button>
+            <Download className="w-3.5 h-3.5 text-violet-600" />
+            <span>Download Resume</span>
+          </a>
 
           <a
             href="#contact"
-            className="inline-flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-50 hover:bg-violet-700 transition-colors shadow-2xs"
+            className="inline-flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-50 hover:bg-violet-700 transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-violet-600"
           >
             <span>Let&apos;s Talk</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -76,16 +70,18 @@ export default function Navbar({ onResumeClick }: NavbarProps) {
 
         {/* Mobile menu trigger */}
         <div className="flex md:hidden items-center gap-2">
-          <button
-            onClick={onResumeClick}
-            className="p-2 text-stone-600 hover:text-stone-900"
-            aria-label="Resume Notice"
+          <a
+            href="/resume/Dipanshi_Gupta_Resume.pdf"
+            download="Dipanshi_Gupta_Resume.pdf"
+            className="p-2 text-stone-600 hover:text-stone-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-600"
+            aria-label="Download Dipanshi Gupta's Resume (PDF)"
+            title="Download Resume (PDF)"
           >
-            <FileText className="w-4 h-4 text-violet-600" />
-          </button>
+            <Download className="w-4 h-4 text-violet-600" />
+          </a>
           <button
             onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="p-2 text-stone-700 hover:text-stone-950 rounded-lg hover:bg-stone-100 transition-colors"
+            className="p-2 text-stone-700 hover:text-stone-950 rounded-lg hover:bg-stone-100 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -109,20 +105,20 @@ export default function Navbar({ onResumeClick }: NavbarProps) {
             ))}
           </nav>
           <div className="pt-2 border-t border-stone-200 flex flex-col gap-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onResumeClick();
-              }}
-              className="w-full flex items-center justify-center gap-2 py-2.5 text-xs font-medium border border-stone-300 rounded-lg bg-white text-stone-800"
+            <a
+              href="/resume/Dipanshi_Gupta_Resume.pdf"
+              download="Dipanshi_Gupta_Resume.pdf"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full flex items-center justify-center gap-2 py-2.5 text-xs font-medium border border-stone-300 rounded-lg bg-white text-stone-800 hover:bg-stone-50 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600"
+              aria-label="Download Dipanshi Gupta's Resume (PDF)"
             >
-              <FileText className="w-4 h-4 text-violet-600" />
-              <span>Resume Notice</span>
-            </button>
+              <Download className="w-4 h-4 text-violet-600" />
+              <span>Download Resume</span>
+            </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-1 py-2.5 text-xs font-semibold bg-stone-900 text-white rounded-lg hover:bg-stone-800"
+              className="w-full flex items-center justify-center gap-1 py-2.5 text-xs font-semibold bg-stone-900 text-white rounded-lg hover:bg-stone-800 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600"
             >
               <span>Contact Directly</span>
               <ArrowUpRight className="w-4 h-4" />
