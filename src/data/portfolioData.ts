@@ -3,14 +3,16 @@ export interface Project {
   title: string;
   category: string;
   summary: string;
+  contribution: string;
   stage: string;
   implementedFeatures: string[];
   prototypeScope: string;
   limitations: string[];
   futurePlans: string[];
   technologies: string[];
-  repoStatus: "Public Repository" | "Private Repository (In Active Development)" | "Local Project (Not Published)";
+  repoStatus: "Public Repository" | "Private Research Repository" | "Private Competition Prototype" | "Local Project (Not Published)";
   repoUrl?: string;
+  isPrivate: boolean;
   featured: boolean;
 }
 
@@ -57,56 +59,31 @@ export const FEATURED_PROJECTS: Project[] = [
   {
     id: "manaksetu",
     title: "ManakSetu",
-    category: "Regulatory Standards Search",
-    stage: "Prototype / Hackathon",
-    summary: "Prototype search and cross-referencing interface for Bureau of Indian Standards (BIS) documents.",
+    category: "AI-Powered Standards Intelligence",
+    stage: "Hackathon Prototype",
+    summary:
+      "Procurement standards intelligence interface designed to streamline discovery and cross-referencing across Bureau of Indian Standards (BIS) documents.",
+    contribution:
+      "Contributed procurement intelligence interface workflows, standards discovery layouts, and clause evidence presentation during a hackathon sprint.",
     prototypeScope:
-      "Developed as a hackathon prototype to explore semantic search and multilingual clause retrieval across sample Bureau of Indian Standards regulatory texts.",
+      "Hackathon prototype exploring document discovery workflows and clause evidence presentation across sample regulatory texts.",
     implementedFeatures: [
-      "Search interface with query parsing across multilingual test queries",
-      "Vector embedding-based document retrieval across sample regulatory corpus",
-      "Clause card view showing matching sections with citation context",
+      "Standards discovery interface with query parsing across sample documents",
+      "Document retrieval matching clauses across sample regulatory corpus",
+      "Clause citation viewer displaying matching sections with contextual references",
     ],
     limitations: [
-      "Operates on a curated sample dataset; not integrated with live official BIS database",
-      "Search latency and index scaling unbenchmarked beyond local demonstration dataset",
+      "Operates on a curated sample corpus; not connected to live official BIS infrastructure",
+      "Search latency unbenchmarked beyond local demonstration dataset",
     ],
     futurePlans: [
-      "Evaluate hybrid sparse-dense retrieval for technical jargon",
-      "Explore official API integration and automated document ingestion pipelines",
+      "Evaluate hybrid sparse-dense retrieval for specialized domain terminology",
+      "Explore official API integration and automated document ingestion",
     ],
     technologies: ["Next.js", "Python", "FastAPI", "Vector Embeddings", "Tailwind CSS"],
     repoStatus: "Public Repository",
     repoUrl: "https://github.com/Dipanshi1/ManakSetu",
-    featured: true,
-  },
-  {
-    id: "sightloop",
-    title: "SightLoop",
-    category: "Adaptive Surface Inspection",
-    stage: "Feasibility Prototype",
-    summary:
-      "Adaptive surface-defect inspection agent developed for the OpenCV AI Competition 2026.",
-    prototypeScope:
-      "A local-first, test-driven feasibility project exploring measurement-driven OpenCV operations (denoising, speckle filtering, anomaly map rebuild) and auditable perception-to-action traces.",
-    implementedFeatures: [
-      "Local measurement-driven inspection loop assessing noise, contrast, and candidate defect geometry",
-      "Adaptive operation selection testing denoising, speckle filtering, and anomaly map rebuilding",
-      "Perception-to-action trace generation producing visual overlays and diagnostic logs",
-      "Test-driven synthetic test fixture suite verifying algorithmic pipeline stages",
-    ],
-    limitations: [
-      "Early feasibility and implementation phase; hardware edge deployment and live camera streaming remain unverified",
-      "Synthetic fixture results reflect behavioral tests rather than benchmarked real-world accuracy",
-      "Cloud and AWS synchronization components are currently undeployed and unverified",
-    ],
-    futurePlans: [
-      "Evaluate algorithmic pipelines on standardized real-world surface defect datasets (e.g. VisA)",
-      "Integrate and benchmark on target competition embedded hardware",
-    ],
-    technologies: ["Python", "OpenCV 5", "PyTest", "Computer Vision"],
-    repoStatus: "Private Repository (In Active Development)",
-    repoUrl: "https://github.com/Dipanshi1/SightLoop",
+    isPrivate: false,
     featured: true,
   },
   {
@@ -115,44 +92,78 @@ export const FEATURED_PROJECTS: Project[] = [
     category: "Model Routing & Evaluation",
     stage: "Experimental Research Prototype",
     summary:
-      "Experimental model-routing and evaluation framework designed for adaptive compute allocation across LLMs.",
+      "Experimental framework evaluating model routing contracts, cost accounting policies, and deterministic replay across LLMs.",
+    contribution:
+      "Implemented modular routing contracts, model registry, telemetry logging, cost accounting, and deterministic replay backed by 141 milestone unit tests.",
     prototypeScope:
-      "A modular evaluation prototype implementing routing contracts, cost accounting, and deterministic replay to evaluate compute paths across language models.",
+      "Experimental evaluation prototype testing routing contracts, cost tracking, and deterministic replay across mock providers (not a production routing system).",
     implementedFeatures: [
-      "Routing contracts and mock execution pipeline validating provider interfaces",
+      "Modular routing contracts and mock provider execution pipeline",
       "Model registry, telemetry logging, and cost accounting modules",
-      "Policy isolation, deterministic replay engine, and bootstrap components",
-      "Comprehensive suite of 141 passing unit and behavioral tests across milestone 3",
+      "Policy evaluation components, deterministic replay engine, and bootstrap components",
+      "Suite of 141 passing unit and behavioral tests across milestone 3",
     ],
     limitations: [
       "Experimental prototype operating against mock provider interfaces and synthetic fixtures",
       "Does not perform dialectical debate, multi-agent consensus, or automated fact verification",
-      "Contains active unresolved design and architecture audit items tracked in project documentation",
+      "Contains active unresolved architecture audit items tracked in project documentation",
     ],
     futurePlans: [
       "Integrate live local model endpoints under strict latency and cost policy ceilings",
       "Address open architecture audit items identified during milestone reviews",
     ],
     technologies: ["Python", "AsyncIO", "PyTest", "JSON Schema", "Architecture Testing"],
-    repoStatus: "Private Repository (In Active Development)",
-    repoUrl: "https://github.com/Dipanshi1/arbiter",
+    repoStatus: "Private Research Repository",
+    isPrivate: true,
+    featured: true,
+  },
+  {
+    id: "sightloop",
+    title: "SightLoop",
+    category: "Adaptive Surface Inspection",
+    stage: "Feasibility Prototype",
+    summary:
+      "Adaptive surface-defect inspection agent exploring measurement-driven computer vision and perception-to-action traces for defect detection.",
+    contribution:
+      "Worked on OpenCV-based inspection pipeline experiments and test-driven validation.",
+    prototypeScope:
+      "Early feasibility-stage research project exploring measurement-driven OpenCV operations (denoising, speckle filtering, anomaly map rebuild) and auditable perception-to-action traces. Not a deployed product.",
+    implementedFeatures: [
+      "Local measurement-driven inspection loop assessing noise, contrast, and candidate defect geometry",
+      "Adaptive operation selection testing denoising, speckle filtering, and anomaly map rebuilding",
+      "Perception-to-action trace generation producing visual overlays and diagnostic logs",
+      "Test-driven synthetic test fixture suite verifying algorithmic pipeline stages",
+    ],
+    limitations: [
+      "Early feasibility stage only; not a deployed product or live camera system",
+      "Synthetic fixture results reflect behavioral unit tests rather than real-world benchmark accuracy",
+      "Hardware edge deployment and cloud synchronization remain unverified",
+    ],
+    futurePlans: [
+      "Evaluate algorithmic pipelines on standardized real-world surface defect datasets (e.g. VisA)",
+      "Integrate and benchmark on target competition embedded hardware",
+    ],
+    technologies: ["Python", "OpenCV 5", "PyTest", "Computer Vision"],
+    repoStatus: "Private Competition Prototype",
+    isPrivate: true,
     featured: true,
   },
   {
     id: "university-ai-chatbot",
-    title: "University AI Chatbot",
-    category: "Support Chatbot Machine Learning Experiment",
+    title: "University Student Support Chatbot",
+    category: "Machine Learning Intent Classification",
     stage: "Machine Learning Experiment",
     summary:
-      "Early machine learning experiment evaluating multi-class intent classification on university support queries.",
+      "Early machine learning experiment evaluating baseline text classification models on university student support inquiries.",
+    contribution:
+      "Performed exploratory data analysis on 200 student inquiries, extracted TF-IDF features, and evaluated baseline classifiers (Linear SVM 50% validation accuracy, Logistic Regression 42%).",
     prototypeScope:
-      "An exploratory machine learning prototype investigating classical text classification baselines and fallback routing for campus academic inquiries.",
+      "Exploratory machine learning prototype investigating classical text classification baselines on sample academic support inquiries (initial Linear SVM reached 50% accuracy; not production-ready).",
     implementedFeatures: [
       "Exploratory Data Analysis (EDA) on a 200-row university student inquiry dataset",
-      "TF-IDF text feature extraction and train/test evaluation splitting",
+      "TF-IDF text feature extraction and train/test evaluation split",
       "Supervised baseline classification experiments comparing Logistic Regression, Linear SVM, and Naive Bayes",
-      "Recorded validation accuracy baselines: Logistic Regression 0.42, Linear SVM 0.50",
-      "Defensive fallback rule routing low-confidence predictions to human escalation",
+      "Recorded initial validation accuracy: Linear SVM 0.50, Logistic Regression 0.42",
       "Prototype Streamlit web interface (app.py) for testing query intent matching",
     ],
     limitations: [
@@ -166,31 +177,7 @@ export const FEATURED_PROJECTS: Project[] = [
     technologies: ["Python", "Scikit-learn", "Streamlit", "TF-IDF", "Jupyter Notebook"],
     repoStatus: "Public Repository",
     repoUrl: "https://github.com/Dipanshi1/ai_chatbot_system",
-    featured: true,
-  },
-  {
-    id: "interview-tracker-pro",
-    title: "Interview Tracker Pro",
-    stage: "Personal Project Prototype",
-    category: "Workflow Application",
-    summary: "Application pipeline management interface for organizing interview stages and feedback.",
-    prototypeScope:
-      "A prototype dashboard designed to help organize job applications across submission, interview rounds, and decision outcomes.",
-    implementedFeatures: [
-      "Kanban-style stage progression layout (Applied, Screening, Technical, Decision)",
-      "Form inputs for recording interviewer notes, dates, and follow-up requirements",
-      "Local state management and persistent browser data storage",
-    ],
-    limitations: [
-      "Currently a standalone frontend prototype; backend synchronization in development",
-      "No automated email parsing or calendar integration",
-    ],
-    futurePlans: [
-      "Build authenticated REST backend with relational database persistence",
-      "Add calendar event export and follow-up email notifications",
-    ],
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
-    repoStatus: "Local Project (Not Published)",
+    isPrivate: false,
     featured: true,
   },
 ];
