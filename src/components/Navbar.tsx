@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Download, Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
 
 export default function Navbar() {
@@ -52,11 +52,10 @@ export default function Navbar() {
           <a
             href="/resume/Dipanshi_Gupta_Resume.pdf"
             download="Dipanshi_Gupta_Resume.pdf"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium border border-stone-300 text-stone-700 hover:text-stone-900 hover:border-stone-400 bg-white shadow-2xs transition-all focus:outline-none focus:ring-2 focus:ring-violet-600"
+            className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-lg text-xs font-medium border border-stone-300 text-stone-700 hover:text-stone-900 hover:border-stone-400 bg-white shadow-2xs transition-all focus:outline-none focus:ring-2 focus:ring-violet-600"
             aria-label="Download Dipanshi Gupta's Resume (PDF)"
           >
-            <Download className="w-3.5 h-3.5 text-violet-600" />
-            <span>Download Resume</span>
+            Resume
           </a>
 
           <a
@@ -73,11 +72,10 @@ export default function Navbar() {
           <a
             href="/resume/Dipanshi_Gupta_Resume.pdf"
             download="Dipanshi_Gupta_Resume.pdf"
-            className="p-2 text-stone-600 hover:text-stone-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-600"
+            className="px-3 py-1.5 text-xs font-medium text-stone-700 hover:text-stone-900 border border-stone-300 rounded-lg bg-white shadow-2xs transition-all focus:outline-none focus:ring-2 focus:ring-violet-600"
             aria-label="Download Dipanshi Gupta's Resume (PDF)"
-            title="Download Resume (PDF)"
           >
-            <Download className="w-4 h-4 text-violet-600" />
+            Resume
           </a>
           <button
             onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -109,11 +107,10 @@ export default function Navbar() {
               href="/resume/Dipanshi_Gupta_Resume.pdf"
               download="Dipanshi_Gupta_Resume.pdf"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-2.5 text-xs font-medium border border-stone-300 rounded-lg bg-white text-stone-800 hover:bg-stone-50 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600"
+              className="w-full flex items-center justify-center py-2.5 text-xs font-medium border border-stone-300 rounded-lg bg-white text-stone-800 hover:bg-stone-50 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600"
               aria-label="Download Dipanshi Gupta's Resume (PDF)"
             >
-              <Download className="w-4 h-4 text-violet-600" />
-              <span>Download Resume</span>
+              Resume
             </a>
             <a
               href="#contact"
