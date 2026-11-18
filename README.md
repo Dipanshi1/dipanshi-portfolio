@@ -1,47 +1,100 @@
 # Dipanshi Gupta — Portfolio
 
-An editorial, high-performance portfolio showcasing software engineering, AI/ML development, full-stack systems, and research projects.
+An editorial, light-first developer portfolio showcasing software engineering, applied AI/ML experiments, full-stack development, and technical projects. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+
+**Live Website:** [dipanshigupta.vercel.app](https://dipanshigupta.vercel.app/)
+
+---
 
 ## Tech Stack
-- **Framework:** Next.js (App Router)
+
+- **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Motion & Interactions:** Framer Motion
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
 - **Icons:** Lucide React
 - **Package Manager:** pnpm
+- **Deployment:** Vercel
 
-## Git Workflow & Branch Strategy
-- `main`: Release-ready production branch.
-- `develop`: Primary integration branch.
-- `feat/*`: Feature branches cut from `develop` and merged via Pull Requests.
-- For complete branch strategy, commit rules, and review protocols, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+## Features & Sections
+
+- **Hero:** Personal introduction, profile portrait, opportunity status, and interactive visual architecture.
+- **About:** Background, interests, and engineering focus.
+- **Expertise & Skills:** Technical capabilities across frontend, backend, AI/ML, and cloud technologies.
+- **Projects:** Selected engineering projects with technology stacks, contributions, and repository links.
+- **Experience:** Leadership and design experience in student communities.
+- **Certifications:** Technical certifications and credentials.
+- **Contact:** Professional contact and social links.
+- **Responsive Design:** Layouts optimized for desktop and mobile.
+- **Motion & Interactions:** Subtle transitions and interactive elements.
+
+## Featured Projects
+
+- **ManakSetu:** Procurement standards discovery interface with clause-level evidence presentation across sample regulatory documents.
+- **Arbiter:** Experimental model-routing and evaluation framework with telemetry, cost accounting, and policy-based execution.
+- **SightLoop:** Local-first computer vision project exploring adaptive surface-defect inspection.
+- **University AI Chatbot:** Machine learning experiment evaluating TF-IDF-based intent classification with baseline classifiers.
+- **Interview Tracker Pro:** Application and interview tracking tool with a React frontend and FastAPI backend.
 
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js >= 22
 - pnpm >= 10
 
 ### Installation
+
 ```bash
+git clone https://github.com/Dipanshi1/dipanshi-portfolio.git
+cd dipanshi-portfolio
 pnpm install
 ```
 
 ### Development
+
 ```bash
 pnpm dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Quality Checks
+Open [http://localhost:3000](http://localhost:3000).
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `pnpm dev` | Starts the development server |
+| `pnpm build` | Creates the production build |
+| `pnpm start` | Starts the production server |
+| `pnpm lint` | Runs ESLint |
+
+## Quality Checks
+
 ```bash
 pnpm lint
+pnpm exec tsc --noEmit
 pnpm build
 ```
 
-## Featured Work
-- **ManakSetu**: Prototype standards search and multilingual clause retrieval for Bureau of Indian Standards (BIS) documents.
-- **SightLoop**: Adaptive surface-defect inspection agent developed for the OpenCV AI Competition 2026.
-- **Arbiter**: Experimental model-routing and evaluation framework for adaptive compute allocation across LLMs.
-- **University AI Chatbot**: Early machine learning experiment evaluating intent classification baselines on university support queries.
-- **Interview Tracker Pro**: Personal frontend workflow prototype for organizing application stages and interview rounds.
+## Deployment
+
+The portfolio is deployed on **Vercel**.
+
+Production URL: [https://dipanshigupta.vercel.app](https://dipanshigupta.vercel.app)
+
+Updates merged into the production branch trigger deployments through the configured GitHub integration.
+
+## Git Workflow
+
+This repository follows a feature-branch and Pull Request workflow.
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for branch strategy, commit conventions, review requirements, and release procedures.
+
+## Connect
+
+- **GitHub:** [Dipanshi1](https://github.com/Dipanshi1)
+- **LinkedIn:** [Dipanshi Gupta](https://www.linkedin.com/in/dipanshi-gupta/)
+
+---
+
+© Dipanshi Gupta
